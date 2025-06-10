@@ -1,0 +1,24 @@
+_target_: pangaea.encoders.btfm_resnet18_encoder.TemporalResnet18
+encoder_weights: ./pretrained_models/model_checkpoint_val_best.pt
+ 
+input_size: 1  
+output_dim: 64
+ 
+input_bands:
+  optical:
+  - B2
+  - B3
+  - B4
+  - B5
+  - B6
+  - B7
+  - B8
+  - B8A
+  - B11
+  - B12
+
+output_layers:
+  - 3
+  - 5
+  - 7
+  - 11

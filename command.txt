@@ -1,0 +1,18 @@
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
+ --config-name=train \
+ dataset=pastis \
+ encoder=remoteclip \
+ decoder=seg_upernet_mt_ltae \
+ preprocessing=seg_resize \
+ criterion=cross_entropy \
+ task=segmentation
+
+ torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
+ --config-name=train \
+ dataset=pastis \
+ encoder=spatial_resnet \
+ decoder=seg_upernet_mt_ltae \
+ decoder.multi_temporal_strategy=null \
+ preprocessing=seg_resize \
+ criterion=cross_entropy \
+ task=segmentation

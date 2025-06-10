@@ -151,7 +151,7 @@ class LTAE2d(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x, batch_positions=None, pad_mask=None, return_comp=False):
-        sz_b, d, seq_len, h, w = x.shape
+        sz_b, d, seq_len, h, w = x.shape # for clip: torch.Size([8, 768, 6, 7, 7])
         x = x.permute(0, 2, 1, 3, 4)
         if pad_mask is not None:
             pad_mask = (
@@ -164,7 +164,7 @@ class LTAE2d(nn.Module):
                 pad_mask.permute(0, 2, 3, 1).contiguous().view(sz_b * h * w, seq_len)
             )
 
-        out = x.permute(0, 3, 4, 1, 2).contiguous().view(sz_b * h * w, seq_len, d)
+        out = x.permute(0, 3, 4, 1, 2).contiguous().view(sz_b * h * w, seq_len, d) # for resnet50: torch.Size([8192, 6, 256])
         out = self.in_norm(out.permute(0, 2, 1)).permute(0, 2, 1)
 
         if self.inconv is not None:
@@ -198,7 +198,7 @@ class LTAE2d(nn.Module):
         if self.return_att:
             return out, attn
         else:
-            return out
+            return out # for clip, torch.Size([8, 128, 7, 7])
 
 
 class MultiHeadAttention(nn.Module):

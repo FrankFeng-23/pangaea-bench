@@ -22,3 +22,7 @@ data/mados/splits/*
 
 .vscode
 .idea
+.venv/
+202*/
+UATE_zenodo/
+venv/

@@ -355,21 +355,21 @@ class SegMTUPerNet(SegUPerNet):
 
         if self.tmap is not None:
             if self.multi_temporal_strategy == "ltae":
-                feats = self.ltae_adaptor(feats)
+                feats = self.ltae_adaptor(feats) # for remoteclip, the 4 elements (layers) in feats have the same shape: torch.Size([8, 768, 6, 7, 7])
                 feats = [self.tmap(f) for f in feats]
             elif self.multi_temporal_strategy == "linear":
                 feats = [self.tmap(f.permute(0, 1, 3, 4, 2)).squeeze(-1) for f in feats]
 
-        feat = self.neck(feats)
-        feat = self._forward_feature(feat)
+        feat = self.neck(feats) # length:4 element shape: (B, C, H, W)
+        feat = self._forward_feature(feat) # shape: (B, C', H, W)
         feat = self.dropout(feat)
-        output = self.conv_seg(feat)
+        output = self.conv_seg(feat) # shape: (B, num_classes, H, W)
 
         if output_shape is None:
             output_shape = img[list(img.keys())[0]].shape[-2:]
 
         # interpolate to the target spatial dims
-        output = F.interpolate(output, size=output_shape, mode="bilinear")
+        output = F.interpolate(output, size=output_shape, mode="bilinear") # shape: (B, num_classes, H', W')
 
         return output
 

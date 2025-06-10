@@ -1,0 +1,107 @@
+_target_: pangaea.datasets.austrian_crop.AustrianCrop
+dataset_name: AustrianCrop
+root_path: ./data/austrian_crop_v1.0_pipeline_prithvi/
+download_url: null
+auto_download: False
+
+img_size: 64  # 根据你的实际patch大小调整
+multi_temporal: 3
+multi_modal: True
+
+# classes
+ignore_index: -1  # 如果没有忽略类别，设为-1
+num_classes: 18
+classes: 
+  - Background
+  - Legume
+  - Soy
+  - Summer Grain
+  - Winter Grain
+  - Corn
+  - Sunflower
+  - Mustard
+  - Potato
+  - Beet
+  - Squash
+  - Grapes
+  - Tree Fruit
+  - Cover Crop
+  - Grass
+  - Fallow
+  - Other (Plants)
+  - Other (Non Plants)
+
+# TODO: 这些distribution数据需要自行计算修改
+distribution:
+  - 0.00000  # Background (excluded, 8,759,944 pixels)
+  - 0.03275  # Legume (256,920 pixels, 3.27% of non-bg)
+  - 0.08817  # Soy (691,749 pixels, 8.82% of non-bg)
+  - 0.03673  # Summer Grain (288,155 pixels, 3.67% of non-bg)
+  - 0.37039  # Winter Grain (2,905,807 pixels, 37.04% of non-bg)
+  - 0.10215  # Corn (801,392 pixels, 10.22% of non-bg)
+  - 0.00317  # Sunflower (24,850 pixels, 0.32% of non-bg)
+  - 0.02550  # Mustard (200,041 pixels, 2.55% of non-bg)
+  - 0.03757  # Potato (294,759 pixels, 3.76% of non-bg)
+  - 0.01855  # Beet (145,498 pixels, 1.85% of non-bg)
+  - 0.02998  # Squash (235,226 pixels, 3.00% of non-bg)
+  - 0.00337  # Grapes (26,466 pixels, 0.34% of non-bg)
+  - 0.00529  # Tree Fruit (41,506 pixels, 0.53% of non-bg)
+  - 0.02078  # Cover Crop (163,014 pixels, 2.08% of non-bg)
+  - 0.03503  # Grass (274,805 pixels, 3.50% of non-bg)
+  - 0.06699  # Fallow (525,528 pixels, 6.70% of non-bg)
+  - 0.12278  # Other (Plants) (963,215 pixels, 12.28% of non-bg)
+  - 0.00080  # Other (Non Plants) (6,309 pixels, 0.08% of non-bg)
+
+bands:
+  optical:
+    - B2
+    - B3
+    - B4
+    - B8
+    - B11
+    - B12
+    # 后续扩展到10个波段时添加
+    # - B7
+    # - B8A
+    # - B11
+    # - B12
+  sar:
+    - VV
+    - VH
+
+# TODO: 这些统计数据需要自行计算修改
+data_mean:
+  optical:
+    - 652.5572  # Band 1
+    - 824.1721  # Band 2
+    - 981.0106  # Band 3
+    - 1861.4259  # Band 4
+    - 2115.6473  # Band 5
+    - 1735.2161  # Band 6
+  sar:
+    - -10.9433
+    - -17.3600
+
+# TODO: 这些统计数据需要自行计算修改
+data_std:
+  optical:
+    - 582.1295  # Band 1
+    - 581.9084  # Band 2
+    - 608.3547  # Band 3
+    - 774.0666  # Band 4
+    - 599.5631  # Band 5
+    - 569.0016  # Band 6
+  sar:
+    - 3.3847
+    - 3.3727
+    - 3.3874
+
+# TODO: 这些统计数据需要自行计算修改
+data_min:
+  optical: [0.0, 0.0, 0.0, 0.0, 0.0, 3.0]
+  sar: [-39.5312, -43.1250, -20.6562]
+
+# TODO: 这些统计数据需要自行计算修改  
+data_max:
+  optical: [18696.0, 17576.0, 16776.0, 16072.0, 15203.0, 15112.0]
+  sar: [34.8750, 27.3125, 51.9062]

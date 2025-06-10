@@ -1,0 +1,32 @@
+_target_: pangaea.encoders.spatial_resnet_encoder.SpatialResNet
+encoder_weights: /maps/zf281/btfm-training-10.4/checkpoints/resnet50_si_2048_wo_projector/model_checkpoint_step_35000.pt
+# download_url: https://path.to.your.model/weights.pth
+
+input_size: 128
+input_channels: 10
+pretrained: True
+
+input_bands:
+  optical:
+    - B2
+    - B3
+    - B4
+    - B5
+    - B6
+    - B7
+    - B8
+    - B8A
+    - B11
+    - B12
+
+output_layers:
+  - 1
+  - 2
+  - 3
+  - 4
+
+output_dim:
+  - 256
+  - 512
+  - 1024
+  - 2048

@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/scratch/zf281/pangaea-bench')
+
 import os as os
 import pathlib
 import pprint
@@ -68,6 +71,10 @@ def main(cfg: DictConfig) -> None:
     # distributed training variables
     rank = int(os.environ["RANK"])
     local_rank = int(os.environ["LOCAL_RANK"])
+    # debug
+    rank = 0  # default value is 0
+    local_rank = 0  # default value is 0
+    # print(f"rank: {rank}, local_rank: {local_rank}")
     device = torch.device("cuda", local_rank)
 
     torch.cuda.set_device(device)

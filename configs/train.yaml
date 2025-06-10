@@ -5,11 +5,13 @@ use_wandb: false
 wandb_run_id: null
 
 # TRAINING
-num_workers: 4
+# num_workers: 4
+num_workers: 1
 batch_size: 8
 
-test_num_workers: 4
-test_batch_size: 1
+# test_num_workers: 4
+test_num_workers: 1
+test_batch_size: 8
 
 # EXPERIMENT
 finetune: false
@@ -22,12 +24,14 @@ data_replicate: 1
 
 
 defaults:
-  - task: ???
-  - dataset: ???
-  - encoder: ???
-  - decoder: ???
-  - preprocessing: ???
-  - criterion: ???
+  - task: segmentation
+  - dataset: mados
+  - encoder: remoteclip 
+  - decoder: seg_upernet
+  - preprocessing: seg_focus_crop 
+  - criterion: cross_entropy 
   - lr_scheduler: multi_step_lr
   - optimizer: adamw
   - _self_ 
+
+  

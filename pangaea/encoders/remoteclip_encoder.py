@@ -462,7 +462,7 @@ class RemoteCLIP_Encoder(Encoder):
         self.parameters_warning(missing, incompatible_shape, logger)
 
     def forward(self, image):
-        x = image["optical"].squeeze(2)
+        x = image["optical"].squeeze(2) # shape = [*, 3, height, width]
         x = self.conv1(x)  # shape = [*, width, grid, grid]
         x = x.reshape(x.shape[0], x.shape[1], -1)  # shape = [*, width, grid ** 2]
         x = x.permute(0, 2, 1)  # shape = [*, grid ** 2, width]
@@ -491,4 +491,4 @@ class RemoteCLIP_Encoder(Encoder):
             for out in output
         ]
 
-        return output
+        return output # 具有四个元素，每个元素均为torch.Size([8, 768, 7, 7])
