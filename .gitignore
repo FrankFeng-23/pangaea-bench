@@ -26,3 +26,6 @@ data/mados/splits/*
 202*/
 UATE_zenodo/
 venv/
+checkpoints/
+logs/
+*.png

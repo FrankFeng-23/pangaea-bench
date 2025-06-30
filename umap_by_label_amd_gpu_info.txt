@@ -1,0 +1,23 @@
+Sampling Information:
+==================================================
+Class  1:  257,773 → 16,406 samples
+Class  2:  692,655 → 44,085 samples
+Class  3:  288,479 → 18,360 samples
+Class  4: 2,908,438 → 185,114 samples
+Class  5:  806,323 → 51,320 samples
+Class  6:   24,850 →  1,581 samples
+Class  7:  200,041 → 12,732 samples
+Class  8:  295,097 → 18,782 samples
+Class  9:  145,498 →  9,260 samples
+Class 10:  235,226 → 14,971 samples
+Class 11:   26,478 →  1,685 samples
+Class 12:   41,506 →  2,641 samples
+Class 13:  163,014 → 10,375 samples
+Class 14:  274,905 → 17,496 samples
+Class 15:  525,665 → 33,457 samples
+Class 16:  963,520 → 61,325 samples
+Class 17:    6,329 →  1,000 samples
+
+Metrics:
+Silhouette Score: -0.0690
+Davies-Bouldin Index: 10.7217

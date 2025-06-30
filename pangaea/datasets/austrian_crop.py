@@ -77,7 +77,7 @@ class AustrianCrop(RawGeoFMDataset):
         self.sar_patch_dir = os.path.join(self.root_path, "sar_band_patch")
         
         # 读取CSV文件来获取数据集划分信息
-        csv_path = os.path.join(self.root_path, "patchsize_64_train_ratio_0.3.csv")
+        csv_path = os.path.join(self.root_path, "patchsize_32_train_ratio_0.05.csv")
         
         # 存储各个split的patch文件名
         train_patches = []

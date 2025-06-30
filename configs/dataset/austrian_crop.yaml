@@ -1,11 +1,12 @@
 _target_: pangaea.datasets.austrian_crop.AustrianCrop
 dataset_name: AustrianCrop
-root_path: ./data/austrian_crop_v1.0_pipeline_prithvi/
+root_path: ./data/austrian_crop_v1.0_pipeline_prithvi
+# root_path: /shared/amdgpu/home/avsm2_f4q/code/pangaea-bench/data/austrian_crop_v1.0_pipeline_prithvi
 download_url: null
 auto_download: False
 
 img_size: 64  # 根据你的实际patch大小调整
-multi_temporal: 3
+multi_temporal: 6
 multi_modal: True
 
 # classes
@@ -54,17 +55,16 @@ distribution:
 
 bands:
   optical:
+    - B4
     - B2
     - B3
-    - B4
     - B8
+    - B8A
+    - B5
+    - B6
+    - B7
     - B11
     - B12
-    # 后续扩展到10个波段时添加
-    # - B7
-    # - B8A
-    # - B11
-    # - B12
   sar:
     - VV
     - VH
@@ -72,12 +72,16 @@ bands:
 # TODO: 这些统计数据需要自行计算修改
 data_mean:
   optical:
-    - 652.5572  # Band 1
-    - 824.1721  # Band 2
-    - 981.0106  # Band 3
-    - 1861.4259  # Band 4
-    - 2115.6473  # Band 5
-    - 1735.2161  # Band 6
+    - 1032.6992  # Band 1
+    - 747.6366  # Band 2
+    - 966.1728  # Band 3
+    - 2637.6731  # Band 4
+    - 2701.3318  # Band 5
+    - 1402.8016  # Band 6
+    - 2197.8057  # Band 7
+    - 2502.8484  # Band 8
+    - 2333.1937  # Band 9
+    - 1779.6444  # Band 10
   sar:
     - -10.9433
     - -17.3600
@@ -85,23 +89,26 @@ data_mean:
 # TODO: 这些统计数据需要自行计算修改
 data_std:
   optical:
-    - 582.1295  # Band 1
-    - 581.9084  # Band 2
-    - 608.3547  # Band 3
-    - 774.0666  # Band 4
-    - 599.5631  # Band 5
-    - 569.0016  # Band 6
+    - 641.3223  # Band 1
+    - 536.6477  # Band 2
+    - 539.0782  # Band 3
+    - 1019.4687  # Band 4
+    - 1016.4736  # Band 5
+    - 610.8468  # Band 6
+    - 829.1185  # Band 7
+    - 1001.1198  # Band 8
+    - 736.9046  # Band 9
+    - 755.6927  # Band 10
   sar:
     - 3.3847
     - 3.3727
-    - 3.3874
 
 # TODO: 这些统计数据需要自行计算修改
 data_min:
-  optical: [0.0, 0.0, 0.0, 0.0, 0.0, 3.0]
-  sar: [-39.5312, -43.1250, -20.6562]
+  optical: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  sar: [-39.5312, -43.1250]
 
 # TODO: 这些统计数据需要自行计算修改  
 data_max:
-  optical: [18696.0, 17576.0, 16776.0, 16072.0, 15203.0, 15112.0]
-  sar: [34.8750, 27.3125, 51.9062]
+  optical: [18264.0, 21192.0, 19512.0, 16664.0, 16405.0, 17617.0, 16900.0, 16579.0, 15486.0, 15307.0]
+  sar: [34.8750, 27.3125]

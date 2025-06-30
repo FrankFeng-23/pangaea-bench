@@ -1,5 +1,4 @@
 import sys
-sys.path.append('/scratch/zf281/pangaea-bench')
 
 import os as os
 import pathlib
@@ -31,7 +30,6 @@ from pangaea.utils.utils import (
     seed_worker,
 )
 
-
 def get_exp_info(hydra_config: HydraConf) -> dict[str, str]:
     """Create a unique experiment name based on the choices made in the config.
 
@@ -58,7 +56,6 @@ def get_exp_info(hydra_config: HydraConf) -> dict[str, str]:
     }
     return exp_info
 
-
 @hydra.main(version_base=None, config_path="../configs", config_name="train")
 def main(cfg: DictConfig) -> None:
     """Geofm-bench main function.
@@ -68,12 +65,14 @@ def main(cfg: DictConfig) -> None:
     """
     # fix all random seeds
     fix_seed(cfg.seed)
+    
     # distributed training variables
     rank = int(os.environ["RANK"])
     local_rank = int(os.environ["LOCAL_RANK"])
-    # debug
-    rank = 0  # default value is 0
-    local_rank = 0  # default value is 0
+    # REMOVED THE DEBUG LINES THAT WERE CAUSING THE ISSUE
+    # rank = 0  # default value is 0
+    # local_rank = 0  # default value is 0
+    
     # print(f"rank: {rank}, local_rank: {local_rank}")
     device = torch.device("cuda", local_rank)
 
@@ -140,7 +139,8 @@ def main(cfg: DictConfig) -> None:
     )
     decoder.to(device)
     decoder = torch.nn.parallel.DistributedDataParallel(
-        decoder, device_ids=[local_rank], output_device=local_rank
+        decoder, device_ids=[local_rank], output_device=local_rank,
+        find_unused_parameters=True
     )
     logger.info(
         "Built {} for with {} encoder.".format(
@@ -215,7 +215,7 @@ def main(cfg: DictConfig) -> None:
             persistent_workers=False,
             worker_init_fn=seed_worker,
             generator=get_generator(cfg.seed),
-            drop_last=True,
+            drop_last=False,
             collate_fn=collate_fn,
         )
 
@@ -290,7 +290,6 @@ def main(cfg: DictConfig) -> None:
 
     if cfg.use_wandb and rank == 0:
         wandb.finish()
-
 
 if __name__ == "__main__":
     main()
