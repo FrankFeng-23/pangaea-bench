@@ -1,6 +1,44 @@
 [![Tests](https://github.com/yurujaja/geofm-bench/actions/workflows/python-test.yml/badge.svg)](https://github.com/yurujaja/geofm-bench/actions/workflows/python-test.yml)
+<p align="center">
+  <img src=".github/pangaea-banner.png" alt="PANGAEA" width="480"/>
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2412.04204">
+    <img
+      src="https://badgen.net/badge/paper/arXiv/red"
+      alt="PANGAEA Paper"
+    />
+    </a>
+    <a href="https://www.eotdl.com/datasets">
+      <img
+         src="https://badgen.net/badge/Pangaea/Datasets/purple"
+         alt="PANGAEA Datasets"
+      />
+   </a>
+   <a href="https://www.eotdl.com/models">
+      <img
+         src="https://badgen.net/badge/Pangaea/Models/green"
+         alt="PANGAEA Models"
+      />
+   </a>
+   <a href="https://philabchallenges.vercel.app/pangaea/leaderboard">
+      <img
+         src="https://badgen.net/badge/Pangaea/Leaderboard/orange"
+         alt="PANGAEA Models"
+      />
+   </a>
+</p>
+
 
 # PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models
+
+
+📢 **News**
+ - [04/06/2025] We integrate [Geo-Bench](https://arxiv.org/abs/2306.03831) Datasets, including six segmentation and six classification tasks.
+ <!-- - [23/04/2025] we pushed a new version of the code, fixing different bugs (e.g. commands are working for all the datasets now, metric computation with ignore_index is fixed, etc...). In the next month, we will provide: all downloadable datasets and models, downloadable stratified subsamples for all the datasets, classification. Stay tuned! -->
+ - [22/04/2025] on EarthDay, PANGAEA was officialy adopted to benchmark TerraMind. Read the [news](https://www.linkedin.com/posts/simonetta-cheli-7669879b_earthday-earthobservation-activity-7320439907028467712-LSzl?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdT8q0BDNWYKAdDYGUe_X4fQOzSHO8jgAs) and the [pre-print](https://arxiv.org/abs/2504.11171). We will release the benchmarking code in PANGAEA very soon!
+ - [05/12/2024] the [pre-print](https://arxiv.org/abs/2412.04204) is out!
 
 ## 📚 Introduction
 
@@ -35,15 +73,20 @@ And the following **datasets**:
 |:-------------------:|:--------:|:------:|:----:|:-------:|:--------:|
 | [HLS Burn Scars](https://huggingface.co/datasets/ibm-nasa-geospatial/hls_burn_scars) | [link](https://huggingface.co/datasets/ibm-nasa-geospatial/hls_burn_scars) | Wildfire | Semantic Segmentation | HLS (Harmonized Landsat Sentinel-2) | USA |
 |        [MADOS](https://www.sciencedirect.com/science/article/pii/S0924271624000625)        |  [link](https://marine-pollution.github.io/index.html)        |  Marine      |  Semantic Segmentation    |    S2   | Global   |
-|        [PASTIS-HD](https://arxiv.org/abs/2404.08351)       |    [link](https://huggingface.co/datasets/IGNF/PASTIS-HD)       |   Agriculture     |  Semantic Segmentation    |    S1, S2, SPOT-6  | France   |
+|        [PASTIS-R](https://arxiv.org/abs/2404.08351)       |    [link](https://huggingface.co/datasets/IGNF/PASTIS-HD)       |   Agriculture     |  Semantic Segmentation    |    S1, S2, SPOT-6  | France   |
 |     [Sen1Floods11](http://openaccess.thecvf.com/content_CVPRW_2020/html/w11/Bonafilia_Sen1Floods11_A_Georeferenced_Dataset_to_Train_and_Test_Deep_Learning_CVPRW_2020_paper.html)    | [link](https://github.com/cloudtostreet/Sen1Floods11) |  Flood |Semantic Segmentation  | S1, S2 | Global |
 |        [xView2](https://openaccess.thecvf.com/content_CVPRW_2019/html/cv4gc/Gupta_Creating_xBD_A_Dataset_for_Assessing_Building_Damage_from_Satellite_CVPRW_2019_paper.html)       | [link](https://xview2.org/dataset) | HADR | Change Detection | Maxar | Global   |
 | [Five Billion Pixels](https://www.sciencedirect.com/science/article/pii/S0924271622003264) |  [original version](https://x-ytong.github.io/project/Five-Billion-Pixels.html) <br> (custom version coming soon)        |  (Urban) Land Cover     |  Semantic Segmentation    |    Gaofen-2     | China    |
 |   [DynamicEarthNet](https://arxiv.org/pdf/2203.12560)   |   [link](https://mediatum.ub.tum.de/1650201)        |    (Urban) Land Cover    |   Semantic Segmentation   |   PlanetFusion      | Global   |
-|   [CropTypeMapping](https://openaccess.thecvf.com/content_CVPRW_2019/papers/cv4gc/Rustowicz_Semantic_Segmentation_of_Crop_Type_in_Africa_A_Novel_Dataset_CVPRW_2019_paper.pdf) |   [link](https://sustainlab-group.github.io/sustainbench/docs/datasets/sdg2/crop_type_mapping_ghana-ss.html#download) | Agriculture |Semantic Segmentation |S1, S2, Planet|South Sudan|
+|   [CropTypeMapping-South Sudan](https://openaccess.thecvf.com/content_CVPRW_2019/papers/cv4gc/Rustowicz_Semantic_Segmentation_of_Crop_Type_in_Africa_A_Novel_Dataset_CVPRW_2019_paper.pdf) |   [link](https://sustainlab-group.github.io/sustainbench/docs/datasets/sdg2/crop_type_mapping_ghana-ss.html#download) | Agriculture |Semantic Segmentation |S1, S2, Planet|South Sudan|
 |      [SpaceNet 7](https://openaccess.thecvf.com/content/CVPR2021/papers/Van_Etten_The_Multi-Temporal_Urban_Development_SpaceNet_Dataset_CVPR_2021_paper.pdf)      |    [link](https://spacenet.ai/sn7-challenge/)      |    Urban    |   Change detection/ <br> Semantic Segmentation   |     Planet    | Global   |
 |    [AI4SmallFarms](https://ieeexplore.ieee.org/document/10278130)  | [link](https://doi.org/10.17026/dans-xy6-ngg6)  |  Agriculture     |  Semantic segmentation  |   S2   | Cambodia/Vietnam |
 |     [BioMassters](https://papers.nips.cc/paper_files/paper/2023/file/40daf2a00278c4bea1b26cd4c8a654f8-Paper-Datasets_and_Benchmarks.pdf)     |   [link](https://huggingface.co/datasets/nascetti-a/BioMassters)       | Forest       | Regression   |  S1, S2 | Finland   |
+
+**Note**: The following datasets are **community-contributed** and are not part of the original benchmark repository. We are grateful for these contributions, which help enrich the benchmark's diversity and applicability.
+- **Potsdam dataset** [[Link](https://www.isprs.org/education/benchmarks/UrbanSemLab/2d-sem-label-potsdam.aspx)]. Contributed by [@pierreadorni](https://github.com/pierreadorni).
+- **Open-Canopy** [[Link](https://arxiv.org/abs/2407.09392)]. Contributed by [@pierreadorni](https://github.com/pierreadorni).
+- **Geo-Bench datasets** [[Link](https://github.com/ServiceNow/geo-bench)]. Contributed by [@yurujaja](https://github.com/yurujaja).
 
 The repository supports the following **tasks** using geospatial (foundation) models:
  - [Single Temporal Semantic Segmentation](#single-temporal-semantic-segmentation)
@@ -51,8 +94,10 @@ The repository supports the following **tasks** using geospatial (foundation) mo
  - [Change Detection](#change-detection)
  - [Single Temporal Regression](#single-temporal-regression)
  - [Multi-Temporal Regression](#multi-temporal-regression)
+ - [Linear Classification](#linear-classification)
+ - [KNN Probe Classification](#knn-probe-classification)
 
-It is also possible to train some [supervised baselines](#-fully-supervised-baseline), based on UNet.
+It is also possible to train some [supervised baselines](#-fully-supervised-baseline), based on UNet and ViT.
 
 ## 🗺️ Datasets details
 Please refer to [**Dataset Guide**](DATASET_GUIDE.md) to understand the processing requirements and commands specific to each dataset.
@@ -62,7 +107,7 @@ If you want to fast-prototype your model, maybe you want to run fast experiments
 ## 🛠️ Setup
 Clone the repository:
 ```
-git clone https://github.com/yurujaja/pangaea-bench.git
+git clone https://github.com/VMarsocci/pangaea-bench.git
 cd pangaea-bench
 ```
 
@@ -175,7 +220,7 @@ torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
    --config-name=train \
    dataset=croptypemapping \
    encoder=satlasnet_mi \
-   decoder=seg_upernet_mt_ltae decoder.multi_temporal_strategy=null \
+   decoder=seg_upernet_mt_ltae \
    preprocessing=seg_resize \
    criterion=cross_entropy \
    task=segmentation
@@ -239,6 +284,66 @@ torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
 To use SatlasNet encoder, please refer to the multi-temporal semantic segmentation example.
 To overwrite parameters, please check the Single Temporal Semantic Segmentation example.
 
+#### Linear Classification
+
+For linear classification, you can use either single-label or multi-label classification depending on your dataset. The main difference is in the task config and criterion used.
+
+For single-label classification (e.g. m-Brick-Kiln dataset):
+```
+export GEO_BENCH_DIR=YOUR/PATH/DIR   # Note that `export GEO_BENCH_DIR=YOUR/PATH/DIR` is required for Geo-Bench datasets.
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
+   --config-name=train \
+   dataset=mbrickkiln \
+   encoder=remoteclip \
+   decoder=cls_linear \
+   preprocessing=cls_resize \
+   criterion=cross_entropy \
+   task=linear_classification \
+   task.trainer.n_epochs=50 \
+   batch_size=16 \
+   finetune=false
+```
+
+For multi-label classification (e.g. MBigEarthNet dataset):
+```
+export GEO_BENCH_DIR=YOUR/PATH/DIR   # Note that `export GEO_BENCH_DIR=YOUR/PATH/DIR` is required for Geo-Bench datasets.
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
+   --config-name=train \
+   dataset=mbigearthnet \
+   encoder=remoteclip \
+   decoder=cls_linear \
+   preprocessing=cls_resize \
+   criterion=binary_cross_entropy \
+   task=linear_classification_multi_label \
+   task.trainer.n_epochs=50 \
+   batch_size=16 \
+   finetune=false
+```
+
+#### KNN Probe Classification
+
+For KNN probe classification, you'll use a different decoder and task config. This is useful for evaluating the quality of learned representations without any fine-tuning. Here's an example using the m-EuroSat dataset:
+
+```
+export GEO_BENCH_DIR=YOUR/PATH/DIR   # Note that `export GEO_BENCH_DIR=YOUR/PATH/DIR` is required for Geo-Bench datasets.
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
+   --config-name=train \
+   dataset=meurosat \
+   encoder=remoteclip \
+   decoder=cls_knn \
+   preprocessing=cls_resize \
+   criterion=none \
+   task=knn_probe \
+   batch_size=32 \
+   finetune=false
+```
+
+Note that for KNN probe:
+- The criterion is set to `none` since no training is performed
+- The batch size can be larger since we're only doing inference
+- `finetune` is set to `false` as we're only using the pre-trained encoder
+
+
 ### 💻 End-to-end Finetuning
 
 It is enough to add `finetune=True` to the command line.
@@ -258,8 +363,8 @@ torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
 
 ### 💻 Fully Supervised Baseline 
 
-The repo supports also training fully supervised baselines (e.g. UNet). To run these, follow the same command line rules as for other models. Keep in mind that setting finetune=True is necessary since this fully supervised approach trains the model from scratch. 
-An example for single temporal semantic segmentation is provided (Sen1Floods11 dataset):
+The repo supports also training fully supervised baselines (i.e. UNet and ViT). To run these, follow the same command line rules as for other models. Keep in mind that setting finetune=True is necessary since this fully supervised approach trains the model from scratch. 
+An example for single temporal semantic segmentation with UNet is provided (Sen1Floods11 dataset):
 ```
 torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
    --config-name=train \
@@ -271,17 +376,31 @@ torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
    task=segmentation \
    finetune=True
 ```
-For the moment, there is no multi-temporal baseline supported.
+There is no multi-temporal UNet supported.
+
+An example for multi-temporal semantic segmentation with ViT is provided (CropTypeMapping-SS dataset):
+```
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
+   --config-name=train \
+   dataset=croptypemapping \
+   encoder=vit_scratch \
+   decoder=seg_upernet_mt_ltae \
+   preprocessing=seg_default \
+   criterion=cross_entropy \
+   task=segmentation \
+   task.evaluator.inference_mode=whole \
+   finetune=true
+```
 
 ## 🔧 Customization
 
 ### Using Your Own Dataset
 
-Refer to: [Adding a new downstream dataset](.github/CONTRIBUTING.md#adding-a-new-downstream-dataset)
+Refer to: [Adding a new downstream dataset](CONTRIBUTING.md#adding-a-new-downstream-dataset)
 
 ### Using Your Own Model
 
-Refer to: [Adding a new geospatial foundation model](.github/CONTRIBUTING.md#adding-a-new-geospatial-foundation-model)
+Refer to: [Adding a new geospatial foundation model](CONTRIBUTING.md#adding-a-new-geospatial-foundation-model)
 
 ## 🏃 Evaluation 
 
@@ -294,38 +413,38 @@ torchrun pangaea/run.py --config-name=test ckpt_dir=path_to_ckpt_dir
 ```
 
 ## ✏️ Contributing
-We appreciate all contributions. Please refer to [Contributing Guidelines](.github/CONTRIBUTING.md).
+We appreciate all contributions. Please refer to [Contributing Guidelines](CONTRIBUTING.md).
 
-## ⚠️ Warnings
+## ⚠️ TO DO
 
-Some features are under construction:
- - the automatic download is working for all the datasets and models' weights but, respectively, **Five Billion Pixels**, **BioMassters**, and **GFM**.
+ - host all weights/datasets/subsets on HF (the automatic download is working for all the datasets and models' weights but, respectively, **Five Billion Pixels**, **BioMassters**, and **GFM**. The GFM pretrained model can be downloaded from [OneDrive](https://onedrive.live.com/?authkey=%21AIx%5FHoX7JG4Ai18&id=93B3D3BDA9EFE744%21100937&cid=93B3D3BDA9EFE744).)
+ - add hyperparameters search ([Optuna](https://optuna.org/))
+ - support automatic running of all the experiments
+ - create an Arena to fast benchmark all the GFMs
 
+## 🧮 Some results
 
-## 🧮 Some first results
+<img src=".github/boxplot.png" alt="results" width="60%">
 
-A pre-print is coming soon... Stay tuned!
+Check the paper for all the insights!
 
-| Encoder | Dataset       | Epochs | mIoU   |
-|---------|---------------|--------|--------|
-| Prithvi | MADOS         | 80     | 53.455 |
-| Prithvi | HLSBurnScars  | 80     | 86.208 |
-| Prithvi | Sen1Floods11  | 80     | 87.217 |
-| Prithvi | AI4SmallFarms | 80     | 33.796 |
-
-NOTE: if you want to benchmark the results of your model, for a fair comparison do not change the hparams in the configs! When the pre-print will be out, we will publish also a set of "benchmark-configs".
+NOTE: if you want to benchmark the results of your model, for a fair comparison do not change the hparams in the configs! Soon we will publish also a set of "benchmark-configs", to support automatic running.
 
 ## 📝 Citation
 
-If you use this software in your work, please cite:
+If you find this work useful, please cite:
 
 ```
-@misc{pangaea,
-  author = {Pangaea Team},
-  title = {Pangaea},
-  year = {2024},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/yurujaja/pangaea-bench}},
+@misc{marsocci2024pangaeaglobalinclusivebenchmark,
+      title={PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models}, 
+      author={Valerio Marsocci and Yuru Jia and Georges Le Bellier and David Kerekes and Liang Zeng and Sebastian Hafner and Sebastian Gerard and Eric Brune and Ritu Yadav and Ali Shibli and Heng Fang and Yifang Ban and Maarten Vergauwen and Nicolas Audebert and Andrea Nascetti},
+      year={2024},
+      eprint={2412.04204},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2412.04204}, 
 }
 ```
+##  Acknowledge
+
+The computations/data handling were enabled by resources provided by the National Academic Infrastructure for Supercomputing in Sweden (NAISS), partially funded by the Swedish Research Council through grant agreement no. 2022-06725.

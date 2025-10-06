@@ -1,3 +1,5 @@
+# Adapted from https://github.com/open-mmlab/mmsegmentation/blob/main/mmseg/models/decode_heads/uper_head.py
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -277,6 +279,7 @@ class SegMTUPerNet(SegUPerNet):
         # returns time merged outputs then we don't need multi_temporal_strategy
         if self.encoder.multi_temporal and not self.encoder.multi_temporal_output:
             self.tmap = None
+
         else:
             if self.multi_temporal_strategy == "ltae":
                 ltae_in_channels = max(decoder_in_channels)
@@ -302,7 +305,7 @@ class SegMTUPerNet(SegUPerNet):
     def get_decoder_in_channels(
         self, multi_temporal_strategy: str | None, encoder: Encoder
     ) -> list[int]:
-        if multi_temporal_strategy == "ltae" and encoder.multi_temporal_output:
+        if multi_temporal_strategy == "ltae":
             # if the encoder output channels vary we must use an adaptor before the LTAE
             ltae_in_channels = max(encoder.output_dim)
             if ltae_in_channels != min(encoder.output_dim):

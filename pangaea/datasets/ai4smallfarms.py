@@ -115,7 +115,7 @@ class AI4SmallFarms(RawGeoFMDataset):
         target = target.astype(np.int64)  # Convert to int64 (since it's a mask)
 
         image = torch.from_numpy(image).permute(2, 0, 1)
-        target = torch.from_numpy(target).long()
+        target = (torch.from_numpy(target) / 255).long()
 
         # Handle invalid data if any
         invalid_mask = torch.isnan(image)
@@ -123,9 +123,6 @@ class AI4SmallFarms(RawGeoFMDataset):
 
         # output image shape (C T=1 H W)
         image = image.unsqueeze(1)
-
-        # Convert target to a boolean tensor
-        target = target.bool()
 
         return {
             "image": {
@@ -149,7 +146,7 @@ class AI4SmallFarms(RawGeoFMDataset):
             return
 
         # Set up the Dataverse API
-        base_url = "https://phys-techsciences.datastations.nl"
+        base_url = self.download_url
         api = NativeApi(base_url)
         data_api = DataAccessApi(base_url)
         DOI = "doi:10.17026/dans-xy6-ngg6"
@@ -205,19 +202,19 @@ class AI4SmallFarms(RawGeoFMDataset):
 
         # **Cleanup: Remove unwanted files and directories**
         unwanted_paths = [
-            os.path.join(dataset_config["root_path"], "easy-migration.zip"),
-            os.path.join(dataset_config["root_path"], "readme.md"),
+            os.path.join(self.root_path, "easy-migration.zip"),
+            os.path.join(self.root_path, "readme.md"),
             os.path.join(
-                dataset_config["root_path"], "sentinel-2-asia", "benchmark.qgz"
+                self.root_path, "sentinel-2-asia", "benchmark.qgz"
             ),
             os.path.join(
-                dataset_config["root_path"], "sentinel-2-asia", "tiles_asia.gpkg"
+                self.root_path, "sentinel-2-asia", "tiles_asia.gpkg"
             ),
-            os.path.join(dataset_config["root_path"], "sentinel-2-asia", "reference"),
+            os.path.join(self.root_path, "sentinel-2-asia", "reference"),
             os.path.join(
-                dataset_config["root_path"], "sentinel-2-asia", "test", "output"
+                self.root_path, "sentinel-2-asia", "test", "output"
             ),
-            os.path.join(dataset_config["root_path"], "sentinel-2-nl"),
+            os.path.join(self.root_path, "sentinel-2-nl"),
         ]
 
         # Remove unwanted files and directories
@@ -230,5 +227,7 @@ class AI4SmallFarms(RawGeoFMDataset):
                 if not silent:
                     print(f"Removed unwanted path: {path}")
 
+        os.rename(os.path.join(self.root_path, "sentinel-2-asia/validate"), os.path.join(self.root_path, "sentinel-2-asia/val"))
+
         if not silent:
-            print(f"Downloaded dataset to {dataset_config['root_path']}")
+            print(f"Downloaded dataset to {self.root_path}")

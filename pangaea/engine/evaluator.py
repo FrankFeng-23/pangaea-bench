@@ -3,11 +3,15 @@ import os
 import time
 from pathlib import Path
 import math
+import numpy as np
+import sklearn.metrics
 import wandb
 
 import torch
 import torch.nn.functional as F
+from torch import Tensor
 from torch.utils.data import DataLoader
+from pangaea.decoders.knnclassifier import KNNClassifier
 from tqdm import tqdm
 
 
@@ -60,8 +64,13 @@ class Evaluator:
         self.ignore_index = self.val_loader.dataset.ignore_index
         self.num_classes = len(self.classes)
         self.max_name_len = max([len(name) for name in self.classes])
-
         self.use_wandb = use_wandb
+        
+        # Compute valid class indices (excluding ignore index)
+        self.valid_class_indices = [
+            i for i in range(self.num_classes) if i != self.ignore_index
+        ]
+        self.valid_classes = [self.classes[i] for i in self.valid_class_indices]
 
     def evaluate(
             self,
@@ -128,6 +137,248 @@ class Evaluator:
         return merged_pred
 
 
+class LinearClassificationEvaluator(Evaluator):
+    def __init__(
+        self,
+        val_loader,
+        exp_dir: str | Path,
+        device: torch.device,
+        inference_mode: str = "whole",
+        sliding_inference_batch: int = None,
+        use_wandb: bool = False,
+        multi_label: bool = False,   # Flag to indicate multi-label evaluation
+        topk: int = 1,               # For multi-label: if > 1, use top-k selection
+    ) -> None:
+        super().__init__(val_loader, exp_dir, device, inference_mode, sliding_inference_batch, use_wandb)
+        self.multi_label = multi_label
+        self.topk = topk
+        
+    def evaluate(
+        self, 
+        model: torch.nn.Module, 
+        model_name: str, 
+        model_ckpt_path: str | Path | None = None):
+        
+        t = time.time()
+        if model_ckpt_path is not None:
+            model_dict = torch.load(model_ckpt_path, map_location=self.device, weights_only=False)
+            model_name = os.path.basename(model_ckpt_path).split(".")[0]
+            if "model" in model_dict:
+                model.module.load_state_dict(model_dict["model"])
+            else:
+                model.module.load_state_dict(model_dict)
+            self.logger.info(f"Loaded {model_name} for evaluation")
+        
+        model.eval()
+        
+        all_preds = []
+        all_targets = []
+        total_correct = 0
+        total_samples = 0
+        
+        tag = f"Evaluating {model_name} on {self.split} set"
+        for batch_idx, data in enumerate(tqdm(self.val_loader, desc=tag)):
+            image, target = data["image"], data["target"]
+            image = {k: v.to(self.device) for k, v in image.items()}
+            target = target.to(self.device)
+            
+            with torch.no_grad():
+                logits = model(image)
+            
+            if self.multi_label:
+                # Multi-label evaluation:
+                # Option 1: If topk > 1, select top-k indices; otherwise, threshold at 0.5.
+                preds_prob = torch.sigmoid(logits)
+                if self.topk > 1:
+                    topk_indices = preds_prob.topk(self.topk, dim=1).indices  # shape: (B, topk)
+                    preds = torch.zeros_like(preds_prob, dtype=torch.int)
+                    preds.scatter_(1, topk_indices, 1)
+                else:
+                    preds = (preds_prob > 0.5).int()
+
+                all_preds.append(preds.cpu().numpy())
+                all_targets.append(target.cpu().numpy())
+            else:
+                preds = torch.argmax(logits, dim=1)  
+
+                total_correct += (preds == target).sum().item()
+                total_samples += target.numel()
+                all_preds.append(preds.cpu().numpy())
+                all_targets.append(target.cpu().numpy())
+        
+        all_preds = np.concatenate(all_preds, axis=0)
+        all_targets = np.concatenate(all_targets, axis=0)
+        
+        
+        if self.multi_label:
+            # For multi-label, accuracy is computed as the subset accuracy.
+            accuracy = sklearn.metrics.accuracy_score(all_targets, all_preds)
+            precision, recall, f1, _ = sklearn.metrics.precision_recall_fscore_support(
+                all_targets, all_preds, average="micro", zero_division=0)
+        else:
+            # For single-class tasks, overall accuracy is computed.
+            accuracy = total_correct / total_samples if total_samples > 0 else 0
+
+            precision, recall, f1, _ = sklearn.metrics.precision_recall_fscore_support(
+                    all_targets, all_preds,labels=list(range(self.num_classes)), average="macro", zero_division=0)
+        
+        metrics = {
+            "accuracy": accuracy,
+            "precision": precision,
+            "recall": recall,
+            "F1": f1,
+        }
+        
+        self.log_metrics(metrics)
+        used_time = time.time() - t
+        return metrics, used_time
+    
+    def __call__(self, model, model_name, model_ckpt_path=None):
+        return self.evaluate(model, model_name, model_ckpt_path)
+    
+    def compute_metrics(self):
+        pass
+
+    def log_metrics(self, metrics: dict):
+        def format_metric(name, value):
+            header = f"[{self.split}] ------- {name} --------\n"
+            value_str = (
+                f"[{self.split}] -------------------\n"
+                + f"[{self.split}] Mean".ljust(self.max_name_len, " ")
+                + "\t{:>7}".format("%.3f" % value)
+            )
+            return header + value_str
+
+        acc_str = format_metric("Accuracy", metrics["accuracy"])
+        prec_str = format_metric("Precision", metrics["precision"])
+        recall_str = format_metric("Recall", metrics["recall"])
+        f1_str = format_metric("F1-score", metrics["F1"])
+        self.logger.info(acc_str)
+        self.logger.info(prec_str)
+        self.logger.info(recall_str)
+        self.logger.info(f1_str)
+
+        if self.use_wandb and self.rank == 0:
+            wandb.log({
+                f"{self.split}_accuracy": metrics["accuracy"],
+                f"{self.split}_precision": metrics["precision"],
+                f"{self.split}_recall": metrics["recall"],
+                f"{self.split}_f1": metrics["F1"],
+            })
+        
+
+class KNNClassificationEvaluator(Evaluator):
+    """Builds a feature bank from *train_loader* and evaluates on *val_loader*."""
+    def __init__(
+        self,
+        val_loader: DataLoader,
+        exp_dir: str | Path,
+        device: torch.device,
+        inference_mode: str = "whole",
+        sliding_inference_batch: int = None,
+        use_wandb: bool = False,
+        multi_label: bool = False,
+    ) -> None:
+        super().__init__(val_loader, exp_dir, device, use_wandb)
+        self.multi_label = multi_label
+        self.logger = logging.getLogger()
+        # e.g., self.split is set by base Evaluator to "val" or "test"
+
+    def topk_acc(self, pred_rank: Tensor, target: Tensor, k: int) -> float:
+        if self.multi_label:
+            # pred_rank and target are both (B, C) binary
+            pred_np = pred_rank.cpu().numpy()
+            target_np = target.cpu().numpy()
+            return sklearn.metrics.f1_score(
+                target_np, pred_np, average='micro', zero_division=0
+            )
+        else:
+            # single-label: pred_rank is (B, C) sorted class indices
+            return (pred_rank[:, :k] == target.unsqueeze(1)).any(1).float().mean().item()
+
+    def evaluate(
+        self,
+        model: KNNClassifier,
+        train_loader: DataLoader,
+        model_name: str,
+        model_ckpt_path: str | Path | None = None
+    ):
+        t0 = time.time()
+        # Load checkpoint if provided
+        if model_ckpt_path is not None:
+            ckpt = torch.load(model_ckpt_path, map_location=self.device, weights_only=False)
+            model_name = os.path.basename(model_ckpt_path).split(".")[0]
+            state = ckpt.get("model", ckpt)
+            model.module.load_state_dict(state)
+            self.logger.info(f"Loaded {model_name} for evaluation")
+
+        model.eval()
+        if isinstance(model, torch.nn.parallel.DistributedDataParallel):
+            model = model.module
+
+        if model._bank is None or model._bank_labels is None:
+            if train_loader is None:
+                raise ValueError("train_loader is required to build feature bank for k-NN probe")
+            model.build_feature_bank(train_loader, self.device)
+
+        total = 0
+        topk_correct = {k: 0.0 for k in model.topk}
+
+        for batch in tqdm(self.val_loader, desc="kNN-compute", leave=True):
+            image, target = batch["image"], batch["target"]
+            image = {k: v.to(self.device) for k, v in image.items()}
+            target = target.to(self.device)
+
+            # one-hot encode val targets for multi-label
+            if self.multi_label and target.dim() == 1:
+                target = F.one_hot(target, num_classes=model.num_classes).float()
+
+            pred = model.classify(image)
+            bsz = target.size(0)
+            total += bsz
+
+            if self.multi_label:
+                # only compute a single F1 per batch
+                f1 = sklearn.metrics.f1_score(
+                    target.cpu().numpy(),
+                    pred.cpu().numpy(),
+                    average='micro',
+                    zero_division=0
+                )
+                topk_correct[ model.topk[0] ] += f1 * bsz
+            else:
+                for k in model.topk:
+                    acc = self.topk_acc(pred, target, k)
+                    topk_correct[k] += acc * bsz
+
+        # Aggregate metrics
+        if self.multi_label:
+            final_f1 = topk_correct[ model.topk[0] ] / total
+            self.logger.info(f"[{self.split}] F1 Score: {final_f1:.3f}")
+            if self.use_wandb and getattr(self, "rank", 0) == 0:
+                import wandb
+                wandb.log({f"{self.split}_f1": final_f1})
+            metrics = {"f1": final_f1}
+        else:
+            metrics = {f"top{k}": topk_correct[k] / total for k in model.topk}
+            # log single-label metrics
+            top1_str = f"[{self.split}] Top-1 Acc: {metrics['top1']:.3f}"
+            top2_str = f"[{self.split}] Top-2 Acc: {metrics.get('top2', 0):.3f}"
+            self.logger.info(top1_str)
+            self.logger.info(top2_str)
+            if self.use_wandb and getattr(self, "rank", 0) == 0:
+                import wandb
+                wandb.log({
+                    f"{self.split}_top1": metrics['top1'],
+                    f"{self.split}_top2": metrics.get('top2', metrics['top1']),
+                })
+
+        return metrics, time.time() - t0
+
+    def __call__(self, model, model_name, model_ckpt_path=None, train_loader=None):
+        return self.evaluate(model, train_loader, model_name, model_ckpt_path)
+                             
+                             
 class SegEvaluator(Evaluator):
     """
     SegEvaluator is a class for evaluating segmentation models. It extends the Evaluator class and provides methods
@@ -165,7 +416,7 @@ class SegEvaluator(Evaluator):
         t = time.time()
 
         if model_ckpt_path is not None:
-            model_dict = torch.load(model_ckpt_path, map_location=self.device)
+            model_dict = torch.load(model_ckpt_path, map_location=self.device, weights_only=False)
             model_name = os.path.basename(model_ckpt_path).split(".")[0]
             if "model" in model_dict:
                 model.module.load_state_dict(model_dict["model"])
@@ -233,42 +484,44 @@ class SegEvaluator(Evaluator):
         f1 = 2 * (precision * recall) / (precision + recall + 1e-6)
 
         # Calculate mean IoU, mean F1-score, and mean Accuracy
-        miou = iou.mean().item()
-        mf1 = f1.mean().item()
+        valid = self.valid_class_indices
+            
+        miou = iou[valid].mean().item() if valid else 0.0
+        mf1 = f1[valid].mean().item() if valid else 0.0
         macc = (intersection.sum() / (confusion_matrix.sum() + 1e-6)).item() * 100
 
         # Convert metrics to CPU and to Python scalars
-        iou = iou.cpu()
-        f1 = f1.cpu()
-        precision = precision.cpu()
-        recall = recall.cpu()
-
+        iou = [iou[i].item() for i in valid]
+        f1 = [f1[i].item() for i in valid]
+        precision = [precision[i].item() for i in valid]
+        recall = [recall[i].item() for i in valid]
+        
         # Prepare the metrics dictionary
         metrics = {
-            "IoU": [iou[i].item() for i in range(self.num_classes)],
+            "IoU": iou,
             "mIoU": miou,
-            "F1": [f1[i].item() for i in range(self.num_classes)],
+            "F1": f1,
             "mF1": mf1,
             "mAcc": macc,
-            "Precision": [precision[i].item() for i in range(self.num_classes)],
-            "Recall": [recall[i].item() for i in range(self.num_classes)],
+            "Precision": precision,
+            "Recall": recall,
         }
 
         return metrics
 
     def log_metrics(self, metrics):
         def format_metric(name, values, mean_value):
-            header = f"------- {name} --------\n"
+            header = f"[{self.split}] ------- {name} --------\n"
             metric_str = (
                     "\n".join(
                         c.ljust(self.max_name_len, " ") + "\t{:>7}".format("%.3f" % num)
-                        for c, num in zip(self.classes, values)
+                        for c, num in zip(self.valid_classes, values)
                     )
                     + "\n"
             )
             mean_str = (
-                    "-------------------\n"
-                    + "Mean".ljust(self.max_name_len, " ")
+                    f"[{self.split}]-------------------\n"
+                    + f"[{self.split}] Mean".ljust(self.max_name_len, " ")
                     + "\t{:>7}".format("%.3f" % mean_value)
             )
             return header + metric_str + mean_str
@@ -276,8 +529,8 @@ class SegEvaluator(Evaluator):
         iou_str = format_metric("IoU", metrics["IoU"], metrics["mIoU"])
         f1_str = format_metric("F1-score", metrics["F1"], metrics["mF1"])
 
-        precision_mean = torch.tensor(metrics["Precision"]).mean().item()
-        recall_mean = torch.tensor(metrics["Recall"]).mean().item()
+        precision_mean = sum(metrics["Precision"]) / len(metrics["Precision"]) if metrics["Precision"] else 0.0
+        recall_mean = sum(metrics["Recall"]) / len(metrics["Recall"]) if metrics["Recall"] else 0.0
 
         precision_str = format_metric("Precision", metrics["Precision"], precision_mean)
         recall_str = format_metric("Recall", metrics["Recall"], recall_mean)
@@ -298,19 +551,19 @@ class SegEvaluator(Evaluator):
                     f"{self.split}_mAcc": metrics["mAcc"],
                     **{
                         f"{self.split}_IoU_{c}": v
-                        for c, v in zip(self.classes, metrics["IoU"])
+                        for c, v in zip(self.valid_classes, metrics["IoU"])
                     },
                     **{
                         f"{self.split}_F1_{c}": v
-                        for c, v in zip(self.classes, metrics["F1"])
+                        for c, v in zip(self.valid_classes, metrics["F1"])
                     },
                     **{
                         f"{self.split}_Precision_{c}": v
-                        for c, v in zip(self.classes, metrics["Precision"])
+                        for c, v in zip(self.valid_classes, metrics["Precision"])
                     },
                     **{
                         f"{self.split}_Recall_{c}": v
-                        for c, v in zip(self.classes, metrics["Recall"])
+                        for c, v in zip(self.valid_classes, metrics["Recall"])
                     },
                 }
             )
@@ -349,7 +602,7 @@ class RegEvaluator(Evaluator):
         t = time.time()
 
         if model_ckpt_path is not None:
-            model_dict = torch.load(model_ckpt_path, map_location=self.device)
+            model_dict = torch.load(model_ckpt_path, map_location=self.device, weights_only=False)
             model_name = os.path.basename(model_ckpt_path).split('.')[0]
             if 'model' in model_dict:
                 model.module.load_state_dict(model_dict["model"])
@@ -372,16 +625,16 @@ class RegEvaluator(Evaluator):
             if self.inference_mode == "sliding":
                 input_size = model.module.encoder.input_size
                 logits = self.sliding_inference(model, image, input_size, output_shape=target.shape[-2:],
-                                                max_batch=self.sliding_inference_batch)
+                                                max_batch=self.sliding_inference_batch).squeeze(dim=1)
             elif self.inference_mode == "whole":
                 logits = model(image, output_shape=target.shape[-2:]).squeeze(dim=1)
             else:
                 raise NotImplementedError((f"Inference mode {self.inference_mode} is not implemented."))
 
-            mse += F.mse_loss(logits, target, reduction='sum')
+            mse += F.mse_loss(logits, target)
 
         torch.distributed.all_reduce(mse, op=torch.distributed.ReduceOp.SUM)
-        mse = mse / len(self.val_loader.dataset)
+        mse = mse / len(self.val_loader)
 
         metrics = {"MSE": mse.item(), "RMSE": torch.sqrt(mse).item()}
         self.log_metrics(metrics)
@@ -395,9 +648,9 @@ class RegEvaluator(Evaluator):
         return self.evaluate(model, model_name, model_ckpt_path)
 
     def log_metrics(self, metrics):
-        header = "------- MSE and RMSE --------\n"
-        mse = "-------------------\n" + 'MSE \t{:>7}'.format('%.3f' % metrics['MSE']) + '\n'
-        rmse = "-------------------\n" + 'RMSE \t{:>7}'.format('%.3f' % metrics['RMSE'])
+        header = f"[{self.split}] ------- MSE and RMSE --------\n"
+        mse = f"[{self.split}]-------------------\n" + 'MSE \t{:>7}'.format('%.3f' % metrics['MSE']) + '\n'
+        rmse = f"[{self.split}]-------------------\n" + 'RMSE \t{:>7}'.format('%.3f' % metrics['RMSE'])
         self.logger.info(header + mse + rmse)
 
         if self.use_wandb and self.rank == 0:

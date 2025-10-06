@@ -1,11 +1,8 @@
-import sys
-sys.path.append('/scratch/zf281/pangaea-bench')
-
+import hashlib
 import os as os
 import pathlib
 import pprint
 import time
-import hashlib
 
 import hydra
 import torch
@@ -27,6 +24,7 @@ from pangaea.utils.subset_sampler import get_subset_indices
 from pangaea.utils.utils import (
     fix_seed,
     get_best_model_ckpt_path,
+    get_final_model_ckpt_path,
     get_generator,
     seed_worker,
 )
@@ -42,7 +40,9 @@ def get_exp_info(hydra_config: HydraConf) -> dict[str, str]:
         str: experiment information.
     """
     choices = OmegaConf.to_container(hydra_config.runtime.choices)
-    cfg_hash = hashlib.sha1(OmegaConf.to_yaml(hydra_config).encode(), usedforsecurity=False).hexdigest()[:6]
+    cfg_hash = hashlib.sha1(
+        OmegaConf.to_yaml(hydra_config).encode(), usedforsecurity=False
+    ).hexdigest()[:6]
     timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
     fm = choices["encoder"]
     decoder = choices["decoder"]
@@ -140,7 +140,10 @@ def main(cfg: DictConfig) -> None:
     )
     decoder.to(device)
     decoder = torch.nn.parallel.DistributedDataParallel(
-        decoder, device_ids=[local_rank], output_device=local_rank
+        decoder,
+        device_ids=[local_rank],
+        output_device=local_rank,
+        find_unused_parameters=cfg.finetune,
     )
     logger.info(
         "Built {} for with {} encoder.".format(
@@ -152,7 +155,7 @@ def main(cfg: DictConfig) -> None:
     collate_fn = get_collate_fn(modalities)
 
     # training
-    if train_run:
+    if train_run or cfg.task.trainer.model == "knn_probe":
         # get preprocessor
         train_preprocessor = instantiate(
             cfg.preprocessing.train,
@@ -192,10 +195,13 @@ def main(cfg: DictConfig) -> None:
                 logger=logger,
             )
             raw_val_dataset = GeoFMSubset(raw_val_dataset, indices)
-        
-        
-        train_dataset = GeoFMDataset(raw_train_dataset, train_preprocessor, cfg.data_replicate)
-        val_dataset = GeoFMDataset(raw_val_dataset, val_preprocessor, cfg.data_replicate)
+
+        train_dataset = GeoFMDataset(
+            raw_train_dataset, train_preprocessor, cfg.data_replicate
+        )
+        val_dataset = GeoFMDataset(
+            raw_val_dataset, val_preprocessor, cfg.data_replicate
+        )
 
         logger.info("Built {} dataset.".format(cfg.dataset.dataset_name))
 
@@ -260,6 +266,7 @@ def main(cfg: DictConfig) -> None:
 
         trainer.train()
 
+    
     # Evaluation
     test_preprocessor = instantiate(
         cfg.preprocessing.test,
@@ -285,8 +292,16 @@ def main(cfg: DictConfig) -> None:
     test_evaluator: Evaluator = instantiate(
         cfg.task.evaluator, val_loader=test_loader, exp_dir=exp_dir, device=device
     )
-    best_model_ckpt_path = get_best_model_ckpt_path(exp_dir)
-    test_evaluator.evaluate(decoder, "best_model", best_model_ckpt_path)
+
+    if cfg.use_final_ckpt:
+        model_ckpt_path = get_final_model_ckpt_path(exp_dir)
+    else:
+        model_ckpt_path = get_best_model_ckpt_path(exp_dir)
+        
+    if model_ckpt_path is None and not cfg.task.trainer.model_name == "knn_probe":
+        raise ValueError(f"No model checkpoint found in {exp_dir}")
+    
+    test_evaluator.evaluate(decoder, "test_model", model_ckpt_path)
 
     if cfg.use_wandb and rank == 0:
         wandb.finish()
