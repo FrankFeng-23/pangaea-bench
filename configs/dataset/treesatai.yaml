@@ -1,0 +1,140 @@
+# TreeSatAI Dataset Configuration
+# Multi-label tree species classification using Sentinel-1 and Sentinel-2 time series
+
+_target_: pangaea.datasets.treesatai_parallel.TreeSatAIParallel
+
+dataset_name: treesatai
+root_path: ./data/treesatai
+download_url: ""
+auto_download: false
+
+# Dataset properties
+ignore_index: -1
+num_classes: 15
+img_size: 6  # TreeSatAI patches are 6x6 pixels
+multi_temporal: 12  # Number of temporal frames to use
+multi_modal: true
+
+# Split configuration
+use_predefined_splits: true
+train_split_file: train_filenames.lst
+val_split_file: val_filenames.lst
+test_split_file: test_filenames.lst
+
+# Class definitions
+classes:
+  - Abies
+  - Acer
+  - Alnus
+  - Betula
+  - Cleared
+  - Fagus
+  - Fraxinus
+  - Larix
+  - Picea
+  - Pinus
+  - Populus
+  - Pseudotsuga
+  - Quercus
+  - Salix
+  - Tilia
+
+# Class distribution (number of samples per class)
+distribution:
+  - 1616    # Abies
+  - 3819    # Acer
+  - 4207    # Alnus
+  - 4345    # Betula
+  - 7080    # Cleared
+  - 14382   # Fagus
+  - 3378    # Fraxinus
+  - 6388    # Larix
+  - 14169   # Picea
+  - 13748   # Pinus
+  - 684     # Populus
+  - 5754    # Pseudotsuga
+  - 15524   # Quercus
+  - 0       # Salix (no samples)
+  - 286     # Tilia
+
+# Band definitions
+bands:
+  optical:
+    - B02  # Blue
+    - B03  # Green
+    - B04  # Red
+    - B05  # Red Edge 1
+    - B06  # Red Edge 2
+    - B07  # Red Edge 3
+    - B08  # NIR
+    - B8A  # Red Edge 4
+    - B11  # SWIR 1
+    - B12  # SWIR 2
+  sar:
+    - VV   # Vertical-Vertical polarization
+    - VH   # Vertical-Horizontal polarization
+
+# Data statistics for normalization
+data_mean:
+  optical:
+    - 4156.3950  # B02
+    - 4156.5190  # B03
+    - 4149.4580  # B04
+    - 4149.7344  # B05
+    - 4145.1440  # B06
+    - 4145.1182  # B07
+    - 4145.0376  # B08
+    - 4145.4180  # B8A
+    - 4097.0508  # B11
+    - 4096.8291  # B12
+  sar:
+    - 0.0890     # VV
+    - 0.0867     # VH
+
+data_std:
+  optical:
+    - 3289.3604  # B02
+    - 3289.8674  # B03
+    - 3281.8787  # B04
+    - 3282.1562  # B05
+    - 3273.9060  # B06
+    - 3274.3887  # B07
+    - 3267.2874  # B08
+    - 3267.7339  # B8A
+    - 3251.6775  # B11
+    - 3252.0730  # B12
+  sar:
+    - 0.2184     # VV
+    - 0.1345     # VH
+
+data_min:
+  optical:
+    - 0.0000     # B02
+    - 0.0000     # B03
+    - 0.0000     # B04
+    - 0.0000     # B05
+    - 0.0000     # B06
+    - 0.0000     # B07
+    - 0.0000     # B08
+    - 0.0000     # B8A
+    - 0.0000     # B11
+    - 0.0000     # B12
+  sar:
+    - 0.0000     # VV
+    - 0.0000     # VH
+
+data_max:
+  optical:
+    - 28662.0000 # B02
+    - 28582.0000 # B03
+    - 28609.0000 # B04
+    - 28638.0000 # B05
+    - 28665.0000 # B06
+    - 28672.0000 # B07
+    - 28734.0000 # B08
+    - 28648.0000 # B8A
+    - 28576.0000 # B11
+    - 28602.0000 # B12
+  sar:
+    - 537.0915   # VV
+    - 244.6395   # VH

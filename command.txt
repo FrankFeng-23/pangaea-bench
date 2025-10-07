@@ -18,3 +18,39 @@ torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
  task=segmentation
 
  torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py  --config-name=train  dataset=austrian_crop encoder=prithvi  decoder=seg_upernet_mt_ltae  preprocessing=seg_resize  criterion=cross_entropy  task=segmentation
+
+
+
+# Galileo
+ 
+## Pastis
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py    --config-name=train    dataset=pastis    encoder=galileo_base    decoder=seg_upernet   preprocessing=seg_default_moddrop    criterion=cross_entropy    task=segmentation
+
+## Austrian Crop
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py    --config-name=train    dataset=austrian_crop    encoder=galileo_base    decoder=seg_upernet_mt_ltae   preprocessing=seg_resize_moddrop    criterion=cross_entropy    task=segmentation
+
+
+
+
+# Prithvi
+
+## austrian_crop
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py    --config-name=train    dataset=austrian_crop    encoder=prithvi    decoder=seg_upernet_mt_ltae   preprocessing=seg_default    criterion=cross_entropy    task=segmentation
+
+
+
+
+# RemoteClip
+
+## TreeSatAI
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
+   --config-name=train \
+   dataset=treesatai \
+   encoder=remoteclip \
+   decoder=cls_linear \
+   preprocessing=cls_resize \
+   criterion=binary_cross_entropy \
+   task=linear_classification_multi_label \
+   task.trainer.n_epochs=50 \
+   batch_size=16 \
+   finetune=false

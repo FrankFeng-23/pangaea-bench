@@ -211,10 +211,14 @@ class LinearClassificationEvaluator(Evaluator):
         
         
         if self.multi_label:
+            # For multi-label, convert continuous targets to binary first
+            # Convert targets to binary (1 if > 0.5, else 0) to match predictions
+            binary_targets = (all_targets > 0.5).astype(int)
+            
             # For multi-label, accuracy is computed as the subset accuracy.
-            accuracy = sklearn.metrics.accuracy_score(all_targets, all_preds)
+            accuracy = sklearn.metrics.accuracy_score(binary_targets, all_preds)
             precision, recall, f1, _ = sklearn.metrics.precision_recall_fscore_support(
-                all_targets, all_preds, average="micro", zero_division=0)
+                binary_targets, all_preds, average="micro", zero_division=0)
         else:
             # For single-class tasks, overall accuracy is computed.
             accuracy = total_correct / total_samples if total_samples > 0 else 0

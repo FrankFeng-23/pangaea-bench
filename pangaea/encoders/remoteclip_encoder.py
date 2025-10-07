@@ -472,7 +472,16 @@ class RemoteCLIP_Encoder(Encoder):
             [_expand_token(self.class_embedding, x.shape[0]).to(x.dtype), x], dim=1
         )
         # shape = [*, grid ** 2 + 1, width]
-        x = x + self.positional_embedding.to(x.dtype)
+        
+        # Dynamically adjust positional embedding if input size doesn't match
+        if x.shape[1] != self.positional_embedding.shape[0]:
+            # Interpolate positional embedding to match current input size
+            pos_embed = self.positional_embedding.unsqueeze(0).permute(0, 2, 1)  # [1, width, seq_len]
+            pos_embed = F.interpolate(pos_embed, size=x.shape[1], mode='linear', align_corners=False)
+            pos_embed = pos_embed.permute(0, 2, 1).squeeze(0)  # [seq_len, width]
+            x = x + pos_embed.to(x.dtype)
+        else:
+            x = x + self.positional_embedding.to(x.dtype)
 
         x = self.patch_dropout(x)
         x = self.ln_pre(x)

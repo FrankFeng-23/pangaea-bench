@@ -1,0 +1,244 @@
+2025-10-06 17:38:39,168 - INFO - Starting TreeSatAI EFM embedding extraction
+2025-10-06 17:38:39,168 - INFO - Creating TIFF index...
+2025-10-06 17:38:39,170 - INFO - Found 655 TIFF files
+2025-10-06 17:38:39,171 - INFO - Indexed 655 TIFF files
+2025-10-06 17:38:39,171 - INFO - Creating coordinate mapping...
+2025-10-06 17:38:39,293 - INFO - Found 45875 unique image IDs and 454 TIFF coordinates
+2025-10-06 17:38:39,306 - INFO - Created coordinate mapping for 45875 image IDs
+2025-10-06 17:38:39,382 - INFO - Found 50381 H5 files
+2025-10-06 17:38:39,384 - INFO - Test mode: processing only 5 files
+2025-10-06 17:38:39,384 - INFO - Processing sequentially
+2025-10-06 17:38:39,384 - INFO - Processing Pinus_sylvestris_3_297805_BI_NLF_2017.h5 -> coordinates (9.0, 52.699999999999996)
+2025-10-06 17:38:39,384 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Pinus_sylvestris_3_297805_BI_NLF_2017.h5 at (9.0, 52.699999999999996) year 2017
+2025-10-06 17:38:39,384 - INFO - Processing Fraxinus_excelsior_4_30101_WEFL_NLF_2017.h5 -> coordinates (10.5, 52.0)
+2025-10-06 17:38:42,030 - INFO - Resizing patch from (0, 595) to (6, 6)
+2025-10-06 17:38:42,363 - ERROR - Error extracting patch: cannot convert float NaN to integer
+2025-10-06 17:38:42,365 - WARNING - Failed to extract patch for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Fraxinus_excelsior_4_30101_WEFL_NLF_2017.h5
+2025-10-06 17:38:42,366 - WARNING - Could not parse H5 filename: /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Cleared_0_20083_WEFL_NLF_2017.h5
+2025-10-06 17:38:42,366 - WARNING - Could not parse H5 filename: /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Cleared_0_24126_WEFL_NLF_2018.h5
+2025-10-06 17:38:42,366 - INFO - Processing Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 -> coordinates (10.8, 53.4)
+2025-10-06 17:38:42,366 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 at (10.8, 53.4) year 2020
+2025-10-06 17:38:42,366 - INFO - Processing complete: 0/5 files processed successfully
+2025-10-06 17:38:42,366 - WARNING - 5 files failed to process
+2025-10-06 17:39:26,710 - INFO - Starting TreeSatAI EFM embedding extraction
+2025-10-06 17:39:26,710 - INFO - Creating TIFF index...
+2025-10-06 17:39:26,711 - INFO - Found 655 TIFF files
+2025-10-06 17:39:26,713 - INFO - Indexed 655 TIFF files
+2025-10-06 17:39:26,713 - INFO - Creating coordinate mapping...
+2025-10-06 17:39:26,868 - INFO - Found 49968 unique image IDs and 454 TIFF coordinates
+2025-10-06 17:39:26,881 - INFO - Created coordinate mapping for 49968 image IDs
+2025-10-06 17:39:26,954 - INFO - Found 50381 H5 files
+2025-10-06 17:39:26,955 - INFO - Test mode: processing only 5 files
+2025-10-06 17:39:26,955 - INFO - Processing sequentially
+2025-10-06 17:39:26,955 - INFO - Processing Pinus_sylvestris_3_297805_BI_NLF_2017.h5 -> coordinates (9.100000000000001, 52.3)
+2025-10-06 17:39:26,955 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Pinus_sylvestris_3_297805_BI_NLF_2017.h5 at (9.100000000000001, 52.3) year 2017
+2025-10-06 17:39:26,956 - INFO - Processing Fraxinus_excelsior_4_30101_WEFL_NLF_2017.h5 -> coordinates (10.5, 53.199999999999996)
+2025-10-06 17:39:29,580 - INFO - Resizing patch from (0, 597) to (6, 6)
+2025-10-06 17:39:29,787 - ERROR - Error extracting patch: cannot convert float NaN to integer
+2025-10-06 17:39:29,790 - WARNING - Failed to extract patch for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Fraxinus_excelsior_4_30101_WEFL_NLF_2017.h5
+2025-10-06 17:39:29,790 - INFO - Processing Cleared_0_20083_WEFL_NLF_2017.h5 -> coordinates (8.8, 52.9)
+2025-10-06 17:39:29,792 - INFO - Merging 2 TIFF files
+2025-10-06 17:39:36,868 - INFO - Resizing patch from (0, 1113) to (6, 6)
+2025-10-06 17:39:36,869 - ERROR - Error extracting patch: cannot convert float NaN to integer
+2025-10-06 17:39:36,946 - WARNING - Failed to extract patch for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Cleared_0_20083_WEFL_NLF_2017.h5
+2025-10-06 17:39:36,946 - INFO - Processing Cleared_0_24126_WEFL_NLF_2018.h5 -> coordinates (9.9, 51.699999999999996)
+2025-10-06 17:39:36,946 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Cleared_0_24126_WEFL_NLF_2018.h5 at (9.9, 51.699999999999996) year 2018
+2025-10-06 17:39:36,946 - INFO - Processing Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 -> coordinates (10.9, 53.199999999999996)
+2025-10-06 17:39:36,946 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 at (10.9, 53.199999999999996) year 2020
+2025-10-06 17:39:36,946 - INFO - Processing complete: 0/5 files processed successfully
+2025-10-06 17:39:36,946 - WARNING - 5 files failed to process
+2025-10-06 17:41:08,385 - INFO - Starting TreeSatAI EFM embedding extraction
+2025-10-06 17:41:08,385 - INFO - Creating TIFF index...
+2025-10-06 17:41:08,387 - INFO - Found 655 TIFF files
+2025-10-06 17:41:08,388 - INFO - Indexed 655 TIFF files
+2025-10-06 17:41:08,388 - INFO - Creating coordinate mapping...
+2025-10-06 17:41:08,551 - INFO - Found 49968 unique image IDs and 454 TIFF coordinates
+2025-10-06 17:41:08,564 - INFO - Created coordinate mapping for 49968 image IDs
+2025-10-06 17:41:08,646 - INFO - Found 50381 H5 files
+2025-10-06 17:41:08,647 - INFO - Test mode: processing only 5 files
+2025-10-06 17:41:08,647 - INFO - Processing sequentially
+2025-10-06 17:41:08,647 - INFO - Processing Pinus_sylvestris_3_297805_BI_NLF_2017.h5 -> coordinates (9.100000000000001, 52.3)
+2025-10-06 17:41:08,647 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Pinus_sylvestris_3_297805_BI_NLF_2017.h5 at (9.100000000000001, 52.3) year 2017
+2025-10-06 17:41:08,647 - INFO - Processing Fraxinus_excelsior_4_30101_WEFL_NLF_2017.h5 -> coordinates (10.5, 53.199999999999996)
+2025-10-06 17:41:11,263 - WARNING - Patch has zero dimensions, creating empty patch
+2025-10-06 17:41:11,266 - INFO - Saved patch (6, 6, 64) to /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding/Fraxinus_excelsior_4_30101_WEFL_NLF_2017.npy
+2025-10-06 17:41:11,266 - INFO - Processing Cleared_0_20083_WEFL_NLF_2017.h5 -> coordinates (8.8, 52.9)
+2025-10-06 17:41:11,268 - INFO - Merging 2 TIFF files
+2025-10-06 17:41:18,381 - WARNING - Patch has zero dimensions, creating empty patch
+2025-10-06 17:41:18,459 - INFO - Saved patch (6, 6, 64) to /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding/Cleared_0_20083_WEFL_NLF_2017.npy
+2025-10-06 17:41:18,459 - INFO - Processing Cleared_0_24126_WEFL_NLF_2018.h5 -> coordinates (9.9, 51.699999999999996)
+2025-10-06 17:41:18,459 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Cleared_0_24126_WEFL_NLF_2018.h5 at (9.9, 51.699999999999996) year 2018
+2025-10-06 17:41:18,459 - INFO - Processing Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 -> coordinates (10.9, 53.199999999999996)
+2025-10-06 17:41:18,460 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 at (10.9, 53.199999999999996) year 2020
+2025-10-06 17:41:18,460 - INFO - Processing complete: 2/5 files processed successfully
+2025-10-06 17:41:18,460 - WARNING - 3 files failed to process
+2025-10-06 18:09:05,873 - INFO - Starting TreeSatAI EFM embedding extraction
+2025-10-06 18:09:05,873 - INFO - Creating TIFF index...
+2025-10-06 18:09:05,874 - INFO - Found 655 TIFF files
+2025-10-06 18:09:05,875 - INFO - Indexed 655 TIFF files
+2025-10-06 18:09:05,875 - INFO - Creating coordinate mapping...
+2025-10-06 18:09:06,030 - INFO - Found 49968 unique image IDs and 454 TIFF coordinates
+2025-10-06 18:09:06,044 - INFO - Created coordinate mapping for 49968 image IDs
+2025-10-06 18:09:06,116 - INFO - Found 50381 H5 files
+2025-10-06 18:09:06,117 - INFO - Test mode: processing only 5 files
+2025-10-06 18:09:06,118 - INFO - Processing sequentially
+2025-10-06 18:09:06,118 - INFO - Processing Pinus_sylvestris_3_297805_BI_NLF_2017.h5 -> coordinates (9.100000000000001, 52.3)
+2025-10-06 18:09:06,118 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Pinus_sylvestris_3_297805_BI_NLF_2017.h5 at (9.100000000000001, 52.3) year 2017
+2025-10-06 18:09:06,118 - INFO - Processing Fraxinus_excelsior_4_30101_WEFL_NLF_2017.h5 -> coordinates (10.5, 53.199999999999996)
+2025-10-06 18:09:08,719 - WARNING - Patch has zero dimensions, creating empty patch
+2025-10-06 18:09:08,722 - INFO - Saved patch (6, 6, 64) to /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding/Fraxinus_excelsior_4_30101_WEFL_NLF_2017.npy
+2025-10-06 18:09:08,722 - INFO - Processing Cleared_0_20083_WEFL_NLF_2017.h5 -> coordinates (8.8, 52.9)
+2025-10-06 18:09:08,724 - INFO - Merging 2 TIFF files
+2025-10-06 18:09:15,911 - WARNING - Patch has zero dimensions, creating empty patch
+2025-10-06 18:09:15,989 - INFO - Saved patch (6, 6, 64) to /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding/Cleared_0_20083_WEFL_NLF_2017.npy
+2025-10-06 18:09:15,990 - INFO - Processing Cleared_0_24126_WEFL_NLF_2018.h5 -> coordinates (9.9, 51.699999999999996)
+2025-10-06 18:09:15,990 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Cleared_0_24126_WEFL_NLF_2018.h5 at (9.9, 51.699999999999996) year 2018
+2025-10-06 18:09:15,990 - INFO - Processing Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 -> coordinates (10.9, 53.199999999999996)
+2025-10-06 18:09:15,990 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 at (10.9, 53.199999999999996) year 2020
+2025-10-06 18:09:15,990 - INFO - Processing complete: 2/5 files processed successfully
+2025-10-06 18:09:15,990 - WARNING - 3 files failed to process
+2025-10-06 18:18:41,861 - INFO - Starting TreeSatAI EFM embedding extraction
+2025-10-06 18:18:41,861 - INFO - Creating TIFF index...
+2025-10-06 18:18:41,862 - INFO - Found 655 TIFF files
+2025-10-06 18:18:41,864 - INFO - Indexed 655 TIFF files
+2025-10-06 18:18:41,864 - INFO - Creating coordinate mapping...
+2025-10-06 18:18:42,025 - INFO - Found 49968 unique image IDs and 454 TIFF coordinates
+2025-10-06 18:18:42,038 - INFO - Created coordinate mapping for 49968 image IDs
+2025-10-06 18:18:42,114 - INFO - Found 50381 H5 files
+2025-10-06 18:18:42,115 - INFO - Test mode: processing only 5 files
+2025-10-06 18:18:42,115 - INFO - Processing with 128 workers
+2025-10-06 18:18:42,392 - INFO - Processing Pinus_sylvestris_3_297805_BI_NLF_2017.h5 -> coordinates (9.100000000000001, 52.3)
+2025-10-06 18:18:42,392 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Pinus_sylvestris_3_297805_BI_NLF_2017.h5 at (9.100000000000001, 52.3) year 2017
+2025-10-06 18:18:42,404 - INFO - Processing Fraxinus_excelsior_4_30101_WEFL_NLF_2017.h5 -> coordinates (10.5, 53.199999999999996)
+2025-10-06 18:18:42,404 - INFO - Processing Cleared_0_24126_WEFL_NLF_2018.h5 -> coordinates (9.9, 51.699999999999996)
+2025-10-06 18:18:42,404 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Cleared_0_24126_WEFL_NLF_2018.h5 at (9.9, 51.699999999999996) year 2018
+2025-10-06 18:18:42,408 - INFO - Processing Cleared_0_20083_WEFL_NLF_2017.h5 -> coordinates (8.8, 52.9)
+2025-10-06 18:18:42,416 - INFO - Processing Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 -> coordinates (10.9, 53.199999999999996)
+2025-10-06 18:18:42,417 - WARNING - No intersecting TIFF files found for /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts/Fraxinus_excelsior_1_31212_WEFL_NLF_2020.h5 at (10.9, 53.199999999999996) year 2020
+2025-10-06 18:18:52,058 - INFO - Saved patch (6, 6, 64) to /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding/Fraxinus_excelsior_4_30101_WEFL_NLF_2017.npy
+2025-10-06 18:19:04,139 - INFO - Saved patch (6, 6, 64) to /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding/Cleared_0_20083_WEFL_NLF_2017.npy
+2025-10-06 18:19:04,247 - INFO - Processing complete: 2/5 files processed successfully
+2025-10-06 18:19:04,248 - WARNING - 3 files failed to process
+2025-10-06 18:33:47,195 - INFO - Starting TreeSatAI EFM embedding extraction
+2025-10-06 18:33:47,195 - INFO - TIFF directory: /scratch/zf281/pangaea-bench/data/treesatai/raw_efm_tif
+2025-10-06 18:33:47,195 - INFO - GeoJSON path: /scratch/zf281/pangaea-bench/data/treesatai/bb_60m.GeoJSON
+2025-10-06 18:33:47,195 - INFO - Output directory: /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding
+2025-10-06 18:33:47,195 - INFO - Target shape: (6, 6)
+2025-10-06 18:33:47,195 - INFO - Target resolution: 10.0m
+2025-10-06 18:33:47,195 - INFO - Minimum year: 2017
+2025-10-06 18:33:47,195 - INFO - Number of workers: 1
+2025-10-06 18:33:47,195 - INFO - Creating TIFF index...
+2025-10-06 18:33:47,198 - INFO - Indexed 655 TIFF files
+2025-10-06 18:33:47,198 - INFO - Reading GeoJSON...
+2025-10-06 18:33:48,362 - INFO - Converting GeoJSON from EPSG:25832 to EPSG:4326
+2025-10-06 18:33:48,471 - INFO - Using UTM CRS: EPSG:32632 (center: 9.16, 52.58)
+2025-10-06 18:33:48,496 - INFO - Filtered features: 50381 -> 22201 (year >= 2017)
+2025-10-06 18:33:51,053 - INFO - Test mode: processing only 10 features
+2025-10-06 18:33:51,054 - INFO - Processing 10 features...
+2025-10-06 18:33:51,054 - ERROR - Error extracting patch 138225: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,054 - ERROR - Error processing feature 138225: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,054 - ERROR - Error extracting patch 138342: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,055 - ERROR - Error processing feature 138342: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,055 - ERROR - Error extracting patch 138464: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,055 - ERROR - Error processing feature 138464: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,055 - ERROR - Error extracting patch 138466: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,055 - ERROR - Error processing feature 138466: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,055 - ERROR - Error extracting patch 138484: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,055 - ERROR - Error processing feature 138484: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,056 - ERROR - Error extracting patch 138603: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,056 - ERROR - Error processing feature 138603: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,056 - ERROR - Error extracting patch 138627: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,056 - ERROR - Error processing feature 138627: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,056 - ERROR - Error extracting patch 138750: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,056 - ERROR - Error processing feature 138750: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,056 - ERROR - Error extracting patch 138752: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,056 - ERROR - Error processing feature 138752: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,056 - ERROR - Error extracting patch 138756: 'data' should be array of geometry objects. Use from_shapely, from_wkb, from_wkt functions to construct a GeometryArray.
+2025-10-06 18:33:51,056 - ERROR - Error processing feature 138756: local variable 'reprojected_datasets' referenced before assignment
+2025-10-06 18:33:51,056 - INFO - Processing complete!
+2025-10-06 18:33:51,056 - INFO - Successful: 0
+2025-10-06 18:33:51,056 - INFO - Failed: 10
+2025-10-06 18:33:51,056 - INFO - Total: 10
+2025-10-06 18:33:51,056 - INFO - Success rate: 0.0%
+2025-10-06 18:35:19,553 - INFO - Starting TreeSatAI EFM embedding extraction
+2025-10-06 18:35:19,553 - INFO - TIFF directory: /scratch/zf281/pangaea-bench/data/treesatai/raw_efm_tif
+2025-10-06 18:35:19,553 - INFO - GeoJSON path: /scratch/zf281/pangaea-bench/data/treesatai/bb_60m.GeoJSON
+2025-10-06 18:35:19,553 - INFO - Output directory: /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding
+2025-10-06 18:35:19,553 - INFO - Target shape: (6, 6)
+2025-10-06 18:35:19,553 - INFO - Target resolution: 10.0m
+2025-10-06 18:35:19,553 - INFO - Minimum year: 2017
+2025-10-06 18:35:19,553 - INFO - Number of workers: 1
+2025-10-06 18:35:19,553 - INFO - Creating TIFF index...
+2025-10-06 18:35:19,556 - INFO - Indexed 655 TIFF files
+2025-10-06 18:35:19,556 - INFO - Reading GeoJSON...
+2025-10-06 18:35:20,728 - INFO - Converting GeoJSON from EPSG:25832 to EPSG:4326
+2025-10-06 18:35:20,827 - INFO - Using UTM CRS: EPSG:32632 (center: 9.16, 52.58)
+2025-10-06 18:35:20,851 - INFO - Filtered features: 50381 -> 22201 (year >= 2017)
+2025-10-06 18:35:23,410 - INFO - Test mode: processing only 10 features
+2025-10-06 18:35:23,410 - INFO - Processing 10 features...
+2025-10-06 18:35:32,489 - WARNING - Empty patch extracted for 138225
+2025-10-06 18:35:32,536 - WARNING - Failed to extract patch: patch_138225_2018.npy
+2025-10-06 18:35:40,882 - WARNING - Empty patch extracted for 138342
+2025-10-06 18:35:40,923 - WARNING - Failed to extract patch: patch_138342_2018.npy
+2025-10-06 18:35:49,348 - WARNING - Empty patch extracted for 138464
+2025-10-06 18:35:49,387 - WARNING - Failed to extract patch: patch_138464_2018.npy
+2025-10-06 18:35:57,822 - WARNING - Empty patch extracted for 138466
+2025-10-06 18:35:57,860 - WARNING - Failed to extract patch: patch_138466_2018.npy
+2025-10-06 18:36:06,413 - WARNING - Empty patch extracted for 138484
+2025-10-06 18:36:06,452 - WARNING - Failed to extract patch: patch_138484_2018.npy
+2025-10-06 18:36:14,859 - WARNING - Empty patch extracted for 138603
+2025-10-06 18:36:14,897 - WARNING - Failed to extract patch: patch_138603_2018.npy
+2025-10-06 18:36:23,425 - WARNING - Empty patch extracted for 138627
+2025-10-06 18:36:23,463 - WARNING - Failed to extract patch: patch_138627_2018.npy
+2025-10-06 18:36:31,897 - WARNING - Empty patch extracted for 138750
+2025-10-06 18:36:31,935 - WARNING - Failed to extract patch: patch_138750_2018.npy
+2025-10-06 18:36:40,451 - WARNING - Empty patch extracted for 138752
+2025-10-06 18:36:40,489 - WARNING - Failed to extract patch: patch_138752_2018.npy
+2025-10-06 18:36:48,909 - WARNING - Empty patch extracted for 138756
+2025-10-06 18:36:48,947 - WARNING - Failed to extract patch: patch_138756_2018.npy
+2025-10-06 18:36:48,947 - INFO - Processing complete!
+2025-10-06 18:36:48,947 - INFO - Successful: 0
+2025-10-06 18:36:48,947 - INFO - Failed: 10
+2025-10-06 18:36:48,947 - INFO - Total: 10
+2025-10-06 18:36:48,947 - INFO - Success rate: 0.0%
+2025-10-06 18:38:23,597 - INFO - Starting TreeSatAI EFM embedding extraction
+2025-10-06 18:38:23,598 - INFO - TIFF directory: /scratch/zf281/pangaea-bench/data/treesatai/raw_efm_tif
+2025-10-06 18:38:23,598 - INFO - GeoJSON path: /scratch/zf281/pangaea-bench/data/treesatai/bb_60m.GeoJSON
+2025-10-06 18:38:23,598 - INFO - Output directory: /scratch/zf281/pangaea-bench/data/treesatai/efm_embedding
+2025-10-06 18:38:23,598 - INFO - Target shape: (6, 6)
+2025-10-06 18:38:23,598 - INFO - Target resolution: 10.0m
+2025-10-06 18:38:23,598 - INFO - Minimum year: 2017
+2025-10-06 18:38:23,598 - INFO - Number of workers: 1
+2025-10-06 18:38:23,598 - INFO - Creating TIFF index...
+2025-10-06 18:38:24,157 - INFO - Indexed 655 TIFF files
+2025-10-06 18:38:24,157 - INFO - Reading GeoJSON...
+2025-10-06 18:38:25,352 - INFO - Converting GeoJSON from EPSG:25832 to EPSG:4326
+2025-10-06 18:38:25,453 - INFO - Using UTM CRS: EPSG:32632 (center: 9.16, 52.58)
+2025-10-06 18:38:25,478 - INFO - Filtered features: 50381 -> 22201 (year >= 2017)
+2025-10-06 18:38:27,966 - INFO - Test mode: processing only 10 features
+2025-10-06 18:38:27,966 - INFO - Processing 10 features...
+2025-10-06 18:38:36,783 - WARNING - Empty patch extracted for 138225
+2025-10-06 18:38:36,830 - WARNING - Failed to extract patch: patch_138225_2018.npy
+2025-10-06 18:38:45,252 - WARNING - Empty patch extracted for 138342
+2025-10-06 18:38:45,293 - WARNING - Failed to extract patch: patch_138342_2018.npy
+2025-10-06 18:38:53,712 - WARNING - Empty patch extracted for 138464
+2025-10-06 18:38:53,752 - WARNING - Failed to extract patch: patch_138464_2018.npy
+2025-10-06 18:39:02,247 - WARNING - Empty patch extracted for 138466
+2025-10-06 18:39:02,286 - WARNING - Failed to extract patch: patch_138466_2018.npy
+2025-10-06 18:39:11,132 - WARNING - Empty patch extracted for 138484
+2025-10-06 18:39:11,171 - WARNING - Failed to extract patch: patch_138484_2018.npy
+2025-10-06 18:39:19,573 - WARNING - Empty patch extracted for 138603
+2025-10-06 18:39:19,611 - WARNING - Failed to extract patch: patch_138603_2018.npy
+2025-10-06 18:39:28,168 - WARNING - Empty patch extracted for 138627
+2025-10-06 18:39:28,207 - WARNING - Failed to extract patch: patch_138627_2018.npy
+2025-10-06 18:39:36,612 - WARNING - Empty patch extracted for 138750
+2025-10-06 18:39:36,650 - WARNING - Failed to extract patch: patch_138750_2018.npy
+2025-10-06 18:39:45,110 - WARNING - Empty patch extracted for 138752
+2025-10-06 18:39:45,149 - WARNING - Failed to extract patch: patch_138752_2018.npy
+2025-10-06 18:39:53,586 - WARNING - Empty patch extracted for 138756
+2025-10-06 18:39:53,624 - WARNING - Failed to extract patch: patch_138756_2018.npy
+2025-10-06 18:39:53,625 - INFO - Processing complete!
+2025-10-06 18:39:53,625 - INFO - Successful: 0
+2025-10-06 18:39:53,625 - INFO - Failed: 10
+2025-10-06 18:39:53,625 - INFO - Total: 10
+2025-10-06 18:39:53,625 - INFO - Success rate: 0.0%

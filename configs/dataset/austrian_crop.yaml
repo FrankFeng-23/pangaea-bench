@@ -31,7 +31,6 @@ classes:
   - Other (Plants)
   - Other (Non Plants)
 
-# TODO: 这些distribution数据需要自行计算修改
 distribution:
   - 0.00000  # Background (excluded, 8,759,944 pixels)
   - 0.03275  # Legume (256,920 pixels, 3.27% of non-bg)
