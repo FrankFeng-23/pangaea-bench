@@ -29,6 +29,18 @@ torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py    --config-name=train    
 ## Austrian Crop
 torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py    --config-name=train    dataset=austrian_crop    encoder=galileo_base    decoder=seg_upernet_mt_ltae   preprocessing=seg_resize_moddrop    criterion=cross_entropy    task=segmentation
 
+## TreeSatAI
+torchrun --nnodes=1 --nproc_per_node=1 pangaea/run.py \
+   --config-name=train \
+   dataset=treesatai \
+   encoder=remoteclip \
+   decoder=cls_linear \
+   preprocessing=cls_resize \
+   criterion=binary_cross_entropy \
+   task=linear_classification_multi_label \
+   task.trainer.n_epochs=60 \
+   batch_size=256 \
+   finetune=false
 
 
 

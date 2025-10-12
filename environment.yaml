@@ -1,4 +1,4 @@
-name: pangaea-bench
+name: pangaea-bench-new
 channels:
   - pytorch
   - nvidia

@@ -1,0 +1,2044 @@
+/scratch/zf281/pangaea-bench/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/scratch/zf281/pangaea-bench/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+2025-10-08 10:56:04,941 - INFO - Initializing TreeSatAI dataset with 4 workers
+2025-10-08 10:56:04,941 - INFO - Labels path: /scratch/zf281/pangaea-bench/data/treesatai/TreeSatBA_v9_60m_multi_labels.json
+2025-10-08 10:56:04,941 - INFO - H5 directory: /scratch/zf281/pangaea-bench/data/treesatai/sentinel-ts
+2025-10-08 10:56:04,941 - INFO - Starting parallel label loading...
+2025-10-08 10:56:04,941 - INFO - Loading labels JSON file...
+2025-10-08 10:56:04,989 - INFO - Loaded 50381 labels from JSON
+2025-10-08 10:56:04,989 - INFO - Scanning H5 directory...
+2025-10-08 10:56:05,021 - INFO - Found 50381 H5 files
+2025-10-08 10:56:05,300 - INFO - Created 504 batches for parallel processing
+2025-10-08 10:56:05,300 - INFO - Using 4 worker processes
+2025-10-08 10:56:05,371 - INFO - Starting parallel processing...
+2025-10-08 10:56:05,374 - INFO - Collecting results from worker processes...
+2025-10-08 10:56:05,479 - INFO - Processing batch 0 with 100 files
+2025-10-08 10:56:05,481 - INFO - Batch 0: Processed 100/100 files
+2025-10-08 10:56:05,481 - INFO - Batch 0 completed: 100 valid samples
+2025-10-08 10:56:05,515 - INFO - Collected batch 1/504: 100 samples
+2025-10-08 10:56:05,540 - INFO - Processing batch 1 with 100 files
+2025-10-08 10:56:05,542 - INFO - Batch 1: Processed 100/100 files
+2025-10-08 10:56:05,542 - INFO - Batch 1 completed: 100 valid samples
+2025-10-08 10:56:05,558 - INFO - Collected batch 2/504: 100 samples
+2025-10-08 10:56:05,566 - INFO - Processing batch 2 with 100 files
+2025-10-08 10:56:05,568 - INFO - Batch 2: Processed 100/100 files
+2025-10-08 10:56:05,568 - INFO - Batch 2 completed: 100 valid samples
+2025-10-08 10:56:05,600 - INFO - Collected batch 3/504: 100 samples
+2025-10-08 10:56:05,610 - INFO - Processing batch 3 with 100 files
+2025-10-08 10:56:05,612 - INFO - Batch 3: Processed 100/100 files
+2025-10-08 10:56:05,612 - INFO - Batch 3 completed: 100 valid samples
+2025-10-08 10:56:05,637 - INFO - Collected batch 4/504: 100 samples
+2025-10-08 10:56:05,646 - INFO - Processing batch 4 with 100 files
+2025-10-08 10:56:05,647 - INFO - Batch 4: Processed 100/100 files
+2025-10-08 10:56:05,647 - INFO - Batch 4 completed: 100 valid samples
+2025-10-08 10:56:05,674 - INFO - Collected batch 5/504: 100 samples
+2025-10-08 10:56:05,683 - INFO - Processing batch 5 with 100 files
+2025-10-08 10:56:05,685 - INFO - Batch 5: Processed 100/100 files
+2025-10-08 10:56:05,685 - INFO - Batch 5 completed: 100 valid samples
+2025-10-08 10:56:05,711 - INFO - Collected batch 6/504: 100 samples
+2025-10-08 10:56:05,720 - INFO - Processing batch 6 with 100 files
+2025-10-08 10:56:05,721 - INFO - Batch 6: Processed 100/100 files
+2025-10-08 10:56:05,722 - INFO - Batch 6 completed: 100 valid samples
+2025-10-08 10:56:05,748 - INFO - Collected batch 7/504: 100 samples
+2025-10-08 10:56:05,758 - INFO - Processing batch 7 with 100 files
+2025-10-08 10:56:05,759 - INFO - Batch 7: Processed 100/100 files
+2025-10-08 10:56:05,759 - INFO - Batch 7 completed: 100 valid samples
+2025-10-08 10:56:05,787 - INFO - Collected batch 8/504: 100 samples
+2025-10-08 10:56:05,796 - INFO - Processing batch 8 with 100 files
+2025-10-08 10:56:05,797 - INFO - Batch 8: Processed 100/100 files
+2025-10-08 10:56:05,797 - INFO - Batch 8 completed: 100 valid samples
+2025-10-08 10:56:05,826 - INFO - Collected batch 9/504: 100 samples
+2025-10-08 10:56:05,835 - INFO - Processing batch 9 with 100 files
+2025-10-08 10:56:05,836 - INFO - Batch 9: Processed 100/100 files
+2025-10-08 10:56:05,837 - INFO - Batch 9 completed: 100 valid samples
+2025-10-08 10:56:05,865 - INFO - Collected batch 10/504: 100 samples
+2025-10-08 10:56:05,873 - INFO - Processing batch 10 with 100 files
+2025-10-08 10:56:05,874 - INFO - Batch 10: Processed 100/100 files
+2025-10-08 10:56:05,874 - INFO - Batch 10 completed: 100 valid samples
+2025-10-08 10:56:05,904 - INFO - Collected batch 11/504: 100 samples
+2025-10-08 10:56:05,914 - INFO - Processing batch 11 with 100 files
+2025-10-08 10:56:05,916 - INFO - Batch 11: Processed 100/100 files
+2025-10-08 10:56:05,916 - INFO - Batch 11 completed: 100 valid samples
+2025-10-08 10:56:05,942 - INFO - Collected batch 12/504: 100 samples
+2025-10-08 10:56:05,950 - INFO - Processing batch 12 with 100 files
+2025-10-08 10:56:05,951 - INFO - Batch 12: Processed 100/100 files
+2025-10-08 10:56:05,951 - INFO - Batch 12 completed: 100 valid samples
+2025-10-08 10:56:05,984 - INFO - Collected batch 13/504: 100 samples
+2025-10-08 10:56:05,991 - INFO - Processing batch 13 with 100 files
+2025-10-08 10:56:05,992 - INFO - Batch 13: Processed 100/100 files
+2025-10-08 10:56:05,992 - INFO - Batch 13 completed: 100 valid samples
+2025-10-08 10:56:06,024 - INFO - Collected batch 14/504: 100 samples
+2025-10-08 10:56:06,030 - INFO - Processing batch 14 with 100 files
+2025-10-08 10:56:06,031 - INFO - Batch 14: Processed 100/100 files
+2025-10-08 10:56:06,031 - INFO - Batch 14 completed: 100 valid samples
+2025-10-08 10:56:06,063 - INFO - Collected batch 15/504: 100 samples
+2025-10-08 10:56:06,077 - INFO - Processing batch 15 with 100 files
+2025-10-08 10:56:06,078 - INFO - Batch 15: Processed 100/100 files
+2025-10-08 10:56:06,078 - INFO - Batch 15 completed: 100 valid samples
+2025-10-08 10:56:06,104 - INFO - Collected batch 16/504: 100 samples
+2025-10-08 10:56:06,111 - INFO - Processing batch 16 with 100 files
+2025-10-08 10:56:06,113 - INFO - Batch 16: Processed 100/100 files
+2025-10-08 10:56:06,113 - INFO - Batch 16 completed: 100 valid samples
+2025-10-08 10:56:06,146 - INFO - Collected batch 17/504: 100 samples
+2025-10-08 10:56:06,153 - INFO - Processing batch 17 with 100 files
+2025-10-08 10:56:06,154 - INFO - Batch 17: Processed 100/100 files
+2025-10-08 10:56:06,154 - INFO - Batch 17 completed: 100 valid samples
+2025-10-08 10:56:06,185 - INFO - Collected batch 18/504: 100 samples
+2025-10-08 10:56:06,193 - INFO - Processing batch 18 with 100 files
+2025-10-08 10:56:06,194 - INFO - Batch 18: Processed 100/100 files
+2025-10-08 10:56:06,194 - INFO - Batch 18 completed: 100 valid samples
+2025-10-08 10:56:06,229 - INFO - Collected batch 19/504: 100 samples
+2025-10-08 10:56:06,233 - INFO - Processing batch 19 with 100 files
+2025-10-08 10:56:06,234 - INFO - Batch 19: Processed 100/100 files
+2025-10-08 10:56:06,234 - INFO - Batch 19 completed: 100 valid samples
+2025-10-08 10:56:06,269 - INFO - Collected batch 20/504: 100 samples
+2025-10-08 10:56:06,276 - INFO - Processing batch 20 with 100 files
+2025-10-08 10:56:06,278 - INFO - Batch 20: Processed 100/100 files
+2025-10-08 10:56:06,278 - INFO - Batch 20 completed: 100 valid samples
+2025-10-08 10:56:06,311 - INFO - Collected batch 21/504: 100 samples
+2025-10-08 10:56:06,318 - INFO - Processing batch 21 with 100 files
+2025-10-08 10:56:06,319 - INFO - Batch 21: Processed 100/100 files
+2025-10-08 10:56:06,319 - INFO - Batch 21 completed: 100 valid samples
+2025-10-08 10:56:06,350 - INFO - Collected batch 22/504: 100 samples
+2025-10-08 10:56:06,358 - INFO - Processing batch 22 with 100 files
+2025-10-08 10:56:06,359 - INFO - Batch 22: Processed 100/100 files
+2025-10-08 10:56:06,359 - INFO - Batch 22 completed: 100 valid samples
+2025-10-08 10:56:06,391 - INFO - Collected batch 23/504: 100 samples
+2025-10-08 10:56:06,399 - INFO - Processing batch 23 with 100 files
+2025-10-08 10:56:06,400 - INFO - Batch 23: Processed 100/100 files
+2025-10-08 10:56:06,400 - INFO - Batch 23 completed: 100 valid samples
+2025-10-08 10:56:06,430 - INFO - Collected batch 24/504: 100 samples
+2025-10-08 10:56:06,437 - INFO - Processing batch 24 with 100 files
+2025-10-08 10:56:06,439 - INFO - Batch 24: Processed 100/100 files
+2025-10-08 10:56:06,439 - INFO - Batch 24 completed: 100 valid samples
+2025-10-08 10:56:06,473 - INFO - Collected batch 25/504: 100 samples
+2025-10-08 10:56:06,477 - INFO - Processing batch 25 with 100 files
+2025-10-08 10:56:06,478 - INFO - Batch 25: Processed 100/100 files
+2025-10-08 10:56:06,478 - INFO - Batch 25 completed: 100 valid samples
+2025-10-08 10:56:06,513 - INFO - Collected batch 26/504: 100 samples
+2025-10-08 10:56:06,518 - INFO - Processing batch 26 with 100 files
+2025-10-08 10:56:06,519 - INFO - Batch 26: Processed 100/100 files
+2025-10-08 10:56:06,519 - INFO - Batch 26 completed: 100 valid samples
+2025-10-08 10:56:06,552 - INFO - Collected batch 27/504: 100 samples
+2025-10-08 10:56:06,559 - INFO - Processing batch 27 with 100 files
+2025-10-08 10:56:06,560 - INFO - Batch 27: Processed 100/100 files
+2025-10-08 10:56:06,560 - INFO - Batch 27 completed: 100 valid samples
+2025-10-08 10:56:06,598 - INFO - Processing batch 28 with 100 files
+2025-10-08 10:56:06,599 - INFO - Collected batch 28/504: 100 samples
+2025-10-08 10:56:06,600 - INFO - Batch 28: Processed 100/100 files
+2025-10-08 10:56:06,600 - INFO - Batch 28 completed: 100 valid samples
+2025-10-08 10:56:06,601 - INFO - Collected batch 29/504: 100 samples
+2025-10-08 10:56:06,664 - INFO - Processing batch 29 with 100 files
+2025-10-08 10:56:06,665 - INFO - Batch 29: Processed 100/100 files
+2025-10-08 10:56:06,665 - INFO - Batch 29 completed: 100 valid samples
+2025-10-08 10:56:06,687 - INFO - Collected batch 30/504: 100 samples
+2025-10-08 10:56:06,688 - INFO - Processing batch 30 with 100 files
+2025-10-08 10:56:06,689 - INFO - Batch 30: Processed 100/100 files
+2025-10-08 10:56:06,689 - INFO - Batch 30 completed: 100 valid samples
+2025-10-08 10:56:06,690 - INFO - Collected batch 31/504: 100 samples
+2025-10-08 10:56:06,736 - INFO - Processing batch 31 with 100 files
+2025-10-08 10:56:06,737 - INFO - Batch 31: Processed 100/100 files
+2025-10-08 10:56:06,737 - INFO - Batch 31 completed: 100 valid samples
+2025-10-08 10:56:06,773 - INFO - Collected batch 32/504: 100 samples
+2025-10-08 10:56:06,778 - INFO - Processing batch 32 with 100 files
+2025-10-08 10:56:06,779 - INFO - Batch 32: Processed 100/100 files
+2025-10-08 10:56:06,779 - INFO - Batch 32 completed: 100 valid samples
+2025-10-08 10:56:06,814 - INFO - Collected batch 33/504: 100 samples
+2025-10-08 10:56:06,822 - INFO - Processing batch 33 with 100 files
+2025-10-08 10:56:06,823 - INFO - Batch 33: Processed 100/100 files
+2025-10-08 10:56:06,823 - INFO - Batch 33 completed: 100 valid samples
+2025-10-08 10:56:06,860 - INFO - Processing batch 34 with 100 files
+2025-10-08 10:56:06,861 - INFO - Batch 34: Processed 100/100 files
+2025-10-08 10:56:06,861 - INFO - Batch 34 completed: 100 valid samples
+2025-10-08 10:56:06,861 - INFO - Collected batch 34/504: 100 samples
+2025-10-08 10:56:06,861 - INFO - Collected batch 35/504: 100 samples
+2025-10-08 10:56:06,908 - INFO - Processing batch 35 with 100 files
+2025-10-08 10:56:06,909 - INFO - Batch 35: Processed 100/100 files
+2025-10-08 10:56:06,909 - INFO - Batch 35 completed: 100 valid samples
+2025-10-08 10:56:06,946 - INFO - Processing batch 36 with 100 files
+2025-10-08 10:56:06,948 - INFO - Batch 36: Processed 100/100 files
+2025-10-08 10:56:06,948 - INFO - Batch 36 completed: 100 valid samples
+2025-10-08 10:56:06,951 - INFO - Collected batch 36/504: 100 samples
+2025-10-08 10:56:06,951 - INFO - Collected batch 37/504: 100 samples
+2025-10-08 10:56:06,994 - INFO - Processing batch 37 with 100 files
+2025-10-08 10:56:06,996 - INFO - Batch 37: Processed 100/100 files
+2025-10-08 10:56:06,996 - INFO - Batch 37 completed: 100 valid samples
+2025-10-08 10:56:06,997 - INFO - Collected batch 38/504: 100 samples
+2025-10-08 10:56:07,040 - INFO - Processing batch 38 with 100 files
+2025-10-08 10:56:07,041 - INFO - Batch 38: Processed 100/100 files
+2025-10-08 10:56:07,041 - INFO - Batch 38 completed: 100 valid samples
+2025-10-08 10:56:07,042 - INFO - Collected batch 39/504: 100 samples
+2025-10-08 10:56:07,083 - INFO - Processing batch 39 with 100 files
+2025-10-08 10:56:07,084 - INFO - Batch 39: Processed 100/100 files
+2025-10-08 10:56:07,084 - INFO - Batch 39 completed: 100 valid samples
+2025-10-08 10:56:07,085 - INFO - Collected batch 40/504: 100 samples
+2025-10-08 10:56:07,132 - INFO - Processing batch 40 with 100 files
+2025-10-08 10:56:07,133 - INFO - Batch 40: Processed 100/100 files
+2025-10-08 10:56:07,133 - INFO - Batch 40 completed: 100 valid samples
+2025-10-08 10:56:07,168 - INFO - Collected batch 41/504: 100 samples
+2025-10-08 10:56:07,173 - INFO - Processing batch 41 with 100 files
+2025-10-08 10:56:07,174 - INFO - Batch 41: Processed 100/100 files
+2025-10-08 10:56:07,174 - INFO - Batch 41 completed: 100 valid samples
+2025-10-08 10:56:07,211 - INFO - Collected batch 42/504: 100 samples
+2025-10-08 10:56:07,214 - INFO - Processing batch 42 with 100 files
+2025-10-08 10:56:07,215 - INFO - Batch 42: Processed 100/100 files
+2025-10-08 10:56:07,215 - INFO - Batch 42 completed: 100 valid samples
+2025-10-08 10:56:07,216 - INFO - Collected batch 43/504: 100 samples
+2025-10-08 10:56:07,256 - INFO - Processing batch 43 with 100 files
+2025-10-08 10:56:07,258 - INFO - Batch 43: Processed 100/100 files
+2025-10-08 10:56:07,258 - INFO - Batch 43 completed: 100 valid samples
+2025-10-08 10:56:07,299 - INFO - Collected batch 44/504: 100 samples
+2025-10-08 10:56:07,315 - INFO - Processing batch 44 with 100 files
+2025-10-08 10:56:07,316 - INFO - Batch 44: Processed 100/100 files
+2025-10-08 10:56:07,316 - INFO - Batch 44 completed: 100 valid samples
+2025-10-08 10:56:07,342 - INFO - Collected batch 45/504: 100 samples
+2025-10-08 10:56:07,349 - INFO - Processing batch 45 with 100 files
+2025-10-08 10:56:07,351 - INFO - Batch 45: Processed 100/100 files
+2025-10-08 10:56:07,351 - INFO - Batch 45 completed: 100 valid samples
+2025-10-08 10:56:07,385 - INFO - Collected batch 46/504: 100 samples
+2025-10-08 10:56:07,391 - INFO - Processing batch 46 with 100 files
+2025-10-08 10:56:07,392 - INFO - Batch 46: Processed 100/100 files
+2025-10-08 10:56:07,392 - INFO - Batch 46 completed: 100 valid samples
+2025-10-08 10:56:07,429 - INFO - Collected batch 47/504: 100 samples
+2025-10-08 10:56:07,436 - INFO - Processing batch 47 with 100 files
+2025-10-08 10:56:07,438 - INFO - Batch 47: Processed 100/100 files
+2025-10-08 10:56:07,438 - INFO - Batch 47 completed: 100 valid samples
+2025-10-08 10:56:07,474 - INFO - Collected batch 48/504: 100 samples
+2025-10-08 10:56:07,476 - INFO - Processing batch 48 with 100 files
+2025-10-08 10:56:07,478 - INFO - Batch 48: Processed 100/100 files
+2025-10-08 10:56:07,478 - INFO - Batch 48 completed: 100 valid samples
+2025-10-08 10:56:07,478 - INFO - Collected batch 49/504: 100 samples
+2025-10-08 10:56:07,521 - INFO - Processing batch 49 with 100 files
+2025-10-08 10:56:07,522 - INFO - Batch 49: Processed 100/100 files
+2025-10-08 10:56:07,522 - INFO - Batch 49 completed: 100 valid samples
+2025-10-08 10:56:07,561 - INFO - Collected batch 50/504: 100 samples
+2025-10-08 10:56:07,563 - INFO - Processing batch 50 with 100 files
+2025-10-08 10:56:07,564 - INFO - Batch 50: Processed 100/100 files
+2025-10-08 10:56:07,564 - INFO - Batch 50 completed: 100 valid samples
+2025-10-08 10:56:07,600 - INFO - Collected batch 51/504: 100 samples
+2025-10-08 10:56:07,608 - INFO - Processing batch 51 with 100 files
+2025-10-08 10:56:07,609 - INFO - Batch 51: Processed 100/100 files
+2025-10-08 10:56:07,609 - INFO - Batch 51 completed: 100 valid samples
+2025-10-08 10:56:07,640 - INFO - Collected batch 52/504: 100 samples
+2025-10-08 10:56:07,646 - INFO - Processing batch 52 with 100 files
+2025-10-08 10:56:07,647 - INFO - Batch 52: Processed 100/100 files
+2025-10-08 10:56:07,647 - INFO - Batch 52 completed: 100 valid samples
+2025-10-08 10:56:07,682 - INFO - Collected batch 53/504: 100 samples
+2025-10-08 10:56:07,686 - INFO - Processing batch 53 with 100 files
+2025-10-08 10:56:07,688 - INFO - Batch 53: Processed 100/100 files
+2025-10-08 10:56:07,688 - INFO - Batch 53 completed: 100 valid samples
+2025-10-08 10:56:07,724 - INFO - Processing batch 54 with 100 files
+2025-10-08 10:56:07,726 - INFO - Batch 54: Processed 100/100 files
+2025-10-08 10:56:07,726 - INFO - Batch 54 completed: 100 valid samples
+2025-10-08 10:56:07,729 - INFO - Collected batch 54/504: 100 samples
+2025-10-08 10:56:07,729 - INFO - Collected batch 55/504: 100 samples
+2025-10-08 10:56:07,792 - INFO - Processing batch 55 with 100 files
+2025-10-08 10:56:07,793 - INFO - Batch 55: Processed 100/100 files
+2025-10-08 10:56:07,793 - INFO - Batch 55 completed: 100 valid samples
+2025-10-08 10:56:07,826 - INFO - Collected batch 56/504: 100 samples
+2025-10-08 10:56:07,847 - INFO - Processing batch 56 with 100 files
+2025-10-08 10:56:07,848 - INFO - Batch 56: Processed 100/100 files
+2025-10-08 10:56:07,848 - INFO - Batch 56 completed: 100 valid samples
+2025-10-08 10:56:07,869 - INFO - Collected batch 57/504: 100 samples
+2025-10-08 10:56:07,882 - INFO - Processing batch 57 with 100 files
+2025-10-08 10:56:07,884 - INFO - Batch 57: Processed 100/100 files
+2025-10-08 10:56:07,884 - INFO - Batch 57 completed: 100 valid samples
+2025-10-08 10:56:07,911 - INFO - Collected batch 58/504: 100 samples
+2025-10-08 10:56:07,915 - INFO - Processing batch 58 with 100 files
+2025-10-08 10:56:07,917 - INFO - Batch 58: Processed 100/100 files
+2025-10-08 10:56:07,917 - INFO - Batch 58 completed: 100 valid samples
+2025-10-08 10:56:07,954 - INFO - Collected batch 59/504: 100 samples
+2025-10-08 10:56:07,958 - INFO - Processing batch 59 with 100 files
+2025-10-08 10:56:07,960 - INFO - Batch 59: Processed 100/100 files
+2025-10-08 10:56:07,960 - INFO - Batch 59 completed: 100 valid samples
+2025-10-08 10:56:07,997 - INFO - Collected batch 60/504: 100 samples
+2025-10-08 10:56:08,001 - INFO - Processing batch 60 with 100 files
+2025-10-08 10:56:08,002 - INFO - Batch 60: Processed 100/100 files
+2025-10-08 10:56:08,002 - INFO - Batch 60 completed: 100 valid samples
+2025-10-08 10:56:08,039 - INFO - Collected batch 61/504: 100 samples
+2025-10-08 10:56:08,044 - INFO - Processing batch 61 with 100 files
+2025-10-08 10:56:08,046 - INFO - Batch 61: Processed 100/100 files
+2025-10-08 10:56:08,046 - INFO - Batch 61 completed: 100 valid samples
+2025-10-08 10:56:08,081 - INFO - Collected batch 62/504: 100 samples
+2025-10-08 10:56:08,084 - INFO - Processing batch 62 with 100 files
+2025-10-08 10:56:08,086 - INFO - Batch 62: Processed 100/100 files
+2025-10-08 10:56:08,086 - INFO - Batch 62 completed: 100 valid samples
+2025-10-08 10:56:08,086 - INFO - Collected batch 63/504: 100 samples
+2025-10-08 10:56:08,128 - INFO - Processing batch 63 with 100 files
+2025-10-08 10:56:08,129 - INFO - Batch 63: Processed 100/100 files
+2025-10-08 10:56:08,129 - INFO - Batch 63 completed: 100 valid samples
+2025-10-08 10:56:08,130 - INFO - Collected batch 64/504: 100 samples
+2025-10-08 10:56:08,173 - INFO - Processing batch 64 with 100 files
+2025-10-08 10:56:08,174 - INFO - Batch 64: Processed 100/100 files
+2025-10-08 10:56:08,174 - INFO - Batch 64 completed: 100 valid samples
+2025-10-08 10:56:08,211 - INFO - Collected batch 65/504: 100 samples
+2025-10-08 10:56:08,215 - INFO - Processing batch 65 with 100 files
+2025-10-08 10:56:08,216 - INFO - Batch 65: Processed 100/100 files
+2025-10-08 10:56:08,217 - INFO - Batch 65 completed: 100 valid samples
+2025-10-08 10:56:08,250 - INFO - Collected batch 66/504: 100 samples
+2025-10-08 10:56:08,277 - INFO - Processing batch 66 with 100 files
+2025-10-08 10:56:08,278 - INFO - Batch 66: Processed 100/100 files
+2025-10-08 10:56:08,278 - INFO - Batch 66 completed: 100 valid samples
+2025-10-08 10:56:08,295 - INFO - Processing batch 67 with 100 files
+2025-10-08 10:56:08,297 - INFO - Batch 67: Processed 100/100 files
+2025-10-08 10:56:08,297 - INFO - Batch 67 completed: 100 valid samples
+2025-10-08 10:56:08,299 - INFO - Collected batch 67/504: 100 samples
+2025-10-08 10:56:08,299 - INFO - Collected batch 68/504: 100 samples
+2025-10-08 10:56:08,344 - INFO - Processing batch 68 with 100 files
+2025-10-08 10:56:08,345 - INFO - Batch 68: Processed 100/100 files
+2025-10-08 10:56:08,346 - INFO - Batch 68 completed: 100 valid samples
+2025-10-08 10:56:08,382 - INFO - Processing batch 69 with 100 files
+2025-10-08 10:56:08,383 - INFO - Batch 69: Processed 100/100 files
+2025-10-08 10:56:08,383 - INFO - Batch 69 completed: 100 valid samples
+2025-10-08 10:56:08,389 - INFO - Collected batch 69/504: 100 samples
+2025-10-08 10:56:08,389 - INFO - Collected batch 70/504: 100 samples
+2025-10-08 10:56:08,450 - INFO - Processing batch 70 with 100 files
+2025-10-08 10:56:08,451 - INFO - Batch 70: Processed 100/100 files
+2025-10-08 10:56:08,451 - INFO - Batch 70 completed: 100 valid samples
+2025-10-08 10:56:08,478 - INFO - Collected batch 71/504: 100 samples
+2025-10-08 10:56:08,481 - INFO - Processing batch 71 with 100 files
+2025-10-08 10:56:08,482 - INFO - Batch 71: Processed 100/100 files
+2025-10-08 10:56:08,482 - INFO - Batch 71 completed: 100 valid samples
+2025-10-08 10:56:08,523 - INFO - Processing batch 72 with 100 files
+2025-10-08 10:56:08,524 - INFO - Batch 72: Processed 100/100 files
+2025-10-08 10:56:08,524 - INFO - Batch 72 completed: 100 valid samples
+2025-10-08 10:56:08,531 - INFO - Collected batch 72/504: 100 samples
+2025-10-08 10:56:08,532 - INFO - Collected batch 73/504: 100 samples
+2025-10-08 10:56:08,573 - INFO - Processing batch 73 with 100 files
+2025-10-08 10:56:08,574 - INFO - Batch 73: Processed 100/100 files
+2025-10-08 10:56:08,574 - INFO - Batch 73 completed: 100 valid samples
+2025-10-08 10:56:08,575 - INFO - Collected batch 74/504: 100 samples
+2025-10-08 10:56:08,615 - INFO - Processing batch 74 with 100 files
+2025-10-08 10:56:08,617 - INFO - Batch 74: Processed 100/100 files
+2025-10-08 10:56:08,617 - INFO - Batch 74 completed: 100 valid samples
+2025-10-08 10:56:08,618 - INFO - Collected batch 75/504: 100 samples
+2025-10-08 10:56:08,664 - INFO - Processing batch 75 with 100 files
+2025-10-08 10:56:08,665 - INFO - Batch 75: Processed 100/100 files
+2025-10-08 10:56:08,665 - INFO - Batch 75 completed: 100 valid samples
+2025-10-08 10:56:08,703 - INFO - Collected batch 76/504: 100 samples
+2025-10-08 10:56:08,707 - INFO - Processing batch 76 with 100 files
+2025-10-08 10:56:08,708 - INFO - Batch 76: Processed 100/100 files
+2025-10-08 10:56:08,708 - INFO - Batch 76 completed: 100 valid samples
+2025-10-08 10:56:08,743 - INFO - Collected batch 77/504: 100 samples
+2025-10-08 10:56:08,749 - INFO - Processing batch 77 with 100 files
+2025-10-08 10:56:08,750 - INFO - Batch 77: Processed 100/100 files
+2025-10-08 10:56:08,750 - INFO - Batch 77 completed: 100 valid samples
+2025-10-08 10:56:08,788 - INFO - Processing batch 78 with 100 files
+2025-10-08 10:56:08,789 - INFO - Collected batch 78/504: 100 samples
+2025-10-08 10:56:08,789 - INFO - Batch 78: Processed 100/100 files
+2025-10-08 10:56:08,789 - INFO - Batch 78 completed: 100 valid samples
+2025-10-08 10:56:08,790 - INFO - Collected batch 79/504: 100 samples
+2025-10-08 10:56:08,829 - INFO - Processing batch 79 with 100 files
+2025-10-08 10:56:08,831 - INFO - Batch 79: Processed 100/100 files
+2025-10-08 10:56:08,831 - INFO - Batch 79 completed: 100 valid samples
+2025-10-08 10:56:08,832 - INFO - Collected batch 80/504: 100 samples
+2025-10-08 10:56:08,871 - INFO - Processing batch 80 with 100 files
+2025-10-08 10:56:08,873 - INFO - Batch 80: Processed 100/100 files
+2025-10-08 10:56:08,873 - INFO - Batch 80 completed: 100 valid samples
+2025-10-08 10:56:08,873 - INFO - Collected batch 81/504: 100 samples
+2025-10-08 10:56:08,913 - INFO - Processing batch 81 with 100 files
+2025-10-08 10:56:08,915 - INFO - Batch 81: Processed 100/100 files
+2025-10-08 10:56:08,915 - INFO - Batch 81 completed: 100 valid samples
+2025-10-08 10:56:08,917 - INFO - Collected batch 82/504: 100 samples
+2025-10-08 10:56:08,959 - INFO - Processing batch 82 with 100 files
+2025-10-08 10:56:08,960 - INFO - Batch 82: Processed 100/100 files
+2025-10-08 10:56:08,960 - INFO - Batch 82 completed: 100 valid samples
+2025-10-08 10:56:08,965 - INFO - Collected batch 83/504: 100 samples
+2025-10-08 10:56:09,005 - INFO - Processing batch 83 with 100 files
+2025-10-08 10:56:09,006 - INFO - Batch 83: Processed 100/100 files
+2025-10-08 10:56:09,006 - INFO - Batch 83 completed: 100 valid samples
+2025-10-08 10:56:09,010 - INFO - Collected batch 84/504: 100 samples
+2025-10-08 10:56:09,053 - INFO - Processing batch 84 with 100 files
+2025-10-08 10:56:09,054 - INFO - Batch 84: Processed 100/100 files
+2025-10-08 10:56:09,054 - INFO - Batch 84 completed: 100 valid samples
+2025-10-08 10:56:09,055 - INFO - Collected batch 85/504: 100 samples
+2025-10-08 10:56:09,096 - INFO - Processing batch 85 with 100 files
+2025-10-08 10:56:09,097 - INFO - Batch 85: Processed 100/100 files
+2025-10-08 10:56:09,097 - INFO - Batch 85 completed: 100 valid samples
+2025-10-08 10:56:09,102 - INFO - Collected batch 86/504: 100 samples
+2025-10-08 10:56:09,146 - INFO - Processing batch 86 with 100 files
+2025-10-08 10:56:09,148 - INFO - Batch 86: Processed 100/100 files
+2025-10-08 10:56:09,148 - INFO - Batch 86 completed: 100 valid samples
+2025-10-08 10:56:09,148 - INFO - Collected batch 87/504: 100 samples
+2025-10-08 10:56:09,191 - INFO - Processing batch 87 with 100 files
+2025-10-08 10:56:09,192 - INFO - Batch 87: Processed 100/100 files
+2025-10-08 10:56:09,192 - INFO - Batch 87 completed: 100 valid samples
+2025-10-08 10:56:09,193 - INFO - Collected batch 88/504: 100 samples
+2025-10-08 10:56:09,235 - INFO - Processing batch 88 with 100 files
+2025-10-08 10:56:09,236 - INFO - Batch 88: Processed 100/100 files
+2025-10-08 10:56:09,236 - INFO - Batch 88 completed: 100 valid samples
+2025-10-08 10:56:09,275 - INFO - Processing batch 89 with 100 files
+2025-10-08 10:56:09,276 - INFO - Collected batch 89/504: 100 samples
+2025-10-08 10:56:09,276 - INFO - Batch 89: Processed 100/100 files
+2025-10-08 10:56:09,276 - INFO - Batch 89 completed: 100 valid samples
+2025-10-08 10:56:09,277 - INFO - Collected batch 90/504: 100 samples
+2025-10-08 10:56:09,317 - INFO - Processing batch 90 with 100 files
+2025-10-08 10:56:09,319 - INFO - Batch 90: Processed 100/100 files
+2025-10-08 10:56:09,319 - INFO - Batch 90 completed: 100 valid samples
+2025-10-08 10:56:09,323 - INFO - Collected batch 91/504: 100 samples
+2025-10-08 10:56:09,367 - INFO - Processing batch 91 with 100 files
+2025-10-08 10:56:09,368 - INFO - Batch 91: Processed 100/100 files
+2025-10-08 10:56:09,368 - INFO - Batch 91 completed: 100 valid samples
+2025-10-08 10:56:09,369 - INFO - Collected batch 92/504: 100 samples
+2025-10-08 10:56:09,409 - INFO - Processing batch 92 with 100 files
+2025-10-08 10:56:09,410 - INFO - Batch 92: Processed 100/100 files
+2025-10-08 10:56:09,410 - INFO - Batch 92 completed: 100 valid samples
+2025-10-08 10:56:09,417 - INFO - Collected batch 93/504: 100 samples
+2025-10-08 10:56:09,464 - INFO - Processing batch 93 with 100 files
+2025-10-08 10:56:09,465 - INFO - Batch 93: Processed 100/100 files
+2025-10-08 10:56:09,465 - INFO - Batch 93 completed: 100 valid samples
+2025-10-08 10:56:09,502 - INFO - Collected batch 94/504: 100 samples
+2025-10-08 10:56:09,509 - INFO - Processing batch 94 with 100 files
+2025-10-08 10:56:09,510 - INFO - Batch 94: Processed 100/100 files
+2025-10-08 10:56:09,510 - INFO - Batch 94 completed: 100 valid samples
+2025-10-08 10:56:09,547 - INFO - Processing batch 95 with 100 files
+2025-10-08 10:56:09,548 - INFO - Batch 95: Processed 100/100 files
+2025-10-08 10:56:09,549 - INFO - Batch 95 completed: 100 valid samples
+2025-10-08 10:56:09,550 - INFO - Collected batch 95/504: 100 samples
+2025-10-08 10:56:09,550 - INFO - Collected batch 96/504: 100 samples
+2025-10-08 10:56:09,589 - INFO - Processing batch 96 with 100 files
+2025-10-08 10:56:09,591 - INFO - Batch 96: Processed 100/100 files
+2025-10-08 10:56:09,591 - INFO - Batch 96 completed: 100 valid samples
+2025-10-08 10:56:09,592 - INFO - Collected batch 97/504: 100 samples
+2025-10-08 10:56:09,633 - INFO - Processing batch 97 with 100 files
+2025-10-08 10:56:09,634 - INFO - Batch 97: Processed 100/100 files
+2025-10-08 10:56:09,634 - INFO - Batch 97 completed: 100 valid samples
+2025-10-08 10:56:09,635 - INFO - Collected batch 98/504: 100 samples
+2025-10-08 10:56:09,673 - INFO - Processing batch 98 with 100 files
+2025-10-08 10:56:09,674 - INFO - Batch 98: Processed 100/100 files
+2025-10-08 10:56:09,674 - INFO - Batch 98 completed: 100 valid samples
+2025-10-08 10:56:09,676 - INFO - Collected batch 99/504: 100 samples
+2025-10-08 10:56:09,722 - INFO - Processing batch 99 with 100 files
+2025-10-08 10:56:09,723 - INFO - Batch 99: Processed 100/100 files
+2025-10-08 10:56:09,724 - INFO - Batch 99 completed: 100 valid samples
+2025-10-08 10:56:09,761 - INFO - Processing batch 100 with 100 files
+2025-10-08 10:56:09,762 - INFO - Batch 100: Processed 100/100 files
+2025-10-08 10:56:09,762 - INFO - Batch 100 completed: 100 valid samples
+2025-10-08 10:56:09,763 - INFO - Collected batch 100/504: 100 samples
+2025-10-08 10:56:09,763 - INFO - Collected batch 101/504: 100 samples
+2025-10-08 10:56:09,806 - INFO - Processing batch 101 with 100 files
+2025-10-08 10:56:09,808 - INFO - Batch 101: Processed 100/100 files
+2025-10-08 10:56:09,808 - INFO - Batch 101 completed: 100 valid samples
+2025-10-08 10:56:09,808 - INFO - Collected batch 102/504: 100 samples
+2025-10-08 10:56:09,848 - INFO - Processing batch 102 with 100 files
+2025-10-08 10:56:09,849 - INFO - Batch 102: Processed 100/100 files
+2025-10-08 10:56:09,849 - INFO - Batch 102 completed: 100 valid samples
+2025-10-08 10:56:09,850 - INFO - Collected batch 103/504: 100 samples
+2025-10-08 10:56:09,890 - INFO - Processing batch 103 with 100 files
+2025-10-08 10:56:09,892 - INFO - Batch 103: Processed 100/100 files
+2025-10-08 10:56:09,892 - INFO - Batch 103 completed: 100 valid samples
+2025-10-08 10:56:09,899 - INFO - Collected batch 104/504: 100 samples
+2025-10-08 10:56:09,941 - INFO - Processing batch 104 with 100 files
+2025-10-08 10:56:09,942 - INFO - Batch 104: Processed 100/100 files
+2025-10-08 10:56:09,942 - INFO - Batch 104 completed: 100 valid samples
+2025-10-08 10:56:09,943 - INFO - Collected batch 105/504: 100 samples
+2025-10-08 10:56:09,985 - INFO - Processing batch 105 with 100 files
+2025-10-08 10:56:09,986 - INFO - Batch 105: Processed 100/100 files
+2025-10-08 10:56:09,986 - INFO - Batch 105 completed: 100 valid samples
+2025-10-08 10:56:09,987 - INFO - Collected batch 106/504: 100 samples
+2025-10-08 10:56:10,027 - INFO - Processing batch 106 with 100 files
+2025-10-08 10:56:10,029 - INFO - Batch 106: Processed 100/100 files
+2025-10-08 10:56:10,029 - INFO - Batch 106 completed: 100 valid samples
+2025-10-08 10:56:10,035 - INFO - Collected batch 107/504: 100 samples
+2025-10-08 10:56:10,077 - INFO - Processing batch 107 with 100 files
+2025-10-08 10:56:10,078 - INFO - Batch 107: Processed 100/100 files
+2025-10-08 10:56:10,078 - INFO - Batch 107 completed: 100 valid samples
+2025-10-08 10:56:10,080 - INFO - Collected batch 108/504: 100 samples
+2025-10-08 10:56:10,123 - INFO - Processing batch 108 with 100 files
+2025-10-08 10:56:10,124 - INFO - Batch 108: Processed 100/100 files
+2025-10-08 10:56:10,124 - INFO - Batch 108 completed: 100 valid samples
+2025-10-08 10:56:10,125 - INFO - Collected batch 109/504: 100 samples
+2025-10-08 10:56:10,165 - INFO - Processing batch 109 with 100 files
+2025-10-08 10:56:10,166 - INFO - Batch 109: Processed 100/100 files
+2025-10-08 10:56:10,167 - INFO - Batch 109 completed: 100 valid samples
+2025-10-08 10:56:10,168 - INFO - Collected batch 110/504: 100 samples
+2025-10-08 10:56:10,206 - INFO - Processing batch 110 with 100 files
+2025-10-08 10:56:10,207 - INFO - Batch 110: Processed 100/100 files
+2025-10-08 10:56:10,207 - INFO - Batch 110 completed: 100 valid samples
+2025-10-08 10:56:10,214 - INFO - Collected batch 111/504: 100 samples
+2025-10-08 10:56:10,252 - INFO - Processing batch 111 with 100 files
+2025-10-08 10:56:10,254 - INFO - Batch 111: Processed 100/100 files
+2025-10-08 10:56:10,254 - INFO - Batch 111 completed: 100 valid samples
+2025-10-08 10:56:10,255 - INFO - Collected batch 112/504: 100 samples
+2025-10-08 10:56:10,296 - INFO - Processing batch 112 with 100 files
+2025-10-08 10:56:10,297 - INFO - Batch 112: Processed 100/100 files
+2025-10-08 10:56:10,298 - INFO - Batch 112 completed: 100 valid samples
+2025-10-08 10:56:10,298 - INFO - Collected batch 113/504: 100 samples
+2025-10-08 10:56:10,340 - INFO - Processing batch 113 with 100 files
+2025-10-08 10:56:10,342 - INFO - Batch 113: Processed 100/100 files
+2025-10-08 10:56:10,342 - INFO - Batch 113 completed: 100 valid samples
+2025-10-08 10:56:10,343 - INFO - Collected batch 114/504: 100 samples
+2025-10-08 10:56:10,382 - INFO - Processing batch 114 with 100 files
+2025-10-08 10:56:10,383 - INFO - Batch 114: Processed 100/100 files
+2025-10-08 10:56:10,383 - INFO - Batch 114 completed: 100 valid samples
+2025-10-08 10:56:10,389 - INFO - Collected batch 115/504: 100 samples
+2025-10-08 10:56:10,428 - INFO - Processing batch 115 with 100 files
+2025-10-08 10:56:10,429 - INFO - Batch 115: Processed 100/100 files
+2025-10-08 10:56:10,429 - INFO - Batch 115 completed: 100 valid samples
+2025-10-08 10:56:10,431 - INFO - Collected batch 116/504: 100 samples
+2025-10-08 10:56:10,476 - INFO - Processing batch 116 with 100 files
+2025-10-08 10:56:10,477 - INFO - Batch 116: Processed 100/100 files
+2025-10-08 10:56:10,477 - INFO - Batch 116 completed: 100 valid samples
+2025-10-08 10:56:10,478 - INFO - Collected batch 117/504: 100 samples
+2025-10-08 10:56:10,539 - INFO - Processing batch 117 with 100 files
+2025-10-08 10:56:10,540 - INFO - Batch 117: Processed 100/100 files
+2025-10-08 10:56:10,540 - INFO - Batch 117 completed: 100 valid samples
+2025-10-08 10:56:10,563 - INFO - Collected batch 118/504: 100 samples
+2025-10-08 10:56:10,566 - INFO - Processing batch 118 with 100 files
+2025-10-08 10:56:10,567 - INFO - Batch 118: Processed 100/100 files
+2025-10-08 10:56:10,567 - INFO - Batch 118 completed: 100 valid samples
+2025-10-08 10:56:10,605 - INFO - Collected batch 119/504: 100 samples
+2025-10-08 10:56:10,610 - INFO - Processing batch 119 with 100 files
+2025-10-08 10:56:10,611 - INFO - Batch 119: Processed 100/100 files
+2025-10-08 10:56:10,611 - INFO - Batch 119 completed: 100 valid samples
+2025-10-08 10:56:10,646 - INFO - Processing batch 120 with 100 files
+2025-10-08 10:56:10,647 - INFO - Batch 120: Processed 100/100 files
+2025-10-08 10:56:10,648 - INFO - Batch 120 completed: 100 valid samples
+2025-10-08 10:56:10,654 - INFO - Collected batch 120/504: 100 samples
+2025-10-08 10:56:10,654 - INFO - Collected batch 121/504: 100 samples
+2025-10-08 10:56:10,695 - INFO - Processing batch 121 with 100 files
+2025-10-08 10:56:10,697 - INFO - Batch 121: Processed 100/100 files
+2025-10-08 10:56:10,697 - INFO - Batch 121 completed: 100 valid samples
+2025-10-08 10:56:10,697 - INFO - Collected batch 122/504: 100 samples
+2025-10-08 10:56:10,732 - INFO - Processing batch 122 with 100 files
+2025-10-08 10:56:10,733 - INFO - Batch 122: Processed 100/100 files
+2025-10-08 10:56:10,734 - INFO - Batch 122 completed: 100 valid samples
+2025-10-08 10:56:10,735 - INFO - Collected batch 123/504: 100 samples
+2025-10-08 10:56:10,793 - INFO - Processing batch 123 with 100 files
+2025-10-08 10:56:10,794 - INFO - Batch 123: Processed 100/100 files
+2025-10-08 10:56:10,794 - INFO - Batch 123 completed: 100 valid samples
+2025-10-08 10:56:10,819 - INFO - Processing batch 124 with 100 files
+2025-10-08 10:56:10,820 - INFO - Batch 124: Processed 100/100 files
+2025-10-08 10:56:10,820 - INFO - Batch 124 completed: 100 valid samples
+2025-10-08 10:56:10,827 - INFO - Collected batch 124/504: 100 samples
+2025-10-08 10:56:10,827 - INFO - Collected batch 125/504: 100 samples
+2025-10-08 10:56:10,869 - INFO - Processing batch 125 with 100 files
+2025-10-08 10:56:10,870 - INFO - Batch 125: Processed 100/100 files
+2025-10-08 10:56:10,870 - INFO - Batch 125 completed: 100 valid samples
+2025-10-08 10:56:10,871 - INFO - Collected batch 126/504: 100 samples
+2025-10-08 10:56:10,913 - INFO - Processing batch 126 with 100 files
+2025-10-08 10:56:10,914 - INFO - Batch 126: Processed 100/100 files
+2025-10-08 10:56:10,914 - INFO - Batch 126 completed: 100 valid samples
+2025-10-08 10:56:10,916 - INFO - Collected batch 127/504: 100 samples
+2025-10-08 10:56:10,956 - INFO - Processing batch 127 with 100 files
+2025-10-08 10:56:10,957 - INFO - Batch 127: Processed 100/100 files
+2025-10-08 10:56:10,957 - INFO - Batch 127 completed: 100 valid samples
+2025-10-08 10:56:10,960 - INFO - Collected batch 128/504: 100 samples
+2025-10-08 10:56:11,003 - INFO - Processing batch 128 with 100 files
+2025-10-08 10:56:11,005 - INFO - Batch 128: Processed 100/100 files
+2025-10-08 10:56:11,005 - INFO - Batch 128 completed: 100 valid samples
+2025-10-08 10:56:11,006 - INFO - Collected batch 129/504: 100 samples
+2025-10-08 10:56:11,042 - INFO - Processing batch 129 with 100 files
+2025-10-08 10:56:11,044 - INFO - Batch 129: Processed 100/100 files
+2025-10-08 10:56:11,044 - INFO - Batch 129 completed: 100 valid samples
+2025-10-08 10:56:11,046 - INFO - Collected batch 130/504: 100 samples
+2025-10-08 10:56:11,083 - INFO - Processing batch 130 with 100 files
+2025-10-08 10:56:11,084 - INFO - Batch 130: Processed 100/100 files
+2025-10-08 10:56:11,084 - INFO - Batch 130 completed: 100 valid samples
+2025-10-08 10:56:11,088 - INFO - Collected batch 131/504: 100 samples
+2025-10-08 10:56:11,151 - INFO - Processing batch 131 with 100 files
+2025-10-08 10:56:11,152 - INFO - Batch 131: Processed 100/100 files
+2025-10-08 10:56:11,152 - INFO - Batch 131 completed: 100 valid samples
+2025-10-08 10:56:11,173 - INFO - Collected batch 132/504: 100 samples
+2025-10-08 10:56:11,178 - INFO - Processing batch 132 with 100 files
+2025-10-08 10:56:11,180 - INFO - Batch 132: Processed 100/100 files
+2025-10-08 10:56:11,180 - INFO - Batch 132 completed: 100 valid samples
+2025-10-08 10:56:11,216 - INFO - Processing batch 133 with 100 files
+2025-10-08 10:56:11,216 - INFO - Collected batch 133/504: 100 samples
+2025-10-08 10:56:11,217 - INFO - Batch 133: Processed 100/100 files
+2025-10-08 10:56:11,217 - INFO - Batch 133 completed: 100 valid samples
+2025-10-08 10:56:11,218 - INFO - Collected batch 134/504: 100 samples
+2025-10-08 10:56:11,262 - INFO - Processing batch 134 with 100 files
+2025-10-08 10:56:11,263 - INFO - Batch 134: Processed 100/100 files
+2025-10-08 10:56:11,263 - INFO - Batch 134 completed: 100 valid samples
+2025-10-08 10:56:11,303 - INFO - Processing batch 135 with 100 files
+2025-10-08 10:56:11,303 - INFO - Collected batch 135/504: 100 samples
+2025-10-08 10:56:11,304 - INFO - Batch 135: Processed 100/100 files
+2025-10-08 10:56:11,304 - INFO - Batch 135 completed: 100 valid samples
+2025-10-08 10:56:11,305 - INFO - Collected batch 136/504: 100 samples
+2025-10-08 10:56:11,349 - INFO - Processing batch 136 with 100 files
+2025-10-08 10:56:11,350 - INFO - Batch 136: Processed 100/100 files
+2025-10-08 10:56:11,350 - INFO - Batch 136 completed: 100 valid samples
+2025-10-08 10:56:11,384 - INFO - Processing batch 137 with 100 files
+2025-10-08 10:56:11,385 - INFO - Batch 137: Processed 100/100 files
+2025-10-08 10:56:11,385 - INFO - Batch 137 completed: 100 valid samples
+2025-10-08 10:56:11,389 - INFO - Collected batch 137/504: 100 samples
+2025-10-08 10:56:11,389 - INFO - Collected batch 138/504: 100 samples
+2025-10-08 10:56:11,434 - INFO - Processing batch 138 with 100 files
+2025-10-08 10:56:11,436 - INFO - Batch 138: Processed 100/100 files
+2025-10-08 10:56:11,436 - INFO - Batch 138 completed: 100 valid samples
+2025-10-08 10:56:11,436 - INFO - Collected batch 139/504: 100 samples
+2025-10-08 10:56:11,475 - INFO - Processing batch 139 with 100 files
+2025-10-08 10:56:11,476 - INFO - Batch 139: Processed 100/100 files
+2025-10-08 10:56:11,476 - INFO - Batch 139 completed: 100 valid samples
+2025-10-08 10:56:11,477 - INFO - Collected batch 140/504: 100 samples
+2025-10-08 10:56:11,527 - INFO - Processing batch 140 with 100 files
+2025-10-08 10:56:11,528 - INFO - Batch 140: Processed 100/100 files
+2025-10-08 10:56:11,528 - INFO - Batch 140 completed: 100 valid samples
+2025-10-08 10:56:11,561 - INFO - Processing batch 141 with 100 files
+2025-10-08 10:56:11,562 - INFO - Batch 141: Processed 100/100 files
+2025-10-08 10:56:11,562 - INFO - Batch 141 completed: 100 valid samples
+2025-10-08 10:56:11,566 - INFO - Collected batch 141/504: 100 samples
+2025-10-08 10:56:11,566 - INFO - Collected batch 142/504: 100 samples
+2025-10-08 10:56:11,613 - INFO - Processing batch 142 with 100 files
+2025-10-08 10:56:11,614 - INFO - Batch 142: Processed 100/100 files
+2025-10-08 10:56:11,614 - INFO - Batch 142 completed: 100 valid samples
+2025-10-08 10:56:11,615 - INFO - Collected batch 143/504: 100 samples
+2025-10-08 10:56:11,655 - INFO - Processing batch 143 with 100 files
+2025-10-08 10:56:11,656 - INFO - Batch 143: Processed 100/100 files
+2025-10-08 10:56:11,656 - INFO - Batch 143 completed: 100 valid samples
+2025-10-08 10:56:11,657 - INFO - Collected batch 144/504: 100 samples
+2025-10-08 10:56:11,696 - INFO - Processing batch 144 with 100 files
+2025-10-08 10:56:11,697 - INFO - Batch 144: Processed 100/100 files
+2025-10-08 10:56:11,697 - INFO - Batch 144 completed: 100 valid samples
+2025-10-08 10:56:11,700 - INFO - Collected batch 145/504: 100 samples
+2025-10-08 10:56:11,739 - INFO - Processing batch 145 with 100 files
+2025-10-08 10:56:11,740 - INFO - Batch 145: Processed 100/100 files
+2025-10-08 10:56:11,740 - INFO - Batch 145 completed: 100 valid samples
+2025-10-08 10:56:11,747 - INFO - Collected batch 146/504: 100 samples
+2025-10-08 10:56:11,791 - INFO - Processing batch 146 with 100 files
+2025-10-08 10:56:11,792 - INFO - Batch 146: Processed 100/100 files
+2025-10-08 10:56:11,792 - INFO - Batch 146 completed: 100 valid samples
+2025-10-08 10:56:11,833 - INFO - Collected batch 147/504: 100 samples
+2025-10-08 10:56:11,834 - INFO - Processing batch 147 with 100 files
+2025-10-08 10:56:11,835 - INFO - Batch 147: Processed 100/100 files
+2025-10-08 10:56:11,836 - INFO - Batch 147 completed: 100 valid samples
+2025-10-08 10:56:11,872 - INFO - Processing batch 148 with 100 files
+2025-10-08 10:56:11,873 - INFO - Batch 148: Processed 100/100 files
+2025-10-08 10:56:11,873 - INFO - Batch 148 completed: 100 valid samples
+2025-10-08 10:56:11,874 - INFO - Collected batch 148/504: 100 samples
+2025-10-08 10:56:11,875 - INFO - Collected batch 149/504: 100 samples
+2025-10-08 10:56:11,919 - INFO - Processing batch 149 with 100 files
+2025-10-08 10:56:11,920 - INFO - Batch 149: Processed 100/100 files
+2025-10-08 10:56:11,920 - INFO - Batch 149 completed: 100 valid samples
+2025-10-08 10:56:11,921 - INFO - Collected batch 150/504: 100 samples
+2025-10-08 10:56:11,957 - INFO - Processing batch 150 with 100 files
+2025-10-08 10:56:11,958 - INFO - Batch 150: Processed 100/100 files
+2025-10-08 10:56:11,958 - INFO - Batch 150 completed: 100 valid samples
+2025-10-08 10:56:11,966 - INFO - Collected batch 151/504: 100 samples
+2025-10-08 10:56:12,013 - INFO - Processing batch 151 with 100 files
+2025-10-08 10:56:12,014 - INFO - Batch 151: Processed 100/100 files
+2025-10-08 10:56:12,014 - INFO - Batch 151 completed: 100 valid samples
+2025-10-08 10:56:12,052 - INFO - Collected batch 152/504: 100 samples
+2025-10-08 10:56:12,055 - INFO - Processing batch 152 with 100 files
+2025-10-08 10:56:12,056 - INFO - Batch 152: Processed 100/100 files
+2025-10-08 10:56:12,056 - INFO - Batch 152 completed: 100 valid samples
+2025-10-08 10:56:12,097 - INFO - Collected batch 153/504: 100 samples
+2025-10-08 10:56:12,099 - INFO - Processing batch 153 with 100 files
+2025-10-08 10:56:12,100 - INFO - Batch 153: Processed 100/100 files
+2025-10-08 10:56:12,100 - INFO - Batch 153 completed: 100 valid samples
+2025-10-08 10:56:12,139 - INFO - Processing batch 154 with 100 files
+2025-10-08 10:56:12,140 - INFO - Batch 154: Processed 100/100 files
+2025-10-08 10:56:12,140 - INFO - Batch 154 completed: 100 valid samples
+2025-10-08 10:56:12,143 - INFO - Collected batch 154/504: 100 samples
+2025-10-08 10:56:12,143 - INFO - Collected batch 155/504: 100 samples
+2025-10-08 10:56:12,188 - INFO - Processing batch 155 with 100 files
+2025-10-08 10:56:12,190 - INFO - Batch 155: Processed 100/100 files
+2025-10-08 10:56:12,190 - INFO - Batch 155 completed: 100 valid samples
+2025-10-08 10:56:12,229 - INFO - Collected batch 156/504: 100 samples
+2025-10-08 10:56:12,231 - INFO - Processing batch 156 with 100 files
+2025-10-08 10:56:12,232 - INFO - Batch 156: Processed 100/100 files
+2025-10-08 10:56:12,232 - INFO - Batch 156 completed: 100 valid samples
+2025-10-08 10:56:12,270 - INFO - Collected batch 157/504: 100 samples
+2025-10-08 10:56:12,274 - INFO - Processing batch 157 with 100 files
+2025-10-08 10:56:12,275 - INFO - Batch 157: Processed 100/100 files
+2025-10-08 10:56:12,275 - INFO - Batch 157 completed: 100 valid samples
+2025-10-08 10:56:12,313 - INFO - Processing batch 158 with 100 files
+2025-10-08 10:56:12,313 - INFO - Collected batch 158/504: 100 samples
+2025-10-08 10:56:12,314 - INFO - Batch 158: Processed 100/100 files
+2025-10-08 10:56:12,314 - INFO - Batch 158 completed: 100 valid samples
+2025-10-08 10:56:12,315 - INFO - Collected batch 159/504: 100 samples
+2025-10-08 10:56:12,358 - INFO - Processing batch 159 with 100 files
+2025-10-08 10:56:12,359 - INFO - Batch 159: Processed 100/100 files
+2025-10-08 10:56:12,359 - INFO - Batch 159 completed: 100 valid samples
+2025-10-08 10:56:12,360 - INFO - Collected batch 160/504: 100 samples
+2025-10-08 10:56:12,394 - INFO - Processing batch 160 with 100 files
+2025-10-08 10:56:12,395 - INFO - Batch 160: Processed 100/100 files
+2025-10-08 10:56:12,395 - INFO - Batch 160 completed: 100 valid samples
+2025-10-08 10:56:12,398 - INFO - Collected batch 161/504: 100 samples
+2025-10-08 10:56:12,440 - INFO - Processing batch 161 with 100 files
+2025-10-08 10:56:12,441 - INFO - Batch 161: Processed 100/100 files
+2025-10-08 10:56:12,441 - INFO - Batch 161 completed: 100 valid samples
+2025-10-08 10:56:12,442 - INFO - Collected batch 162/504: 100 samples
+2025-10-08 10:56:12,484 - INFO - Processing batch 162 with 100 files
+2025-10-08 10:56:12,486 - INFO - Batch 162: Processed 100/100 files
+2025-10-08 10:56:12,486 - INFO - Batch 162 completed: 100 valid samples
+2025-10-08 10:56:12,487 - INFO - Collected batch 163/504: 100 samples
+2025-10-08 10:56:12,529 - INFO - Processing batch 163 with 100 files
+2025-10-08 10:56:12,531 - INFO - Batch 163: Processed 100/100 files
+2025-10-08 10:56:12,531 - INFO - Batch 163 completed: 100 valid samples
+2025-10-08 10:56:12,532 - INFO - Collected batch 164/504: 100 samples
+2025-10-08 10:56:12,570 - INFO - Processing batch 164 with 100 files
+2025-10-08 10:56:12,571 - INFO - Batch 164: Processed 100/100 files
+2025-10-08 10:56:12,571 - INFO - Batch 164 completed: 100 valid samples
+2025-10-08 10:56:12,578 - INFO - Collected batch 165/504: 100 samples
+2025-10-08 10:56:12,620 - INFO - Processing batch 165 with 100 files
+2025-10-08 10:56:12,621 - INFO - Batch 165: Processed 100/100 files
+2025-10-08 10:56:12,621 - INFO - Batch 165 completed: 100 valid samples
+2025-10-08 10:56:12,622 - INFO - Collected batch 166/504: 100 samples
+2025-10-08 10:56:12,659 - INFO - Processing batch 166 with 100 files
+2025-10-08 10:56:12,661 - INFO - Batch 166: Processed 100/100 files
+2025-10-08 10:56:12,661 - INFO - Batch 166 completed: 100 valid samples
+2025-10-08 10:56:12,670 - INFO - Collected batch 167/504: 100 samples
+2025-10-08 10:56:12,715 - INFO - Processing batch 167 with 100 files
+2025-10-08 10:56:12,717 - INFO - Batch 167: Processed 100/100 files
+2025-10-08 10:56:12,717 - INFO - Batch 167 completed: 100 valid samples
+2025-10-08 10:56:12,718 - INFO - Collected batch 168/504: 100 samples
+2025-10-08 10:56:12,758 - INFO - Processing batch 168 with 100 files
+2025-10-08 10:56:12,759 - INFO - Batch 168: Processed 100/100 files
+2025-10-08 10:56:12,759 - INFO - Batch 168 completed: 100 valid samples
+2025-10-08 10:56:12,772 - INFO - Collected batch 169/504: 100 samples
+2025-10-08 10:56:12,816 - INFO - Processing batch 169 with 100 files
+2025-10-08 10:56:12,817 - INFO - Batch 169: Processed 100/100 files
+2025-10-08 10:56:12,817 - INFO - Batch 169 completed: 100 valid samples
+2025-10-08 10:56:12,821 - INFO - Collected batch 170/504: 100 samples
+2025-10-08 10:56:12,866 - INFO - Processing batch 170 with 100 files
+2025-10-08 10:56:12,867 - INFO - Batch 170: Processed 100/100 files
+2025-10-08 10:56:12,867 - INFO - Batch 170 completed: 100 valid samples
+2025-10-08 10:56:12,868 - INFO - Collected batch 171/504: 100 samples
+2025-10-08 10:56:12,910 - INFO - Processing batch 171 with 100 files
+2025-10-08 10:56:12,911 - INFO - Batch 171: Processed 100/100 files
+2025-10-08 10:56:12,911 - INFO - Batch 171 completed: 100 valid samples
+2025-10-08 10:56:12,912 - INFO - Collected batch 172/504: 100 samples
+2025-10-08 10:56:12,952 - INFO - Processing batch 172 with 100 files
+2025-10-08 10:56:12,953 - INFO - Batch 172: Processed 100/100 files
+2025-10-08 10:56:12,953 - INFO - Batch 172 completed: 100 valid samples
+2025-10-08 10:56:12,954 - INFO - Collected batch 173/504: 100 samples
+2025-10-08 10:56:13,009 - INFO - Processing batch 173 with 100 files
+2025-10-08 10:56:13,011 - INFO - Batch 173: Processed 100/100 files
+2025-10-08 10:56:13,012 - INFO - Batch 173 completed: 100 valid samples
+2025-10-08 10:56:13,032 - INFO - Processing batch 174 with 100 files
+2025-10-08 10:56:13,034 - INFO - Batch 174: Processed 100/100 files
+2025-10-08 10:56:13,034 - INFO - Batch 174 completed: 100 valid samples
+2025-10-08 10:56:13,041 - INFO - Collected batch 174/504: 100 samples
+2025-10-08 10:56:13,042 - INFO - Collected batch 175/504: 100 samples
+2025-10-08 10:56:13,086 - INFO - Processing batch 175 with 100 files
+2025-10-08 10:56:13,088 - INFO - Batch 175: Processed 100/100 files
+2025-10-08 10:56:13,088 - INFO - Batch 175 completed: 100 valid samples
+2025-10-08 10:56:13,089 - INFO - Collected batch 176/504: 100 samples
+2025-10-08 10:56:13,141 - INFO - Processing batch 176 with 100 files
+2025-10-08 10:56:13,142 - INFO - Batch 176: Processed 100/100 files
+2025-10-08 10:56:13,142 - INFO - Batch 176 completed: 100 valid samples
+2025-10-08 10:56:13,168 - INFO - Processing batch 177 with 100 files
+2025-10-08 10:56:13,169 - INFO - Batch 177: Processed 100/100 files
+2025-10-08 10:56:13,169 - INFO - Batch 177 completed: 100 valid samples
+2025-10-08 10:56:13,173 - INFO - Collected batch 177/504: 100 samples
+2025-10-08 10:56:13,173 - INFO - Collected batch 178/504: 100 samples
+2025-10-08 10:56:13,216 - INFO - Processing batch 178 with 100 files
+2025-10-08 10:56:13,218 - INFO - Batch 178: Processed 100/100 files
+2025-10-08 10:56:13,218 - INFO - Batch 178 completed: 100 valid samples
+2025-10-08 10:56:13,219 - INFO - Collected batch 179/504: 100 samples
+2025-10-08 10:56:13,257 - INFO - Processing batch 179 with 100 files
+2025-10-08 10:56:13,258 - INFO - Batch 179: Processed 100/100 files
+2025-10-08 10:56:13,258 - INFO - Batch 179 completed: 100 valid samples
+2025-10-08 10:56:13,263 - INFO - Collected batch 180/504: 100 samples
+2025-10-08 10:56:13,304 - INFO - Processing batch 180 with 100 files
+2025-10-08 10:56:13,305 - INFO - Batch 180: Processed 100/100 files
+2025-10-08 10:56:13,305 - INFO - Batch 180 completed: 100 valid samples
+2025-10-08 10:56:13,312 - INFO - Collected batch 181/504: 100 samples
+2025-10-08 10:56:13,350 - INFO - Processing batch 181 with 100 files
+2025-10-08 10:56:13,351 - INFO - Batch 181: Processed 100/100 files
+2025-10-08 10:56:13,352 - INFO - Batch 181 completed: 100 valid samples
+2025-10-08 10:56:13,353 - INFO - Collected batch 182/504: 100 samples
+2025-10-08 10:56:13,397 - INFO - Processing batch 182 with 100 files
+2025-10-08 10:56:13,398 - INFO - Batch 182: Processed 100/100 files
+2025-10-08 10:56:13,398 - INFO - Batch 182 completed: 100 valid samples
+2025-10-08 10:56:13,399 - INFO - Collected batch 183/504: 100 samples
+2025-10-08 10:56:13,454 - INFO - Processing batch 183 with 100 files
+2025-10-08 10:56:13,455 - INFO - Batch 183: Processed 100/100 files
+2025-10-08 10:56:13,456 - INFO - Batch 183 completed: 100 valid samples
+2025-10-08 10:56:13,479 - INFO - Processing batch 184 with 100 files
+2025-10-08 10:56:13,480 - INFO - Batch 184: Processed 100/100 files
+2025-10-08 10:56:13,480 - INFO - Batch 184 completed: 100 valid samples
+2025-10-08 10:56:13,485 - INFO - Collected batch 184/504: 100 samples
+2025-10-08 10:56:13,485 - INFO - Collected batch 185/504: 100 samples
+2025-10-08 10:56:13,526 - INFO - Processing batch 185 with 100 files
+2025-10-08 10:56:13,527 - INFO - Batch 185: Processed 100/100 files
+2025-10-08 10:56:13,527 - INFO - Batch 185 completed: 100 valid samples
+2025-10-08 10:56:13,528 - INFO - Collected batch 186/504: 100 samples
+2025-10-08 10:56:13,573 - INFO - Processing batch 186 with 100 files
+2025-10-08 10:56:13,575 - INFO - Batch 186: Processed 100/100 files
+2025-10-08 10:56:13,575 - INFO - Batch 186 completed: 100 valid samples
+2025-10-08 10:56:13,613 - INFO - Processing batch 187 with 100 files
+2025-10-08 10:56:13,614 - INFO - Collected batch 187/504: 100 samples
+2025-10-08 10:56:13,614 - INFO - Batch 187: Processed 100/100 files
+2025-10-08 10:56:13,614 - INFO - Batch 187 completed: 100 valid samples
+2025-10-08 10:56:13,615 - INFO - Collected batch 188/504: 100 samples
+2025-10-08 10:56:13,655 - INFO - Processing batch 188 with 100 files
+2025-10-08 10:56:13,656 - INFO - Batch 188: Processed 100/100 files
+2025-10-08 10:56:13,656 - INFO - Batch 188 completed: 100 valid samples
+2025-10-08 10:56:13,657 - INFO - Collected batch 189/504: 100 samples
+2025-10-08 10:56:13,695 - INFO - Processing batch 189 with 100 files
+2025-10-08 10:56:13,696 - INFO - Batch 189: Processed 100/100 files
+2025-10-08 10:56:13,696 - INFO - Batch 189 completed: 100 valid samples
+2025-10-08 10:56:13,701 - INFO - Collected batch 190/504: 100 samples
+2025-10-08 10:56:13,763 - INFO - Processing batch 190 with 100 files
+2025-10-08 10:56:13,764 - INFO - Batch 190: Processed 100/100 files
+2025-10-08 10:56:13,764 - INFO - Batch 190 completed: 100 valid samples
+2025-10-08 10:56:13,786 - INFO - Processing batch 191 with 100 files
+2025-10-08 10:56:13,788 - INFO - Batch 191: Processed 100/100 files
+2025-10-08 10:56:13,788 - INFO - Batch 191 completed: 100 valid samples
+2025-10-08 10:56:13,791 - INFO - Collected batch 191/504: 100 samples
+2025-10-08 10:56:13,791 - INFO - Collected batch 192/504: 100 samples
+2025-10-08 10:56:13,832 - INFO - Processing batch 192 with 100 files
+2025-10-08 10:56:13,833 - INFO - Batch 192: Processed 100/100 files
+2025-10-08 10:56:13,833 - INFO - Batch 192 completed: 100 valid samples
+2025-10-08 10:56:13,839 - INFO - Collected batch 193/504: 100 samples
+2025-10-08 10:56:13,880 - INFO - Processing batch 193 with 100 files
+2025-10-08 10:56:13,881 - INFO - Batch 193: Processed 100/100 files
+2025-10-08 10:56:13,881 - INFO - Batch 193 completed: 100 valid samples
+2025-10-08 10:56:13,886 - INFO - Collected batch 194/504: 100 samples
+2025-10-08 10:56:13,927 - INFO - Processing batch 194 with 100 files
+2025-10-08 10:56:13,928 - INFO - Batch 194: Processed 100/100 files
+2025-10-08 10:56:13,928 - INFO - Batch 194 completed: 100 valid samples
+2025-10-08 10:56:13,935 - INFO - Collected batch 195/504: 100 samples
+2025-10-08 10:56:13,977 - INFO - Processing batch 195 with 100 files
+2025-10-08 10:56:13,978 - INFO - Batch 195: Processed 100/100 files
+2025-10-08 10:56:13,978 - INFO - Batch 195 completed: 100 valid samples
+2025-10-08 10:56:13,983 - INFO - Collected batch 196/504: 100 samples
+2025-10-08 10:56:14,026 - INFO - Processing batch 196 with 100 files
+2025-10-08 10:56:14,027 - INFO - Batch 196: Processed 100/100 files
+2025-10-08 10:56:14,028 - INFO - Batch 196 completed: 100 valid samples
+2025-10-08 10:56:14,029 - INFO - Collected batch 197/504: 100 samples
+2025-10-08 10:56:14,069 - INFO - Processing batch 197 with 100 files
+2025-10-08 10:56:14,070 - INFO - Batch 197: Processed 100/100 files
+2025-10-08 10:56:14,070 - INFO - Batch 197 completed: 100 valid samples
+2025-10-08 10:56:14,071 - INFO - Collected batch 198/504: 100 samples
+2025-10-08 10:56:14,106 - INFO - Processing batch 198 with 100 files
+2025-10-08 10:56:14,107 - INFO - Batch 198: Processed 100/100 files
+2025-10-08 10:56:14,107 - INFO - Batch 198 completed: 100 valid samples
+2025-10-08 10:56:14,113 - INFO - Collected batch 199/504: 100 samples
+2025-10-08 10:56:14,157 - INFO - Processing batch 199 with 100 files
+2025-10-08 10:56:14,159 - INFO - Batch 199: Processed 100/100 files
+2025-10-08 10:56:14,159 - INFO - Batch 199 completed: 100 valid samples
+2025-10-08 10:56:14,160 - INFO - Collected batch 200/504: 100 samples
+2025-10-08 10:56:14,195 - INFO - Processing batch 200 with 100 files
+2025-10-08 10:56:14,196 - INFO - Batch 200: Processed 100/100 files
+2025-10-08 10:56:14,196 - INFO - Batch 200 completed: 100 valid samples
+2025-10-08 10:56:14,200 - INFO - Collected batch 201/504: 100 samples
+2025-10-08 10:56:14,241 - INFO - Processing batch 201 with 100 files
+2025-10-08 10:56:14,242 - INFO - Batch 201: Processed 100/100 files
+2025-10-08 10:56:14,243 - INFO - Batch 201 completed: 100 valid samples
+2025-10-08 10:56:14,244 - INFO - Collected batch 202/504: 100 samples
+2025-10-08 10:56:14,285 - INFO - Processing batch 202 with 100 files
+2025-10-08 10:56:14,286 - INFO - Batch 202: Processed 100/100 files
+2025-10-08 10:56:14,286 - INFO - Batch 202 completed: 100 valid samples
+2025-10-08 10:56:14,293 - INFO - Collected batch 203/504: 100 samples
+2025-10-08 10:56:14,339 - INFO - Processing batch 203 with 100 files
+2025-10-08 10:56:14,340 - INFO - Batch 203: Processed 100/100 files
+2025-10-08 10:56:14,340 - INFO - Batch 203 completed: 100 valid samples
+2025-10-08 10:56:14,374 - INFO - Processing batch 204 with 100 files
+2025-10-08 10:56:14,375 - INFO - Batch 204: Processed 100/100 files
+2025-10-08 10:56:14,375 - INFO - Batch 204 completed: 100 valid samples
+2025-10-08 10:56:14,376 - INFO - Collected batch 204/504: 100 samples
+2025-10-08 10:56:14,377 - INFO - Collected batch 205/504: 100 samples
+2025-10-08 10:56:14,422 - INFO - Processing batch 205 with 100 files
+2025-10-08 10:56:14,423 - INFO - Batch 205: Processed 100/100 files
+2025-10-08 10:56:14,423 - INFO - Batch 205 completed: 100 valid samples
+2025-10-08 10:56:14,460 - INFO - Processing batch 206 with 100 files
+2025-10-08 10:56:14,462 - INFO - Batch 206: Processed 100/100 files
+2025-10-08 10:56:14,462 - INFO - Batch 206 completed: 100 valid samples
+2025-10-08 10:56:14,463 - INFO - Collected batch 206/504: 100 samples
+2025-10-08 10:56:14,463 - INFO - Collected batch 207/504: 100 samples
+2025-10-08 10:56:14,506 - INFO - Processing batch 207 with 100 files
+2025-10-08 10:56:14,507 - INFO - Batch 207: Processed 100/100 files
+2025-10-08 10:56:14,507 - INFO - Batch 207 completed: 100 valid samples
+2025-10-08 10:56:14,508 - INFO - Collected batch 208/504: 100 samples
+2025-10-08 10:56:14,554 - INFO - Processing batch 208 with 100 files
+2025-10-08 10:56:14,555 - INFO - Batch 208: Processed 100/100 files
+2025-10-08 10:56:14,555 - INFO - Batch 208 completed: 100 valid samples
+2025-10-08 10:56:14,556 - INFO - Collected batch 209/504: 100 samples
+2025-10-08 10:56:14,601 - INFO - Processing batch 209 with 100 files
+2025-10-08 10:56:14,602 - INFO - Batch 209: Processed 100/100 files
+2025-10-08 10:56:14,602 - INFO - Batch 209 completed: 100 valid samples
+2025-10-08 10:56:14,639 - INFO - Processing batch 210 with 100 files
+2025-10-08 10:56:14,639 - INFO - Collected batch 210/504: 100 samples
+2025-10-08 10:56:14,640 - INFO - Batch 210: Processed 100/100 files
+2025-10-08 10:56:14,640 - INFO - Batch 210 completed: 100 valid samples
+2025-10-08 10:56:14,641 - INFO - Collected batch 211/504: 100 samples
+2025-10-08 10:56:14,676 - INFO - Processing batch 211 with 100 files
+2025-10-08 10:56:14,677 - INFO - Batch 211: Processed 100/100 files
+2025-10-08 10:56:14,677 - INFO - Batch 211 completed: 100 valid samples
+2025-10-08 10:56:14,681 - INFO - Collected batch 212/504: 100 samples
+2025-10-08 10:56:14,721 - INFO - Processing batch 212 with 100 files
+2025-10-08 10:56:14,723 - INFO - Batch 212: Processed 100/100 files
+2025-10-08 10:56:14,723 - INFO - Batch 212 completed: 100 valid samples
+2025-10-08 10:56:14,731 - INFO - Collected batch 213/504: 100 samples
+2025-10-08 10:56:14,775 - INFO - Processing batch 213 with 100 files
+2025-10-08 10:56:14,776 - INFO - Batch 213: Processed 100/100 files
+2025-10-08 10:56:14,776 - INFO - Batch 213 completed: 100 valid samples
+2025-10-08 10:56:14,777 - INFO - Collected batch 214/504: 100 samples
+2025-10-08 10:56:14,818 - INFO - Processing batch 214 with 100 files
+2025-10-08 10:56:14,819 - INFO - Batch 214: Processed 100/100 files
+2025-10-08 10:56:14,819 - INFO - Batch 214 completed: 100 valid samples
+2025-10-08 10:56:14,820 - INFO - Collected batch 215/504: 100 samples
+2025-10-08 10:56:14,864 - INFO - Processing batch 215 with 100 files
+2025-10-08 10:56:14,865 - INFO - Batch 215: Processed 100/100 files
+2025-10-08 10:56:14,866 - INFO - Batch 215 completed: 100 valid samples
+2025-10-08 10:56:14,904 - INFO - Collected batch 216/504: 100 samples
+2025-10-08 10:56:14,908 - INFO - Processing batch 216 with 100 files
+2025-10-08 10:56:14,909 - INFO - Batch 216: Processed 100/100 files
+2025-10-08 10:56:14,909 - INFO - Batch 216 completed: 100 valid samples
+2025-10-08 10:56:14,947 - INFO - Processing batch 217 with 100 files
+2025-10-08 10:56:14,948 - INFO - Batch 217: Processed 100/100 files
+2025-10-08 10:56:14,948 - INFO - Batch 217 completed: 100 valid samples
+2025-10-08 10:56:14,949 - INFO - Collected batch 217/504: 100 samples
+2025-10-08 10:56:14,950 - INFO - Collected batch 218/504: 100 samples
+2025-10-08 10:56:14,994 - INFO - Processing batch 218 with 100 files
+2025-10-08 10:56:14,996 - INFO - Batch 218: Processed 100/100 files
+2025-10-08 10:56:14,996 - INFO - Batch 218 completed: 100 valid samples
+2025-10-08 10:56:15,029 - INFO - Processing batch 219 with 100 files
+2025-10-08 10:56:15,030 - INFO - Batch 219: Processed 100/100 files
+2025-10-08 10:56:15,031 - INFO - Batch 219 completed: 100 valid samples
+2025-10-08 10:56:15,031 - INFO - Collected batch 219/504: 100 samples
+2025-10-08 10:56:15,032 - INFO - Collected batch 220/504: 100 samples
+2025-10-08 10:56:15,072 - INFO - Processing batch 220 with 100 files
+2025-10-08 10:56:15,073 - INFO - Batch 220: Processed 100/100 files
+2025-10-08 10:56:15,073 - INFO - Batch 220 completed: 100 valid samples
+2025-10-08 10:56:15,077 - INFO - Collected batch 221/504: 100 samples
+2025-10-08 10:56:15,117 - INFO - Processing batch 221 with 100 files
+2025-10-08 10:56:15,118 - INFO - Batch 221: Processed 100/100 files
+2025-10-08 10:56:15,118 - INFO - Batch 221 completed: 100 valid samples
+2025-10-08 10:56:15,126 - INFO - Collected batch 222/504: 100 samples
+2025-10-08 10:56:15,167 - INFO - Processing batch 222 with 100 files
+2025-10-08 10:56:15,168 - INFO - Batch 222: Processed 100/100 files
+2025-10-08 10:56:15,168 - INFO - Batch 222 completed: 100 valid samples
+2025-10-08 10:56:15,169 - INFO - Collected batch 223/504: 100 samples
+2025-10-08 10:56:15,214 - INFO - Processing batch 223 with 100 files
+2025-10-08 10:56:15,215 - INFO - Batch 223: Processed 100/100 files
+2025-10-08 10:56:15,215 - INFO - Batch 223 completed: 100 valid samples
+2025-10-08 10:56:15,216 - INFO - Collected batch 224/504: 100 samples
+2025-10-08 10:56:15,257 - INFO - Processing batch 224 with 100 files
+2025-10-08 10:56:15,259 - INFO - Batch 224: Processed 100/100 files
+2025-10-08 10:56:15,259 - INFO - Batch 224 completed: 100 valid samples
+2025-10-08 10:56:15,260 - INFO - Collected batch 225/504: 100 samples
+2025-10-08 10:56:15,303 - INFO - Processing batch 225 with 100 files
+2025-10-08 10:56:15,304 - INFO - Batch 225: Processed 100/100 files
+2025-10-08 10:56:15,304 - INFO - Batch 225 completed: 100 valid samples
+2025-10-08 10:56:15,337 - INFO - Processing batch 226 with 100 files
+2025-10-08 10:56:15,339 - INFO - Batch 226: Processed 100/100 files
+2025-10-08 10:56:15,339 - INFO - Batch 226 completed: 100 valid samples
+2025-10-08 10:56:15,344 - INFO - Collected batch 226/504: 100 samples
+2025-10-08 10:56:15,345 - INFO - Collected batch 227/504: 100 samples
+2025-10-08 10:56:15,384 - INFO - Processing batch 227 with 100 files
+2025-10-08 10:56:15,385 - INFO - Batch 227: Processed 100/100 files
+2025-10-08 10:56:15,386 - INFO - Batch 227 completed: 100 valid samples
+2025-10-08 10:56:15,390 - INFO - Collected batch 228/504: 100 samples
+2025-10-08 10:56:15,436 - INFO - Processing batch 228 with 100 files
+2025-10-08 10:56:15,437 - INFO - Batch 228: Processed 100/100 files
+2025-10-08 10:56:15,437 - INFO - Batch 228 completed: 100 valid samples
+2025-10-08 10:56:15,438 - INFO - Collected batch 229/504: 100 samples
+2025-10-08 10:56:15,477 - INFO - Processing batch 229 with 100 files
+2025-10-08 10:56:15,478 - INFO - Batch 229: Processed 100/100 files
+2025-10-08 10:56:15,478 - INFO - Batch 229 completed: 100 valid samples
+2025-10-08 10:56:15,479 - INFO - Collected batch 230/504: 100 samples
+2025-10-08 10:56:15,525 - INFO - Processing batch 230 with 100 files
+2025-10-08 10:56:15,526 - INFO - Batch 230: Processed 100/100 files
+2025-10-08 10:56:15,526 - INFO - Batch 230 completed: 100 valid samples
+2025-10-08 10:56:15,564 - INFO - Processing batch 231 with 100 files
+2025-10-08 10:56:15,565 - INFO - Batch 231: Processed 100/100 files
+2025-10-08 10:56:15,565 - INFO - Batch 231 completed: 100 valid samples
+2025-10-08 10:56:15,567 - INFO - Collected batch 231/504: 100 samples
+2025-10-08 10:56:15,567 - INFO - Collected batch 232/504: 100 samples
+2025-10-08 10:56:15,612 - INFO - Processing batch 232 with 100 files
+2025-10-08 10:56:15,613 - INFO - Batch 232: Processed 100/100 files
+2025-10-08 10:56:15,613 - INFO - Batch 232 completed: 100 valid samples
+2025-10-08 10:56:15,614 - INFO - Collected batch 233/504: 100 samples
+2025-10-08 10:56:15,654 - INFO - Processing batch 233 with 100 files
+2025-10-08 10:56:15,656 - INFO - Batch 233: Processed 100/100 files
+2025-10-08 10:56:15,656 - INFO - Batch 233 completed: 100 valid samples
+2025-10-08 10:56:15,657 - INFO - Collected batch 234/504: 100 samples
+2025-10-08 10:56:15,692 - INFO - Processing batch 234 with 100 files
+2025-10-08 10:56:15,693 - INFO - Batch 234: Processed 100/100 files
+2025-10-08 10:56:15,693 - INFO - Batch 234 completed: 100 valid samples
+2025-10-08 10:56:15,695 - INFO - Collected batch 235/504: 100 samples
+2025-10-08 10:56:15,740 - INFO - Processing batch 235 with 100 files
+2025-10-08 10:56:15,742 - INFO - Batch 235: Processed 100/100 files
+2025-10-08 10:56:15,742 - INFO - Batch 235 completed: 100 valid samples
+2025-10-08 10:56:15,743 - INFO - Collected batch 236/504: 100 samples
+2025-10-08 10:56:15,797 - INFO - Processing batch 236 with 100 files
+2025-10-08 10:56:15,798 - INFO - Batch 236: Processed 100/100 files
+2025-10-08 10:56:15,799 - INFO - Batch 236 completed: 100 valid samples
+2025-10-08 10:56:15,826 - INFO - Processing batch 237 with 100 files
+2025-10-08 10:56:15,826 - INFO - Collected batch 237/504: 100 samples
+2025-10-08 10:56:15,827 - INFO - Batch 237: Processed 100/100 files
+2025-10-08 10:56:15,827 - INFO - Batch 237 completed: 100 valid samples
+2025-10-08 10:56:15,828 - INFO - Collected batch 238/504: 100 samples
+2025-10-08 10:56:15,875 - INFO - Processing batch 238 with 100 files
+2025-10-08 10:56:15,876 - INFO - Batch 238: Processed 100/100 files
+2025-10-08 10:56:15,876 - INFO - Batch 238 completed: 100 valid samples
+2025-10-08 10:56:15,911 - INFO - Collected batch 239/504: 100 samples
+2025-10-08 10:56:15,918 - INFO - Processing batch 239 with 100 files
+2025-10-08 10:56:15,919 - INFO - Batch 239: Processed 100/100 files
+2025-10-08 10:56:15,919 - INFO - Batch 239 completed: 100 valid samples
+2025-10-08 10:56:15,952 - INFO - Collected batch 240/504: 100 samples
+2025-10-08 10:56:15,956 - INFO - Processing batch 240 with 100 files
+2025-10-08 10:56:15,957 - INFO - Batch 240: Processed 100/100 files
+2025-10-08 10:56:15,957 - INFO - Batch 240 completed: 100 valid samples
+2025-10-08 10:56:15,990 - INFO - Processing batch 241 with 100 files
+2025-10-08 10:56:15,991 - INFO - Batch 241: Processed 100/100 files
+2025-10-08 10:56:15,992 - INFO - Batch 241 completed: 100 valid samples
+2025-10-08 10:56:15,994 - INFO - Collected batch 241/504: 100 samples
+2025-10-08 10:56:15,994 - INFO - Collected batch 242/504: 100 samples
+2025-10-08 10:56:16,051 - INFO - Processing batch 242 with 100 files
+2025-10-08 10:56:16,052 - INFO - Batch 242: Processed 100/100 files
+2025-10-08 10:56:16,052 - INFO - Batch 242 completed: 100 valid samples
+2025-10-08 10:56:16,083 - INFO - Collected batch 243/504: 100 samples
+2025-10-08 10:56:16,086 - INFO - Processing batch 243 with 100 files
+2025-10-08 10:56:16,087 - INFO - Batch 243: Processed 100/100 files
+2025-10-08 10:56:16,087 - INFO - Batch 243 completed: 100 valid samples
+2025-10-08 10:56:16,125 - INFO - Processing batch 244 with 100 files
+2025-10-08 10:56:16,127 - INFO - Batch 244: Processed 100/100 files
+2025-10-08 10:56:16,127 - INFO - Batch 244 completed: 100 valid samples
+2025-10-08 10:56:16,130 - INFO - Collected batch 244/504: 100 samples
+2025-10-08 10:56:16,130 - INFO - Collected batch 245/504: 100 samples
+2025-10-08 10:56:16,172 - INFO - Processing batch 245 with 100 files
+2025-10-08 10:56:16,173 - INFO - Batch 245: Processed 100/100 files
+2025-10-08 10:56:16,173 - INFO - Batch 245 completed: 100 valid samples
+2025-10-08 10:56:16,174 - INFO - Collected batch 246/504: 100 samples
+2025-10-08 10:56:16,216 - INFO - Processing batch 246 with 100 files
+2025-10-08 10:56:16,217 - INFO - Batch 246: Processed 100/100 files
+2025-10-08 10:56:16,217 - INFO - Batch 246 completed: 100 valid samples
+2025-10-08 10:56:16,218 - INFO - Collected batch 247/504: 100 samples
+2025-10-08 10:56:16,258 - INFO - Processing batch 247 with 100 files
+2025-10-08 10:56:16,260 - INFO - Batch 247: Processed 100/100 files
+2025-10-08 10:56:16,260 - INFO - Batch 247 completed: 100 valid samples
+2025-10-08 10:56:16,260 - INFO - Collected batch 248/504: 100 samples
+2025-10-08 10:56:16,303 - INFO - Processing batch 248 with 100 files
+2025-10-08 10:56:16,304 - INFO - Batch 248: Processed 100/100 files
+2025-10-08 10:56:16,304 - INFO - Batch 248 completed: 100 valid samples
+2025-10-08 10:56:16,306 - INFO - Collected batch 249/504: 100 samples
+2025-10-08 10:56:16,344 - INFO - Processing batch 249 with 100 files
+2025-10-08 10:56:16,345 - INFO - Batch 249: Processed 100/100 files
+2025-10-08 10:56:16,345 - INFO - Batch 249 completed: 100 valid samples
+2025-10-08 10:56:16,347 - INFO - Collected batch 250/504: 100 samples
+2025-10-08 10:56:16,388 - INFO - Processing batch 250 with 100 files
+2025-10-08 10:56:16,389 - INFO - Batch 250: Processed 100/100 files
+2025-10-08 10:56:16,389 - INFO - Batch 250 completed: 100 valid samples
+2025-10-08 10:56:16,390 - INFO - Collected batch 251/504: 100 samples
+2025-10-08 10:56:16,428 - INFO - Processing batch 251 with 100 files
+2025-10-08 10:56:16,429 - INFO - Batch 251: Processed 100/100 files
+2025-10-08 10:56:16,429 - INFO - Batch 251 completed: 100 valid samples
+2025-10-08 10:56:16,434 - INFO - Collected batch 252/504: 100 samples
+2025-10-08 10:56:16,479 - INFO - Processing batch 252 with 100 files
+2025-10-08 10:56:16,480 - INFO - Batch 252: Processed 100/100 files
+2025-10-08 10:56:16,480 - INFO - Batch 252 completed: 100 valid samples
+2025-10-08 10:56:16,481 - INFO - Collected batch 253/504: 100 samples
+2025-10-08 10:56:16,522 - INFO - Processing batch 253 with 100 files
+2025-10-08 10:56:16,524 - INFO - Batch 253: Processed 100/100 files
+2025-10-08 10:56:16,524 - INFO - Batch 253 completed: 100 valid samples
+2025-10-08 10:56:16,525 - INFO - Collected batch 254/504: 100 samples
+2025-10-08 10:56:16,565 - INFO - Processing batch 254 with 100 files
+2025-10-08 10:56:16,567 - INFO - Batch 254: Processed 100/100 files
+2025-10-08 10:56:16,567 - INFO - Batch 254 completed: 100 valid samples
+2025-10-08 10:56:16,574 - INFO - Collected batch 255/504: 100 samples
+2025-10-08 10:56:16,618 - INFO - Processing batch 255 with 100 files
+2025-10-08 10:56:16,619 - INFO - Batch 255: Processed 100/100 files
+2025-10-08 10:56:16,619 - INFO - Batch 255 completed: 100 valid samples
+2025-10-08 10:56:16,620 - INFO - Collected batch 256/504: 100 samples
+2025-10-08 10:56:16,660 - INFO - Processing batch 256 with 100 files
+2025-10-08 10:56:16,661 - INFO - Batch 256: Processed 100/100 files
+2025-10-08 10:56:16,661 - INFO - Batch 256 completed: 100 valid samples
+2025-10-08 10:56:16,667 - INFO - Collected batch 257/504: 100 samples
+2025-10-08 10:56:16,711 - INFO - Processing batch 257 with 100 files
+2025-10-08 10:56:16,712 - INFO - Batch 257: Processed 100/100 files
+2025-10-08 10:56:16,712 - INFO - Batch 257 completed: 100 valid samples
+2025-10-08 10:56:16,713 - INFO - Collected batch 258/504: 100 samples
+2025-10-08 10:56:16,753 - INFO - Processing batch 258 with 100 files
+2025-10-08 10:56:16,754 - INFO - Batch 258: Processed 100/100 files
+2025-10-08 10:56:16,754 - INFO - Batch 258 completed: 100 valid samples
+2025-10-08 10:56:16,755 - INFO - Collected batch 259/504: 100 samples
+2025-10-08 10:56:16,791 - INFO - Processing batch 259 with 100 files
+2025-10-08 10:56:16,793 - INFO - Batch 259: Processed 100/100 files
+2025-10-08 10:56:16,793 - INFO - Batch 259 completed: 100 valid samples
+2025-10-08 10:56:16,794 - INFO - Collected batch 260/504: 100 samples
+2025-10-08 10:56:16,839 - INFO - Processing batch 260 with 100 files
+2025-10-08 10:56:16,840 - INFO - Batch 260: Processed 100/100 files
+2025-10-08 10:56:16,841 - INFO - Batch 260 completed: 100 valid samples
+2025-10-08 10:56:16,878 - INFO - Processing batch 261 with 100 files
+2025-10-08 10:56:16,879 - INFO - Collected batch 261/504: 100 samples
+2025-10-08 10:56:16,879 - INFO - Batch 261: Processed 100/100 files
+2025-10-08 10:56:16,879 - INFO - Batch 261 completed: 100 valid samples
+2025-10-08 10:56:16,880 - INFO - Collected batch 262/504: 100 samples
+2025-10-08 10:56:16,924 - INFO - Processing batch 262 with 100 files
+2025-10-08 10:56:16,926 - INFO - Batch 262: Processed 100/100 files
+2025-10-08 10:56:16,926 - INFO - Batch 262 completed: 100 valid samples
+2025-10-08 10:56:16,926 - INFO - Collected batch 263/504: 100 samples
+2025-10-08 10:56:16,967 - INFO - Processing batch 263 with 100 files
+2025-10-08 10:56:16,968 - INFO - Batch 263: Processed 100/100 files
+2025-10-08 10:56:16,968 - INFO - Batch 263 completed: 100 valid samples
+2025-10-08 10:56:16,969 - INFO - Collected batch 264/504: 100 samples
+2025-10-08 10:56:17,006 - INFO - Processing batch 264 with 100 files
+2025-10-08 10:56:17,007 - INFO - Batch 264: Processed 100/100 files
+2025-10-08 10:56:17,007 - INFO - Batch 264 completed: 100 valid samples
+2025-10-08 10:56:17,009 - INFO - Collected batch 265/504: 100 samples
+2025-10-08 10:56:17,053 - INFO - Processing batch 265 with 100 files
+2025-10-08 10:56:17,054 - INFO - Batch 265: Processed 100/100 files
+2025-10-08 10:56:17,054 - INFO - Batch 265 completed: 100 valid samples
+2025-10-08 10:56:17,055 - INFO - Collected batch 266/504: 100 samples
+2025-10-08 10:56:17,093 - INFO - Processing batch 266 with 100 files
+2025-10-08 10:56:17,094 - INFO - Batch 266: Processed 100/100 files
+2025-10-08 10:56:17,094 - INFO - Batch 266 completed: 100 valid samples
+2025-10-08 10:56:17,102 - INFO - Collected batch 267/504: 100 samples
+2025-10-08 10:56:17,147 - INFO - Processing batch 267 with 100 files
+2025-10-08 10:56:17,148 - INFO - Batch 267: Processed 100/100 files
+2025-10-08 10:56:17,148 - INFO - Batch 267 completed: 100 valid samples
+2025-10-08 10:56:17,149 - INFO - Collected batch 268/504: 100 samples
+2025-10-08 10:56:17,191 - INFO - Processing batch 268 with 100 files
+2025-10-08 10:56:17,193 - INFO - Batch 268: Processed 100/100 files
+2025-10-08 10:56:17,193 - INFO - Batch 268 completed: 100 valid samples
+2025-10-08 10:56:17,231 - INFO - Processing batch 269 with 100 files
+2025-10-08 10:56:17,231 - INFO - Collected batch 269/504: 100 samples
+2025-10-08 10:56:17,232 - INFO - Batch 269: Processed 100/100 files
+2025-10-08 10:56:17,232 - INFO - Batch 269 completed: 100 valid samples
+2025-10-08 10:56:17,233 - INFO - Collected batch 270/504: 100 samples
+2025-10-08 10:56:17,274 - INFO - Processing batch 270 with 100 files
+2025-10-08 10:56:17,275 - INFO - Batch 270: Processed 100/100 files
+2025-10-08 10:56:17,276 - INFO - Batch 270 completed: 100 valid samples
+2025-10-08 10:56:17,279 - INFO - Collected batch 271/504: 100 samples
+2025-10-08 10:56:17,316 - INFO - Processing batch 271 with 100 files
+2025-10-08 10:56:17,317 - INFO - Batch 271: Processed 100/100 files
+2025-10-08 10:56:17,317 - INFO - Batch 271 completed: 100 valid samples
+2025-10-08 10:56:17,320 - INFO - Collected batch 272/504: 100 samples
+2025-10-08 10:56:17,361 - INFO - Processing batch 272 with 100 files
+2025-10-08 10:56:17,362 - INFO - Batch 272: Processed 100/100 files
+2025-10-08 10:56:17,362 - INFO - Batch 272 completed: 100 valid samples
+2025-10-08 10:56:17,371 - INFO - Collected batch 273/504: 100 samples
+2025-10-08 10:56:17,415 - INFO - Processing batch 273 with 100 files
+2025-10-08 10:56:17,416 - INFO - Batch 273: Processed 100/100 files
+2025-10-08 10:56:17,416 - INFO - Batch 273 completed: 100 valid samples
+2025-10-08 10:56:17,417 - INFO - Collected batch 274/504: 100 samples
+2025-10-08 10:56:17,456 - INFO - Processing batch 274 with 100 files
+2025-10-08 10:56:17,457 - INFO - Batch 274: Processed 100/100 files
+2025-10-08 10:56:17,457 - INFO - Batch 274 completed: 100 valid samples
+2025-10-08 10:56:17,458 - INFO - Collected batch 275/504: 100 samples
+2025-10-08 10:56:17,504 - INFO - Processing batch 275 with 100 files
+2025-10-08 10:56:17,505 - INFO - Batch 275: Processed 100/100 files
+2025-10-08 10:56:17,505 - INFO - Batch 275 completed: 100 valid samples
+2025-10-08 10:56:17,544 - INFO - Collected batch 276/504: 100 samples
+2025-10-08 10:56:17,548 - INFO - Processing batch 276 with 100 files
+2025-10-08 10:56:17,549 - INFO - Batch 276: Processed 100/100 files
+2025-10-08 10:56:17,549 - INFO - Batch 276 completed: 100 valid samples
+2025-10-08 10:56:17,550 - INFO - Collected batch 277/504: 100 samples
+2025-10-08 10:56:17,588 - INFO - Processing batch 277 with 100 files
+2025-10-08 10:56:17,589 - INFO - Batch 277: Processed 100/100 files
+2025-10-08 10:56:17,589 - INFO - Batch 277 completed: 100 valid samples
+2025-10-08 10:56:17,590 - INFO - Collected batch 278/504: 100 samples
+2025-10-08 10:56:17,634 - INFO - Processing batch 278 with 100 files
+2025-10-08 10:56:17,635 - INFO - Batch 278: Processed 100/100 files
+2025-10-08 10:56:17,635 - INFO - Batch 278 completed: 100 valid samples
+2025-10-08 10:56:17,636 - INFO - Collected batch 279/504: 100 samples
+2025-10-08 10:56:17,680 - INFO - Processing batch 279 with 100 files
+2025-10-08 10:56:17,681 - INFO - Batch 279: Processed 100/100 files
+2025-10-08 10:56:17,681 - INFO - Batch 279 completed: 100 valid samples
+2025-10-08 10:56:17,719 - INFO - Collected batch 280/504: 100 samples
+2025-10-08 10:56:17,723 - INFO - Processing batch 280 with 100 files
+2025-10-08 10:56:17,724 - INFO - Batch 280: Processed 100/100 files
+2025-10-08 10:56:17,724 - INFO - Batch 280 completed: 100 valid samples
+2025-10-08 10:56:17,757 - INFO - Processing batch 281 with 100 files
+2025-10-08 10:56:17,758 - INFO - Batch 281: Processed 100/100 files
+2025-10-08 10:56:17,758 - INFO - Batch 281 completed: 100 valid samples
+2025-10-08 10:56:17,762 - INFO - Collected batch 281/504: 100 samples
+2025-10-08 10:56:17,762 - INFO - Collected batch 282/504: 100 samples
+2025-10-08 10:56:17,822 - INFO - Processing batch 282 with 100 files
+2025-10-08 10:56:17,823 - INFO - Batch 282: Processed 100/100 files
+2025-10-08 10:56:17,823 - INFO - Batch 282 completed: 100 valid samples
+2025-10-08 10:56:17,849 - INFO - Processing batch 283 with 100 files
+2025-10-08 10:56:17,850 - INFO - Batch 283: Processed 100/100 files
+2025-10-08 10:56:17,850 - INFO - Batch 283 completed: 100 valid samples
+2025-10-08 10:56:17,851 - INFO - Collected batch 283/504: 100 samples
+2025-10-08 10:56:17,851 - INFO - Collected batch 284/504: 100 samples
+2025-10-08 10:56:17,897 - INFO - Processing batch 284 with 100 files
+2025-10-08 10:56:17,899 - INFO - Batch 284: Processed 100/100 files
+2025-10-08 10:56:17,899 - INFO - Batch 284 completed: 100 valid samples
+2025-10-08 10:56:17,937 - INFO - Collected batch 285/504: 100 samples
+2025-10-08 10:56:17,945 - INFO - Processing batch 285 with 100 files
+2025-10-08 10:56:17,946 - INFO - Batch 285: Processed 100/100 files
+2025-10-08 10:56:17,946 - INFO - Batch 285 completed: 100 valid samples
+2025-10-08 10:56:17,978 - INFO - Processing batch 286 with 100 files
+2025-10-08 10:56:17,979 - INFO - Batch 286: Processed 100/100 files
+2025-10-08 10:56:17,979 - INFO - Batch 286 completed: 100 valid samples
+2025-10-08 10:56:17,980 - INFO - Collected batch 286/504: 100 samples
+2025-10-08 10:56:17,980 - INFO - Collected batch 287/504: 100 samples
+2025-10-08 10:56:18,028 - INFO - Processing batch 287 with 100 files
+2025-10-08 10:56:18,029 - INFO - Batch 287: Processed 100/100 files
+2025-10-08 10:56:18,029 - INFO - Batch 287 completed: 100 valid samples
+2025-10-08 10:56:18,064 - INFO - Collected batch 288/504: 100 samples
+2025-10-08 10:56:18,080 - INFO - Processing batch 288 with 100 files
+2025-10-08 10:56:18,081 - INFO - Batch 288: Processed 100/100 files
+2025-10-08 10:56:18,081 - INFO - Batch 288 completed: 100 valid samples
+2025-10-08 10:56:18,106 - INFO - Processing batch 289 with 100 files
+2025-10-08 10:56:18,106 - INFO - Collected batch 289/504: 100 samples
+2025-10-08 10:56:18,107 - INFO - Batch 289: Processed 100/100 files
+2025-10-08 10:56:18,107 - INFO - Batch 289 completed: 100 valid samples
+2025-10-08 10:56:18,108 - INFO - Collected batch 290/504: 100 samples
+2025-10-08 10:56:18,152 - INFO - Processing batch 290 with 100 files
+2025-10-08 10:56:18,153 - INFO - Batch 290: Processed 100/100 files
+2025-10-08 10:56:18,153 - INFO - Batch 290 completed: 100 valid samples
+2025-10-08 10:56:18,154 - INFO - Collected batch 291/504: 100 samples
+2025-10-08 10:56:18,191 - INFO - Processing batch 291 with 100 files
+2025-10-08 10:56:18,193 - INFO - Batch 291: Processed 100/100 files
+2025-10-08 10:56:18,193 - INFO - Batch 291 completed: 100 valid samples
+2025-10-08 10:56:18,198 - INFO - Collected batch 292/504: 100 samples
+2025-10-08 10:56:18,243 - INFO - Processing batch 292 with 100 files
+2025-10-08 10:56:18,244 - INFO - Batch 292: Processed 100/100 files
+2025-10-08 10:56:18,244 - INFO - Batch 292 completed: 100 valid samples
+2025-10-08 10:56:18,245 - INFO - Collected batch 293/504: 100 samples
+2025-10-08 10:56:18,287 - INFO - Processing batch 293 with 100 files
+2025-10-08 10:56:18,288 - INFO - Batch 293: Processed 100/100 files
+2025-10-08 10:56:18,288 - INFO - Batch 293 completed: 100 valid samples
+2025-10-08 10:56:18,289 - INFO - Collected batch 294/504: 100 samples
+2025-10-08 10:56:18,334 - INFO - Processing batch 294 with 100 files
+2025-10-08 10:56:18,336 - INFO - Batch 294: Processed 100/100 files
+2025-10-08 10:56:18,336 - INFO - Batch 294 completed: 100 valid samples
+2025-10-08 10:56:18,373 - INFO - Collected batch 295/504: 100 samples
+2025-10-08 10:56:18,376 - INFO - Processing batch 295 with 100 files
+2025-10-08 10:56:18,377 - INFO - Batch 295: Processed 100/100 files
+2025-10-08 10:56:18,377 - INFO - Batch 295 completed: 100 valid samples
+2025-10-08 10:56:18,412 - INFO - Processing batch 296 with 100 files
+2025-10-08 10:56:18,413 - INFO - Batch 296: Processed 100/100 files
+2025-10-08 10:56:18,413 - INFO - Batch 296 completed: 100 valid samples
+2025-10-08 10:56:18,414 - INFO - Collected batch 296/504: 100 samples
+2025-10-08 10:56:18,414 - INFO - Collected batch 297/504: 100 samples
+2025-10-08 10:56:18,459 - INFO - Processing batch 297 with 100 files
+2025-10-08 10:56:18,460 - INFO - Batch 297: Processed 100/100 files
+2025-10-08 10:56:18,460 - INFO - Batch 297 completed: 100 valid samples
+2025-10-08 10:56:18,497 - INFO - Processing batch 298 with 100 files
+2025-10-08 10:56:18,498 - INFO - Batch 298: Processed 100/100 files
+2025-10-08 10:56:18,498 - INFO - Batch 298 completed: 100 valid samples
+2025-10-08 10:56:18,501 - INFO - Collected batch 298/504: 100 samples
+2025-10-08 10:56:18,502 - INFO - Collected batch 299/504: 100 samples
+2025-10-08 10:56:18,544 - INFO - Processing batch 299 with 100 files
+2025-10-08 10:56:18,545 - INFO - Batch 299: Processed 100/100 files
+2025-10-08 10:56:18,545 - INFO - Batch 299 completed: 100 valid samples
+2025-10-08 10:56:18,547 - INFO - Collected batch 300/504: 100 samples
+2025-10-08 10:56:18,611 - INFO - Processing batch 300 with 100 files
+2025-10-08 10:56:18,612 - INFO - Batch 300: Processed 100/100 files
+2025-10-08 10:56:18,612 - INFO - Batch 300 completed: 100 valid samples
+2025-10-08 10:56:18,643 - INFO - Collected batch 301/504: 100 samples
+2025-10-08 10:56:18,646 - INFO - Processing batch 301 with 100 files
+2025-10-08 10:56:18,648 - INFO - Batch 301: Processed 100/100 files
+2025-10-08 10:56:18,648 - INFO - Batch 301 completed: 100 valid samples
+2025-10-08 10:56:18,686 - INFO - Collected batch 302/504: 100 samples
+2025-10-08 10:56:18,689 - INFO - Processing batch 302 with 100 files
+2025-10-08 10:56:18,690 - INFO - Batch 302: Processed 100/100 files
+2025-10-08 10:56:18,690 - INFO - Batch 302 completed: 100 valid samples
+2025-10-08 10:56:18,732 - INFO - Collected batch 303/504: 100 samples
+2025-10-08 10:56:18,734 - INFO - Processing batch 303 with 100 files
+2025-10-08 10:56:18,736 - INFO - Batch 303: Processed 100/100 files
+2025-10-08 10:56:18,736 - INFO - Batch 303 completed: 100 valid samples
+2025-10-08 10:56:18,736 - INFO - Collected batch 304/504: 100 samples
+2025-10-08 10:56:18,779 - INFO - Processing batch 304 with 100 files
+2025-10-08 10:56:18,780 - INFO - Batch 304: Processed 100/100 files
+2025-10-08 10:56:18,780 - INFO - Batch 304 completed: 100 valid samples
+2025-10-08 10:56:18,819 - INFO - Processing batch 305 with 100 files
+2025-10-08 10:56:18,820 - INFO - Collected batch 305/504: 100 samples
+2025-10-08 10:56:18,820 - INFO - Batch 305: Processed 100/100 files
+2025-10-08 10:56:18,820 - INFO - Batch 305 completed: 100 valid samples
+2025-10-08 10:56:18,821 - INFO - Collected batch 306/504: 100 samples
+2025-10-08 10:56:18,866 - INFO - Processing batch 306 with 100 files
+2025-10-08 10:56:18,867 - INFO - Batch 306: Processed 100/100 files
+2025-10-08 10:56:18,867 - INFO - Batch 306 completed: 100 valid samples
+2025-10-08 10:56:18,906 - INFO - Collected batch 307/504: 100 samples
+2025-10-08 10:56:18,909 - INFO - Processing batch 307 with 100 files
+2025-10-08 10:56:18,910 - INFO - Batch 307: Processed 100/100 files
+2025-10-08 10:56:18,910 - INFO - Batch 307 completed: 100 valid samples
+2025-10-08 10:56:18,945 - INFO - Processing batch 308 with 100 files
+2025-10-08 10:56:18,946 - INFO - Batch 308: Processed 100/100 files
+2025-10-08 10:56:18,946 - INFO - Batch 308 completed: 100 valid samples
+2025-10-08 10:56:18,948 - INFO - Collected batch 308/504: 100 samples
+2025-10-08 10:56:18,948 - INFO - Collected batch 309/504: 100 samples
+2025-10-08 10:56:19,007 - INFO - Processing batch 309 with 100 files
+2025-10-08 10:56:19,008 - INFO - Batch 309: Processed 100/100 files
+2025-10-08 10:56:19,008 - INFO - Batch 309 completed: 100 valid samples
+2025-10-08 10:56:19,039 - INFO - Processing batch 310 with 100 files
+2025-10-08 10:56:19,040 - INFO - Batch 310: Processed 100/100 files
+2025-10-08 10:56:19,040 - INFO - Batch 310 completed: 100 valid samples
+2025-10-08 10:56:19,042 - INFO - Collected batch 310/504: 100 samples
+2025-10-08 10:56:19,043 - INFO - Collected batch 311/504: 100 samples
+2025-10-08 10:56:19,088 - INFO - Processing batch 311 with 100 files
+2025-10-08 10:56:19,089 - INFO - Batch 311: Processed 100/100 files
+2025-10-08 10:56:19,089 - INFO - Batch 311 completed: 100 valid samples
+2025-10-08 10:56:19,128 - INFO - Collected batch 312/504: 100 samples
+2025-10-08 10:56:19,132 - INFO - Processing batch 312 with 100 files
+2025-10-08 10:56:19,133 - INFO - Batch 312: Processed 100/100 files
+2025-10-08 10:56:19,133 - INFO - Batch 312 completed: 100 valid samples
+2025-10-08 10:56:19,172 - INFO - Collected batch 313/504: 100 samples
+2025-10-08 10:56:19,176 - INFO - Processing batch 313 with 100 files
+2025-10-08 10:56:19,177 - INFO - Batch 313: Processed 100/100 files
+2025-10-08 10:56:19,177 - INFO - Batch 313 completed: 100 valid samples
+2025-10-08 10:56:19,213 - INFO - Processing batch 314 with 100 files
+2025-10-08 10:56:19,214 - INFO - Batch 314: Processed 100/100 files
+2025-10-08 10:56:19,214 - INFO - Batch 314 completed: 100 valid samples
+2025-10-08 10:56:19,220 - INFO - Collected batch 314/504: 100 samples
+2025-10-08 10:56:19,221 - INFO - Collected batch 315/504: 100 samples
+2025-10-08 10:56:19,268 - INFO - Processing batch 315 with 100 files
+2025-10-08 10:56:19,269 - INFO - Batch 315: Processed 100/100 files
+2025-10-08 10:56:19,269 - INFO - Batch 315 completed: 100 valid samples
+2025-10-08 10:56:19,303 - INFO - Collected batch 316/504: 100 samples
+2025-10-08 10:56:19,306 - INFO - Processing batch 316 with 100 files
+2025-10-08 10:56:19,308 - INFO - Batch 316: Processed 100/100 files
+2025-10-08 10:56:19,308 - INFO - Batch 316 completed: 100 valid samples
+2025-10-08 10:56:19,308 - INFO - Collected batch 317/504: 100 samples
+2025-10-08 10:56:19,350 - INFO - Processing batch 317 with 100 files
+2025-10-08 10:56:19,351 - INFO - Batch 317: Processed 100/100 files
+2025-10-08 10:56:19,351 - INFO - Batch 317 completed: 100 valid samples
+2025-10-08 10:56:19,386 - INFO - Processing batch 318 with 100 files
+2025-10-08 10:56:19,387 - INFO - Batch 318: Processed 100/100 files
+2025-10-08 10:56:19,387 - INFO - Batch 318 completed: 100 valid samples
+2025-10-08 10:56:19,395 - INFO - Collected batch 318/504: 100 samples
+2025-10-08 10:56:19,395 - INFO - Collected batch 319/504: 100 samples
+2025-10-08 10:56:19,435 - INFO - Processing batch 319 with 100 files
+2025-10-08 10:56:19,436 - INFO - Batch 319: Processed 100/100 files
+2025-10-08 10:56:19,436 - INFO - Batch 319 completed: 100 valid samples
+2025-10-08 10:56:19,443 - INFO - Collected batch 320/504: 100 samples
+2025-10-08 10:56:19,491 - INFO - Processing batch 320 with 100 files
+2025-10-08 10:56:19,492 - INFO - Batch 320: Processed 100/100 files
+2025-10-08 10:56:19,492 - INFO - Batch 320 completed: 100 valid samples
+2025-10-08 10:56:19,530 - INFO - Processing batch 321 with 100 files
+2025-10-08 10:56:19,531 - INFO - Collected batch 321/504: 100 samples
+2025-10-08 10:56:19,532 - INFO - Batch 321: Processed 100/100 files
+2025-10-08 10:56:19,532 - INFO - Batch 321 completed: 100 valid samples
+2025-10-08 10:56:19,532 - INFO - Collected batch 322/504: 100 samples
+2025-10-08 10:56:19,577 - INFO - Processing batch 322 with 100 files
+2025-10-08 10:56:19,578 - INFO - Batch 322: Processed 100/100 files
+2025-10-08 10:56:19,578 - INFO - Batch 322 completed: 100 valid samples
+2025-10-08 10:56:19,613 - INFO - Processing batch 323 with 100 files
+2025-10-08 10:56:19,614 - INFO - Batch 323: Processed 100/100 files
+2025-10-08 10:56:19,614 - INFO - Batch 323 completed: 100 valid samples
+2025-10-08 10:56:19,618 - INFO - Collected batch 323/504: 100 samples
+2025-10-08 10:56:19,618 - INFO - Collected batch 324/504: 100 samples
+2025-10-08 10:56:19,659 - INFO - Processing batch 324 with 100 files
+2025-10-08 10:56:19,660 - INFO - Batch 324: Processed 100/100 files
+2025-10-08 10:56:19,660 - INFO - Batch 324 completed: 100 valid samples
+2025-10-08 10:56:19,666 - INFO - Collected batch 325/504: 100 samples
+2025-10-08 10:56:19,709 - INFO - Processing batch 325 with 100 files
+2025-10-08 10:56:19,710 - INFO - Batch 325: Processed 100/100 files
+2025-10-08 10:56:19,710 - INFO - Batch 325 completed: 100 valid samples
+2025-10-08 10:56:19,711 - INFO - Collected batch 326/504: 100 samples
+2025-10-08 10:56:19,752 - INFO - Processing batch 326 with 100 files
+2025-10-08 10:56:19,753 - INFO - Batch 326: Processed 100/100 files
+2025-10-08 10:56:19,753 - INFO - Batch 326 completed: 100 valid samples
+2025-10-08 10:56:19,756 - INFO - Collected batch 327/504: 100 samples
+2025-10-08 10:56:19,798 - INFO - Processing batch 327 with 100 files
+2025-10-08 10:56:19,800 - INFO - Batch 327: Processed 100/100 files
+2025-10-08 10:56:19,800 - INFO - Batch 327 completed: 100 valid samples
+2025-10-08 10:56:19,800 - INFO - Collected batch 328/504: 100 samples
+2025-10-08 10:56:19,838 - INFO - Processing batch 328 with 100 files
+2025-10-08 10:56:19,839 - INFO - Batch 328: Processed 100/100 files
+2025-10-08 10:56:19,839 - INFO - Batch 328 completed: 100 valid samples
+2025-10-08 10:56:19,842 - INFO - Collected batch 329/504: 100 samples
+2025-10-08 10:56:19,886 - INFO - Processing batch 329 with 100 files
+2025-10-08 10:56:19,887 - INFO - Batch 329: Processed 100/100 files
+2025-10-08 10:56:19,887 - INFO - Batch 329 completed: 100 valid samples
+2025-10-08 10:56:19,923 - INFO - Collected batch 330/504: 100 samples
+2025-10-08 10:56:19,925 - INFO - Processing batch 330 with 100 files
+2025-10-08 10:56:19,926 - INFO - Batch 330: Processed 100/100 files
+2025-10-08 10:56:19,927 - INFO - Batch 330 completed: 100 valid samples
+2025-10-08 10:56:19,927 - INFO - Collected batch 331/504: 100 samples
+2025-10-08 10:56:19,962 - INFO - Processing batch 331 with 100 files
+2025-10-08 10:56:19,963 - INFO - Batch 331: Processed 100/100 files
+2025-10-08 10:56:19,963 - INFO - Batch 331 completed: 100 valid samples
+2025-10-08 10:56:19,967 - INFO - Collected batch 332/504: 100 samples
+2025-10-08 10:56:20,008 - INFO - Processing batch 332 with 100 files
+2025-10-08 10:56:20,009 - INFO - Batch 332: Processed 100/100 files
+2025-10-08 10:56:20,009 - INFO - Batch 332 completed: 100 valid samples
+2025-10-08 10:56:20,013 - INFO - Collected batch 333/504: 100 samples
+2025-10-08 10:56:20,063 - INFO - Processing batch 333 with 100 files
+2025-10-08 10:56:20,065 - INFO - Batch 333: Processed 100/100 files
+2025-10-08 10:56:20,065 - INFO - Batch 333 completed: 100 valid samples
+2025-10-08 10:56:20,099 - INFO - Collected batch 334/504: 100 samples
+2025-10-08 10:56:20,101 - INFO - Processing batch 334 with 100 files
+2025-10-08 10:56:20,102 - INFO - Batch 334: Processed 100/100 files
+2025-10-08 10:56:20,102 - INFO - Batch 334 completed: 100 valid samples
+2025-10-08 10:56:20,103 - INFO - Collected batch 335/504: 100 samples
+2025-10-08 10:56:20,146 - INFO - Processing batch 335 with 100 files
+2025-10-08 10:56:20,148 - INFO - Batch 335: Processed 100/100 files
+2025-10-08 10:56:20,148 - INFO - Batch 335 completed: 100 valid samples
+2025-10-08 10:56:20,188 - INFO - Collected batch 336/504: 100 samples
+2025-10-08 10:56:20,197 - INFO - Processing batch 336 with 100 files
+2025-10-08 10:56:20,198 - INFO - Batch 336: Processed 100/100 files
+2025-10-08 10:56:20,198 - INFO - Batch 336 completed: 100 valid samples
+2025-10-08 10:56:20,229 - INFO - Collected batch 337/504: 100 samples
+2025-10-08 10:56:20,233 - INFO - Processing batch 337 with 100 files
+2025-10-08 10:56:20,234 - INFO - Batch 337: Processed 100/100 files
+2025-10-08 10:56:20,235 - INFO - Batch 337 completed: 100 valid samples
+2025-10-08 10:56:20,272 - INFO - Collected batch 338/504: 100 samples
+2025-10-08 10:56:20,281 - INFO - Processing batch 338 with 100 files
+2025-10-08 10:56:20,283 - INFO - Batch 338: Processed 100/100 files
+2025-10-08 10:56:20,283 - INFO - Batch 338 completed: 100 valid samples
+2025-10-08 10:56:20,318 - INFO - Collected batch 339/504: 100 samples
+2025-10-08 10:56:20,321 - INFO - Processing batch 339 with 100 files
+2025-10-08 10:56:20,323 - INFO - Batch 339: Processed 100/100 files
+2025-10-08 10:56:20,323 - INFO - Batch 339 completed: 100 valid samples
+2025-10-08 10:56:20,358 - INFO - Collected batch 340/504: 100 samples
+2025-10-08 10:56:20,381 - INFO - Processing batch 340 with 100 files
+2025-10-08 10:56:20,382 - INFO - Batch 340: Processed 100/100 files
+2025-10-08 10:56:20,383 - INFO - Batch 340 completed: 100 valid samples
+2025-10-08 10:56:20,407 - INFO - Collected batch 341/504: 100 samples
+2025-10-08 10:56:20,408 - INFO - Processing batch 341 with 100 files
+2025-10-08 10:56:20,410 - INFO - Batch 341: Processed 100/100 files
+2025-10-08 10:56:20,410 - INFO - Batch 341 completed: 100 valid samples
+2025-10-08 10:56:20,411 - INFO - Collected batch 342/504: 100 samples
+2025-10-08 10:56:20,453 - INFO - Processing batch 342 with 100 files
+2025-10-08 10:56:20,454 - INFO - Batch 342: Processed 100/100 files
+2025-10-08 10:56:20,454 - INFO - Batch 342 completed: 100 valid samples
+2025-10-08 10:56:20,490 - INFO - Processing batch 343 with 100 files
+2025-10-08 10:56:20,491 - INFO - Batch 343: Processed 100/100 files
+2025-10-08 10:56:20,491 - INFO - Batch 343 completed: 100 valid samples
+2025-10-08 10:56:20,500 - INFO - Collected batch 343/504: 100 samples
+2025-10-08 10:56:20,500 - INFO - Collected batch 344/504: 100 samples
+2025-10-08 10:56:20,541 - INFO - Processing batch 344 with 100 files
+2025-10-08 10:56:20,542 - INFO - Batch 344: Processed 100/100 files
+2025-10-08 10:56:20,542 - INFO - Batch 344 completed: 100 valid samples
+2025-10-08 10:56:20,545 - INFO - Collected batch 345/504: 100 samples
+2025-10-08 10:56:20,591 - INFO - Processing batch 345 with 100 files
+2025-10-08 10:56:20,592 - INFO - Batch 345: Processed 100/100 files
+2025-10-08 10:56:20,592 - INFO - Batch 345 completed: 100 valid samples
+2025-10-08 10:56:20,593 - INFO - Collected batch 346/504: 100 samples
+2025-10-08 10:56:20,627 - INFO - Processing batch 346 with 100 files
+2025-10-08 10:56:20,628 - INFO - Batch 346: Processed 100/100 files
+2025-10-08 10:56:20,628 - INFO - Batch 346 completed: 100 valid samples
+2025-10-08 10:56:20,635 - INFO - Collected batch 347/504: 100 samples
+2025-10-08 10:56:20,679 - INFO - Processing batch 347 with 100 files
+2025-10-08 10:56:20,680 - INFO - Batch 347: Processed 100/100 files
+2025-10-08 10:56:20,680 - INFO - Batch 347 completed: 100 valid samples
+2025-10-08 10:56:20,681 - INFO - Collected batch 348/504: 100 samples
+2025-10-08 10:56:20,720 - INFO - Processing batch 348 with 100 files
+2025-10-08 10:56:20,721 - INFO - Batch 348: Processed 100/100 files
+2025-10-08 10:56:20,721 - INFO - Batch 348 completed: 100 valid samples
+2025-10-08 10:56:20,729 - INFO - Collected batch 349/504: 100 samples
+2025-10-08 10:56:20,773 - INFO - Processing batch 349 with 100 files
+2025-10-08 10:56:20,774 - INFO - Batch 349: Processed 100/100 files
+2025-10-08 10:56:20,774 - INFO - Batch 349 completed: 100 valid samples
+2025-10-08 10:56:20,813 - INFO - Collected batch 350/504: 100 samples
+2025-10-08 10:56:20,817 - INFO - Processing batch 350 with 100 files
+2025-10-08 10:56:20,819 - INFO - Batch 350: Processed 100/100 files
+2025-10-08 10:56:20,819 - INFO - Batch 350 completed: 100 valid samples
+2025-10-08 10:56:20,857 - INFO - Collected batch 351/504: 100 samples
+2025-10-08 10:56:20,861 - INFO - Processing batch 351 with 100 files
+2025-10-08 10:56:20,862 - INFO - Batch 351: Processed 100/100 files
+2025-10-08 10:56:20,862 - INFO - Batch 351 completed: 100 valid samples
+2025-10-08 10:56:20,901 - INFO - Collected batch 352/504: 100 samples
+2025-10-08 10:56:20,905 - INFO - Processing batch 352 with 100 files
+2025-10-08 10:56:20,906 - INFO - Batch 352: Processed 100/100 files
+2025-10-08 10:56:20,906 - INFO - Batch 352 completed: 100 valid samples
+2025-10-08 10:56:20,940 - INFO - Processing batch 353 with 100 files
+2025-10-08 10:56:20,941 - INFO - Batch 353: Processed 100/100 files
+2025-10-08 10:56:20,941 - INFO - Batch 353 completed: 100 valid samples
+2025-10-08 10:56:20,942 - INFO - Collected batch 353/504: 100 samples
+2025-10-08 10:56:20,942 - INFO - Collected batch 354/504: 100 samples
+2025-10-08 10:56:20,987 - INFO - Processing batch 354 with 100 files
+2025-10-08 10:56:20,988 - INFO - Batch 354: Processed 100/100 files
+2025-10-08 10:56:20,988 - INFO - Batch 354 completed: 100 valid samples
+2025-10-08 10:56:21,027 - INFO - Processing batch 355 with 100 files
+2025-10-08 10:56:21,027 - INFO - Collected batch 355/504: 100 samples
+2025-10-08 10:56:21,028 - INFO - Batch 355: Processed 100/100 files
+2025-10-08 10:56:21,028 - INFO - Batch 355 completed: 100 valid samples
+2025-10-08 10:56:21,029 - INFO - Collected batch 356/504: 100 samples
+2025-10-08 10:56:21,077 - INFO - Processing batch 356 with 100 files
+2025-10-08 10:56:21,078 - INFO - Batch 356: Processed 100/100 files
+2025-10-08 10:56:21,079 - INFO - Batch 356 completed: 100 valid samples
+2025-10-08 10:56:21,112 - INFO - Collected batch 357/504: 100 samples
+2025-10-08 10:56:21,113 - INFO - Processing batch 357 with 100 files
+2025-10-08 10:56:21,114 - INFO - Batch 357: Processed 100/100 files
+2025-10-08 10:56:21,114 - INFO - Batch 357 completed: 100 valid samples
+2025-10-08 10:56:21,115 - INFO - Collected batch 358/504: 100 samples
+2025-10-08 10:56:21,151 - INFO - Processing batch 358 with 100 files
+2025-10-08 10:56:21,152 - INFO - Batch 358: Processed 100/100 files
+2025-10-08 10:56:21,152 - INFO - Batch 358 completed: 100 valid samples
+2025-10-08 10:56:21,155 - INFO - Collected batch 359/504: 100 samples
+2025-10-08 10:56:21,202 - INFO - Processing batch 359 with 100 files
+2025-10-08 10:56:21,203 - INFO - Batch 359: Processed 100/100 files
+2025-10-08 10:56:21,203 - INFO - Batch 359 completed: 100 valid samples
+2025-10-08 10:56:21,234 - INFO - Processing batch 360 with 100 files
+2025-10-08 10:56:21,236 - INFO - Batch 360: Processed 100/100 files
+2025-10-08 10:56:21,236 - INFO - Batch 360 completed: 100 valid samples
+2025-10-08 10:56:21,237 - INFO - Collected batch 360/504: 100 samples
+2025-10-08 10:56:21,238 - INFO - Collected batch 361/504: 100 samples
+2025-10-08 10:56:21,283 - INFO - Processing batch 361 with 100 files
+2025-10-08 10:56:21,284 - INFO - Batch 361: Processed 100/100 files
+2025-10-08 10:56:21,284 - INFO - Batch 361 completed: 100 valid samples
+2025-10-08 10:56:21,285 - INFO - Collected batch 362/504: 100 samples
+2025-10-08 10:56:21,327 - INFO - Processing batch 362 with 100 files
+2025-10-08 10:56:21,328 - INFO - Batch 362: Processed 100/100 files
+2025-10-08 10:56:21,328 - INFO - Batch 362 completed: 100 valid samples
+2025-10-08 10:56:21,365 - INFO - Collected batch 363/504: 100 samples
+2025-10-08 10:56:21,369 - INFO - Processing batch 363 with 100 files
+2025-10-08 10:56:21,371 - INFO - Batch 363: Processed 100/100 files
+2025-10-08 10:56:21,371 - INFO - Batch 363 completed: 100 valid samples
+2025-10-08 10:56:21,406 - INFO - Collected batch 364/504: 100 samples
+2025-10-08 10:56:21,411 - INFO - Processing batch 364 with 100 files
+2025-10-08 10:56:21,412 - INFO - Batch 364: Processed 100/100 files
+2025-10-08 10:56:21,412 - INFO - Batch 364 completed: 100 valid samples
+2025-10-08 10:56:21,449 - INFO - Collected batch 365/504: 100 samples
+2025-10-08 10:56:21,451 - INFO - Processing batch 365 with 100 files
+2025-10-08 10:56:21,452 - INFO - Batch 365: Processed 100/100 files
+2025-10-08 10:56:21,452 - INFO - Batch 365 completed: 100 valid samples
+2025-10-08 10:56:21,453 - INFO - Collected batch 366/504: 100 samples
+2025-10-08 10:56:21,496 - INFO - Processing batch 366 with 100 files
+2025-10-08 10:56:21,497 - INFO - Batch 366: Processed 100/100 files
+2025-10-08 10:56:21,498 - INFO - Batch 366 completed: 100 valid samples
+2025-10-08 10:56:21,535 - INFO - Collected batch 367/504: 100 samples
+2025-10-08 10:56:21,536 - INFO - Processing batch 367 with 100 files
+2025-10-08 10:56:21,537 - INFO - Batch 367: Processed 100/100 files
+2025-10-08 10:56:21,537 - INFO - Batch 367 completed: 100 valid samples
+2025-10-08 10:56:21,538 - INFO - Collected batch 368/504: 100 samples
+2025-10-08 10:56:21,583 - INFO - Processing batch 368 with 100 files
+2025-10-08 10:56:21,584 - INFO - Batch 368: Processed 100/100 files
+2025-10-08 10:56:21,584 - INFO - Batch 368 completed: 100 valid samples
+2025-10-08 10:56:21,585 - INFO - Collected batch 369/504: 100 samples
+2025-10-08 10:56:21,638 - INFO - Processing batch 369 with 100 files
+2025-10-08 10:56:21,640 - INFO - Batch 369: Processed 100/100 files
+2025-10-08 10:56:21,640 - INFO - Batch 369 completed: 100 valid samples
+2025-10-08 10:56:21,664 - INFO - Processing batch 370 with 100 files
+2025-10-08 10:56:21,665 - INFO - Batch 370: Processed 100/100 files
+2025-10-08 10:56:21,665 - INFO - Batch 370 completed: 100 valid samples
+2025-10-08 10:56:21,672 - INFO - Collected batch 370/504: 100 samples
+2025-10-08 10:56:21,672 - INFO - Collected batch 371/504: 100 samples
+2025-10-08 10:56:21,714 - INFO - Processing batch 371 with 100 files
+2025-10-08 10:56:21,715 - INFO - Batch 371: Processed 100/100 files
+2025-10-08 10:56:21,715 - INFO - Batch 371 completed: 100 valid samples
+2025-10-08 10:56:21,716 - INFO - Collected batch 372/504: 100 samples
+2025-10-08 10:56:21,759 - INFO - Processing batch 372 with 100 files
+2025-10-08 10:56:21,760 - INFO - Batch 372: Processed 100/100 files
+2025-10-08 10:56:21,760 - INFO - Batch 372 completed: 100 valid samples
+2025-10-08 10:56:21,762 - INFO - Collected batch 373/504: 100 samples
+2025-10-08 10:56:21,824 - INFO - Processing batch 373 with 100 files
+2025-10-08 10:56:21,825 - INFO - Batch 373: Processed 100/100 files
+2025-10-08 10:56:21,826 - INFO - Batch 373 completed: 100 valid samples
+2025-10-08 10:56:21,850 - INFO - Collected batch 374/504: 100 samples
+2025-10-08 10:56:21,850 - INFO - Processing batch 374 with 100 files
+2025-10-08 10:56:21,852 - INFO - Batch 374: Processed 100/100 files
+2025-10-08 10:56:21,852 - INFO - Batch 374 completed: 100 valid samples
+2025-10-08 10:56:21,852 - INFO - Collected batch 375/504: 100 samples
+2025-10-08 10:56:21,892 - INFO - Processing batch 375 with 100 files
+2025-10-08 10:56:21,893 - INFO - Batch 375: Processed 100/100 files
+2025-10-08 10:56:21,893 - INFO - Batch 375 completed: 100 valid samples
+2025-10-08 10:56:21,898 - INFO - Collected batch 376/504: 100 samples
+2025-10-08 10:56:21,941 - INFO - Processing batch 376 with 100 files
+2025-10-08 10:56:21,942 - INFO - Batch 376: Processed 100/100 files
+2025-10-08 10:56:21,942 - INFO - Batch 376 completed: 100 valid samples
+2025-10-08 10:56:21,943 - INFO - Collected batch 377/504: 100 samples
+2025-10-08 10:56:21,982 - INFO - Processing batch 377 with 100 files
+2025-10-08 10:56:21,983 - INFO - Batch 377: Processed 100/100 files
+2025-10-08 10:56:21,983 - INFO - Batch 377 completed: 100 valid samples
+2025-10-08 10:56:21,988 - INFO - Collected batch 378/504: 100 samples
+2025-10-08 10:56:22,032 - INFO - Processing batch 378 with 100 files
+2025-10-08 10:56:22,033 - INFO - Batch 378: Processed 100/100 files
+2025-10-08 10:56:22,033 - INFO - Batch 378 completed: 100 valid samples
+2025-10-08 10:56:22,035 - INFO - Collected batch 379/504: 100 samples
+2025-10-08 10:56:22,083 - INFO - Processing batch 379 with 100 files
+2025-10-08 10:56:22,084 - INFO - Batch 379: Processed 100/100 files
+2025-10-08 10:56:22,084 - INFO - Batch 379 completed: 100 valid samples
+2025-10-08 10:56:22,116 - INFO - Processing batch 380 with 100 files
+2025-10-08 10:56:22,118 - INFO - Batch 380: Processed 100/100 files
+2025-10-08 10:56:22,118 - INFO - Batch 380 completed: 100 valid samples
+2025-10-08 10:56:22,120 - INFO - Collected batch 380/504: 100 samples
+2025-10-08 10:56:22,121 - INFO - Collected batch 381/504: 100 samples
+2025-10-08 10:56:22,164 - INFO - Processing batch 381 with 100 files
+2025-10-08 10:56:22,166 - INFO - Batch 381: Processed 100/100 files
+2025-10-08 10:56:22,166 - INFO - Batch 381 completed: 100 valid samples
+2025-10-08 10:56:22,167 - INFO - Collected batch 382/504: 100 samples
+2025-10-08 10:56:22,209 - INFO - Processing batch 382 with 100 files
+2025-10-08 10:56:22,210 - INFO - Batch 382: Processed 100/100 files
+2025-10-08 10:56:22,211 - INFO - Batch 382 completed: 100 valid samples
+2025-10-08 10:56:22,250 - INFO - Collected batch 383/504: 100 samples
+2025-10-08 10:56:22,257 - INFO - Processing batch 383 with 100 files
+2025-10-08 10:56:22,258 - INFO - Batch 383: Processed 100/100 files
+2025-10-08 10:56:22,258 - INFO - Batch 383 completed: 100 valid samples
+2025-10-08 10:56:22,295 - INFO - Processing batch 384 with 100 files
+2025-10-08 10:56:22,296 - INFO - Collected batch 384/504: 100 samples
+2025-10-08 10:56:22,296 - INFO - Batch 384: Processed 100/100 files
+2025-10-08 10:56:22,296 - INFO - Batch 384 completed: 100 valid samples
+2025-10-08 10:56:22,297 - INFO - Collected batch 385/504: 100 samples
+2025-10-08 10:56:22,334 - INFO - Processing batch 385 with 100 files
+2025-10-08 10:56:22,336 - INFO - Batch 385: Processed 100/100 files
+2025-10-08 10:56:22,336 - INFO - Batch 385 completed: 100 valid samples
+2025-10-08 10:56:22,338 - INFO - Collected batch 386/504: 100 samples
+2025-10-08 10:56:22,379 - INFO - Processing batch 386 with 100 files
+2025-10-08 10:56:22,380 - INFO - Batch 386: Processed 100/100 files
+2025-10-08 10:56:22,380 - INFO - Batch 386 completed: 100 valid samples
+2025-10-08 10:56:22,383 - INFO - Collected batch 387/504: 100 samples
+2025-10-08 10:56:22,428 - INFO - Processing batch 387 with 100 files
+2025-10-08 10:56:22,429 - INFO - Batch 387: Processed 100/100 files
+2025-10-08 10:56:22,429 - INFO - Batch 387 completed: 100 valid samples
+2025-10-08 10:56:22,430 - INFO - Collected batch 388/504: 100 samples
+2025-10-08 10:56:22,475 - INFO - Processing batch 388 with 100 files
+2025-10-08 10:56:22,476 - INFO - Batch 388: Processed 100/100 files
+2025-10-08 10:56:22,476 - INFO - Batch 388 completed: 100 valid samples
+2025-10-08 10:56:22,514 - INFO - Collected batch 389/504: 100 samples
+2025-10-08 10:56:22,516 - INFO - Processing batch 389 with 100 files
+2025-10-08 10:56:22,517 - INFO - Batch 389: Processed 100/100 files
+2025-10-08 10:56:22,517 - INFO - Batch 389 completed: 100 valid samples
+2025-10-08 10:56:22,518 - INFO - Collected batch 390/504: 100 samples
+2025-10-08 10:56:22,562 - INFO - Processing batch 390 with 100 files
+2025-10-08 10:56:22,563 - INFO - Batch 390: Processed 100/100 files
+2025-10-08 10:56:22,563 - INFO - Batch 390 completed: 100 valid samples
+2025-10-08 10:56:22,600 - INFO - Collected batch 391/504: 100 samples
+2025-10-08 10:56:22,605 - INFO - Processing batch 391 with 100 files
+2025-10-08 10:56:22,606 - INFO - Batch 391: Processed 100/100 files
+2025-10-08 10:56:22,606 - INFO - Batch 391 completed: 100 valid samples
+2025-10-08 10:56:22,644 - INFO - Collected batch 392/504: 100 samples
+2025-10-08 10:56:22,646 - INFO - Processing batch 392 with 100 files
+2025-10-08 10:56:22,647 - INFO - Batch 392: Processed 100/100 files
+2025-10-08 10:56:22,647 - INFO - Batch 392 completed: 100 valid samples
+2025-10-08 10:56:22,648 - INFO - Collected batch 393/504: 100 samples
+2025-10-08 10:56:22,689 - INFO - Processing batch 393 with 100 files
+2025-10-08 10:56:22,690 - INFO - Batch 393: Processed 100/100 files
+2025-10-08 10:56:22,690 - INFO - Batch 393 completed: 100 valid samples
+2025-10-08 10:56:22,691 - INFO - Collected batch 394/504: 100 samples
+2025-10-08 10:56:22,736 - INFO - Processing batch 394 with 100 files
+2025-10-08 10:56:22,737 - INFO - Batch 394: Processed 100/100 files
+2025-10-08 10:56:22,737 - INFO - Batch 394 completed: 100 valid samples
+2025-10-08 10:56:22,777 - INFO - Collected batch 395/504: 100 samples
+2025-10-08 10:56:22,778 - INFO - Processing batch 395 with 100 files
+2025-10-08 10:56:22,779 - INFO - Batch 395: Processed 100/100 files
+2025-10-08 10:56:22,779 - INFO - Batch 395 completed: 100 valid samples
+2025-10-08 10:56:22,780 - INFO - Collected batch 396/504: 100 samples
+2025-10-08 10:56:22,824 - INFO - Processing batch 396 with 100 files
+2025-10-08 10:56:22,825 - INFO - Batch 396: Processed 100/100 files
+2025-10-08 10:56:22,825 - INFO - Batch 396 completed: 100 valid samples
+2025-10-08 10:56:22,826 - INFO - Collected batch 397/504: 100 samples
+2025-10-08 10:56:22,867 - INFO - Processing batch 397 with 100 files
+2025-10-08 10:56:22,869 - INFO - Batch 397: Processed 100/100 files
+2025-10-08 10:56:22,869 - INFO - Batch 397 completed: 100 valid samples
+2025-10-08 10:56:22,903 - INFO - Processing batch 398 with 100 files
+2025-10-08 10:56:22,904 - INFO - Batch 398: Processed 100/100 files
+2025-10-08 10:56:22,904 - INFO - Batch 398 completed: 100 valid samples
+2025-10-08 10:56:22,908 - INFO - Collected batch 398/504: 100 samples
+2025-10-08 10:56:22,908 - INFO - Collected batch 399/504: 100 samples
+2025-10-08 10:56:22,946 - INFO - Processing batch 399 with 100 files
+2025-10-08 10:56:22,947 - INFO - Batch 399: Processed 100/100 files
+2025-10-08 10:56:22,947 - INFO - Batch 399 completed: 100 valid samples
+2025-10-08 10:56:22,949 - INFO - Collected batch 400/504: 100 samples
+2025-10-08 10:56:22,991 - INFO - Processing batch 400 with 100 files
+2025-10-08 10:56:22,992 - INFO - Batch 400: Processed 100/100 files
+2025-10-08 10:56:22,992 - INFO - Batch 400 completed: 100 valid samples
+2025-10-08 10:56:22,993 - INFO - Collected batch 401/504: 100 samples
+2025-10-08 10:56:23,035 - INFO - Processing batch 401 with 100 files
+2025-10-08 10:56:23,036 - INFO - Batch 401: Processed 100/100 files
+2025-10-08 10:56:23,036 - INFO - Batch 401 completed: 100 valid samples
+2025-10-08 10:56:23,037 - INFO - Collected batch 402/504: 100 samples
+2025-10-08 10:56:23,082 - INFO - Processing batch 402 with 100 files
+2025-10-08 10:56:23,084 - INFO - Batch 402: Processed 100/100 files
+2025-10-08 10:56:23,084 - INFO - Batch 402 completed: 100 valid samples
+2025-10-08 10:56:23,121 - INFO - Collected batch 403/504: 100 samples
+2025-10-08 10:56:23,122 - INFO - Processing batch 403 with 100 files
+2025-10-08 10:56:23,123 - INFO - Batch 403: Processed 100/100 files
+2025-10-08 10:56:23,123 - INFO - Batch 403 completed: 100 valid samples
+2025-10-08 10:56:23,124 - INFO - Collected batch 404/504: 100 samples
+2025-10-08 10:56:23,169 - INFO - Processing batch 404 with 100 files
+2025-10-08 10:56:23,170 - INFO - Batch 404: Processed 100/100 files
+2025-10-08 10:56:23,170 - INFO - Batch 404 completed: 100 valid samples
+2025-10-08 10:56:23,208 - INFO - Collected batch 405/504: 100 samples
+2025-10-08 10:56:23,210 - INFO - Processing batch 405 with 100 files
+2025-10-08 10:56:23,211 - INFO - Batch 405: Processed 100/100 files
+2025-10-08 10:56:23,211 - INFO - Batch 405 completed: 100 valid samples
+2025-10-08 10:56:23,250 - INFO - Collected batch 406/504: 100 samples
+2025-10-08 10:56:23,252 - INFO - Processing batch 406 with 100 files
+2025-10-08 10:56:23,253 - INFO - Batch 406: Processed 100/100 files
+2025-10-08 10:56:23,254 - INFO - Batch 406 completed: 100 valid samples
+2025-10-08 10:56:23,293 - INFO - Collected batch 407/504: 100 samples
+2025-10-08 10:56:23,297 - INFO - Processing batch 407 with 100 files
+2025-10-08 10:56:23,298 - INFO - Batch 407: Processed 100/100 files
+2025-10-08 10:56:23,298 - INFO - Batch 407 completed: 100 valid samples
+2025-10-08 10:56:23,334 - INFO - Collected batch 408/504: 100 samples
+2025-10-08 10:56:23,339 - INFO - Processing batch 408 with 100 files
+2025-10-08 10:56:23,340 - INFO - Batch 408: Processed 100/100 files
+2025-10-08 10:56:23,340 - INFO - Batch 408 completed: 100 valid samples
+2025-10-08 10:56:23,374 - INFO - Processing batch 409 with 100 files
+2025-10-08 10:56:23,376 - INFO - Batch 409: Processed 100/100 files
+2025-10-08 10:56:23,376 - INFO - Batch 409 completed: 100 valid samples
+2025-10-08 10:56:23,383 - INFO - Collected batch 409/504: 100 samples
+2025-10-08 10:56:23,383 - INFO - Collected batch 410/504: 100 samples
+2025-10-08 10:56:23,421 - INFO - Processing batch 410 with 100 files
+2025-10-08 10:56:23,422 - INFO - Batch 410: Processed 100/100 files
+2025-10-08 10:56:23,422 - INFO - Batch 410 completed: 100 valid samples
+2025-10-08 10:56:23,427 - INFO - Collected batch 411/504: 100 samples
+2025-10-08 10:56:23,468 - INFO - Processing batch 411 with 100 files
+2025-10-08 10:56:23,469 - INFO - Batch 411: Processed 100/100 files
+2025-10-08 10:56:23,469 - INFO - Batch 411 completed: 100 valid samples
+2025-10-08 10:56:23,473 - INFO - Collected batch 412/504: 100 samples
+2025-10-08 10:56:23,512 - INFO - Processing batch 412 with 100 files
+2025-10-08 10:56:23,514 - INFO - Batch 412: Processed 100/100 files
+2025-10-08 10:56:23,514 - INFO - Batch 412 completed: 100 valid samples
+2025-10-08 10:56:23,520 - INFO - Collected batch 413/504: 100 samples
+2025-10-08 10:56:23,559 - INFO - Processing batch 413 with 100 files
+2025-10-08 10:56:23,560 - INFO - Batch 413: Processed 100/100 files
+2025-10-08 10:56:23,560 - INFO - Batch 413 completed: 100 valid samples
+2025-10-08 10:56:23,568 - INFO - Collected batch 414/504: 100 samples
+2025-10-08 10:56:23,611 - INFO - Processing batch 414 with 100 files
+2025-10-08 10:56:23,612 - INFO - Batch 414: Processed 100/100 files
+2025-10-08 10:56:23,612 - INFO - Batch 414 completed: 100 valid samples
+2025-10-08 10:56:23,613 - INFO - Collected batch 415/504: 100 samples
+2025-10-08 10:56:23,657 - INFO - Processing batch 415 with 100 files
+2025-10-08 10:56:23,658 - INFO - Batch 415: Processed 100/100 files
+2025-10-08 10:56:23,658 - INFO - Batch 415 completed: 100 valid samples
+2025-10-08 10:56:23,659 - INFO - Collected batch 416/504: 100 samples
+2025-10-08 10:56:23,700 - INFO - Processing batch 416 with 100 files
+2025-10-08 10:56:23,701 - INFO - Batch 416: Processed 100/100 files
+2025-10-08 10:56:23,701 - INFO - Batch 416 completed: 100 valid samples
+2025-10-08 10:56:23,702 - INFO - Collected batch 417/504: 100 samples
+2025-10-08 10:56:23,744 - INFO - Processing batch 417 with 100 files
+2025-10-08 10:56:23,745 - INFO - Batch 417: Processed 100/100 files
+2025-10-08 10:56:23,745 - INFO - Batch 417 completed: 100 valid samples
+2025-10-08 10:56:23,746 - INFO - Collected batch 418/504: 100 samples
+2025-10-08 10:56:23,791 - INFO - Processing batch 418 with 100 files
+2025-10-08 10:56:23,792 - INFO - Batch 418: Processed 100/100 files
+2025-10-08 10:56:23,792 - INFO - Batch 418 completed: 100 valid samples
+2025-10-08 10:56:23,830 - INFO - Processing batch 419 with 100 files
+2025-10-08 10:56:23,830 - INFO - Collected batch 419/504: 100 samples
+2025-10-08 10:56:23,831 - INFO - Batch 419: Processed 100/100 files
+2025-10-08 10:56:23,831 - INFO - Batch 419 completed: 100 valid samples
+2025-10-08 10:56:23,832 - INFO - Collected batch 420/504: 100 samples
+2025-10-08 10:56:23,877 - INFO - Processing batch 420 with 100 files
+2025-10-08 10:56:23,878 - INFO - Batch 420: Processed 100/100 files
+2025-10-08 10:56:23,878 - INFO - Batch 420 completed: 100 valid samples
+2025-10-08 10:56:23,914 - INFO - Processing batch 421 with 100 files
+2025-10-08 10:56:23,915 - INFO - Batch 421: Processed 100/100 files
+2025-10-08 10:56:23,916 - INFO - Batch 421 completed: 100 valid samples
+2025-10-08 10:56:23,926 - INFO - Collected batch 421/504: 100 samples
+2025-10-08 10:56:23,926 - INFO - Collected batch 422/504: 100 samples
+2025-10-08 10:56:23,965 - INFO - Processing batch 422 with 100 files
+2025-10-08 10:56:23,966 - INFO - Batch 422: Processed 100/100 files
+2025-10-08 10:56:23,966 - INFO - Batch 422 completed: 100 valid samples
+2025-10-08 10:56:23,970 - INFO - Collected batch 423/504: 100 samples
+2025-10-08 10:56:24,008 - INFO - Processing batch 423 with 100 files
+2025-10-08 10:56:24,009 - INFO - Batch 423: Processed 100/100 files
+2025-10-08 10:56:24,009 - INFO - Batch 423 completed: 100 valid samples
+2025-10-08 10:56:24,013 - INFO - Collected batch 424/504: 100 samples
+2025-10-08 10:56:24,053 - INFO - Processing batch 424 with 100 files
+2025-10-08 10:56:24,055 - INFO - Batch 424: Processed 100/100 files
+2025-10-08 10:56:24,055 - INFO - Batch 424 completed: 100 valid samples
+2025-10-08 10:56:24,060 - INFO - Collected batch 425/504: 100 samples
+2025-10-08 10:56:24,105 - INFO - Processing batch 425 with 100 files
+2025-10-08 10:56:24,106 - INFO - Batch 425: Processed 100/100 files
+2025-10-08 10:56:24,106 - INFO - Batch 425 completed: 100 valid samples
+2025-10-08 10:56:24,107 - INFO - Collected batch 426/504: 100 samples
+2025-10-08 10:56:24,155 - INFO - Processing batch 426 with 100 files
+2025-10-08 10:56:24,156 - INFO - Batch 426: Processed 100/100 files
+2025-10-08 10:56:24,156 - INFO - Batch 426 completed: 100 valid samples
+2025-10-08 10:56:24,190 - INFO - Collected batch 427/504: 100 samples
+2025-10-08 10:56:24,195 - INFO - Processing batch 427 with 100 files
+2025-10-08 10:56:24,196 - INFO - Batch 427: Processed 100/100 files
+2025-10-08 10:56:24,196 - INFO - Batch 427 completed: 100 valid samples
+2025-10-08 10:56:24,231 - INFO - Collected batch 428/504: 100 samples
+2025-10-08 10:56:24,238 - INFO - Processing batch 428 with 100 files
+2025-10-08 10:56:24,239 - INFO - Batch 428: Processed 100/100 files
+2025-10-08 10:56:24,239 - INFO - Batch 428 completed: 100 valid samples
+2025-10-08 10:56:24,274 - INFO - Collected batch 429/504: 100 samples
+2025-10-08 10:56:24,283 - INFO - Processing batch 429 with 100 files
+2025-10-08 10:56:24,284 - INFO - Batch 429: Processed 100/100 files
+2025-10-08 10:56:24,284 - INFO - Batch 429 completed: 100 valid samples
+2025-10-08 10:56:24,318 - INFO - Collected batch 430/504: 100 samples
+2025-10-08 10:56:24,321 - INFO - Processing batch 430 with 100 files
+2025-10-08 10:56:24,322 - INFO - Batch 430: Processed 100/100 files
+2025-10-08 10:56:24,322 - INFO - Batch 430 completed: 100 valid samples
+2025-10-08 10:56:24,323 - INFO - Collected batch 431/504: 100 samples
+2025-10-08 10:56:24,372 - INFO - Processing batch 431 with 100 files
+2025-10-08 10:56:24,374 - INFO - Batch 431: Processed 100/100 files
+2025-10-08 10:56:24,374 - INFO - Batch 431 completed: 100 valid samples
+2025-10-08 10:56:24,374 - INFO - Collected batch 432/504: 100 samples
+2025-10-08 10:56:24,419 - INFO - Processing batch 432 with 100 files
+2025-10-08 10:56:24,420 - INFO - Batch 432: Processed 100/100 files
+2025-10-08 10:56:24,420 - INFO - Batch 432 completed: 100 valid samples
+2025-10-08 10:56:24,453 - INFO - Processing batch 433 with 100 files
+2025-10-08 10:56:24,454 - INFO - Batch 433: Processed 100/100 files
+2025-10-08 10:56:24,455 - INFO - Batch 433 completed: 100 valid samples
+2025-10-08 10:56:24,460 - INFO - Collected batch 433/504: 100 samples
+2025-10-08 10:56:24,460 - INFO - Collected batch 434/504: 100 samples
+2025-10-08 10:56:24,505 - INFO - Processing batch 434 with 100 files
+2025-10-08 10:56:24,506 - INFO - Batch 434: Processed 100/100 files
+2025-10-08 10:56:24,506 - INFO - Batch 434 completed: 100 valid samples
+2025-10-08 10:56:24,507 - INFO - Collected batch 435/504: 100 samples
+2025-10-08 10:56:24,552 - INFO - Processing batch 435 with 100 files
+2025-10-08 10:56:24,553 - INFO - Batch 435: Processed 100/100 files
+2025-10-08 10:56:24,553 - INFO - Batch 435 completed: 100 valid samples
+2025-10-08 10:56:24,592 - INFO - Collected batch 436/504: 100 samples
+2025-10-08 10:56:24,596 - INFO - Processing batch 436 with 100 files
+2025-10-08 10:56:24,597 - INFO - Batch 436: Processed 100/100 files
+2025-10-08 10:56:24,598 - INFO - Batch 436 completed: 100 valid samples
+2025-10-08 10:56:24,637 - INFO - Collected batch 437/504: 100 samples
+2025-10-08 10:56:24,637 - INFO - Processing batch 437 with 100 files
+2025-10-08 10:56:24,638 - INFO - Batch 437: Processed 100/100 files
+2025-10-08 10:56:24,638 - INFO - Batch 437 completed: 100 valid samples
+2025-10-08 10:56:24,639 - INFO - Collected batch 438/504: 100 samples
+2025-10-08 10:56:24,676 - INFO - Processing batch 438 with 100 files
+2025-10-08 10:56:24,677 - INFO - Batch 438: Processed 100/100 files
+2025-10-08 10:56:24,677 - INFO - Batch 438 completed: 100 valid samples
+2025-10-08 10:56:24,684 - INFO - Collected batch 439/504: 100 samples
+2025-10-08 10:56:24,729 - INFO - Processing batch 439 with 100 files
+2025-10-08 10:56:24,731 - INFO - Batch 439: Processed 100/100 files
+2025-10-08 10:56:24,731 - INFO - Batch 439 completed: 100 valid samples
+2025-10-08 10:56:24,769 - INFO - Collected batch 440/504: 100 samples
+2025-10-08 10:56:24,773 - INFO - Processing batch 440 with 100 files
+2025-10-08 10:56:24,774 - INFO - Batch 440: Processed 100/100 files
+2025-10-08 10:56:24,774 - INFO - Batch 440 completed: 100 valid samples
+2025-10-08 10:56:24,813 - INFO - Collected batch 441/504: 100 samples
+2025-10-08 10:56:24,816 - INFO - Processing batch 441 with 100 files
+2025-10-08 10:56:24,818 - INFO - Batch 441: Processed 100/100 files
+2025-10-08 10:56:24,818 - INFO - Batch 441 completed: 100 valid samples
+2025-10-08 10:56:24,856 - INFO - Collected batch 442/504: 100 samples
+2025-10-08 10:56:24,860 - INFO - Processing batch 442 with 100 files
+2025-10-08 10:56:24,861 - INFO - Batch 442: Processed 100/100 files
+2025-10-08 10:56:24,861 - INFO - Batch 442 completed: 100 valid samples
+2025-10-08 10:56:24,895 - INFO - Processing batch 443 with 100 files
+2025-10-08 10:56:24,896 - INFO - Batch 443: Processed 100/100 files
+2025-10-08 10:56:24,896 - INFO - Batch 443 completed: 100 valid samples
+2025-10-08 10:56:24,898 - INFO - Collected batch 443/504: 100 samples
+2025-10-08 10:56:24,899 - INFO - Collected batch 444/504: 100 samples
+2025-10-08 10:56:24,939 - INFO - Processing batch 444 with 100 files
+2025-10-08 10:56:24,940 - INFO - Batch 444: Processed 100/100 files
+2025-10-08 10:56:24,940 - INFO - Batch 444 completed: 100 valid samples
+2025-10-08 10:56:24,944 - INFO - Collected batch 445/504: 100 samples
+2025-10-08 10:56:24,990 - INFO - Processing batch 445 with 100 files
+2025-10-08 10:56:24,991 - INFO - Batch 445: Processed 100/100 files
+2025-10-08 10:56:24,991 - INFO - Batch 445 completed: 100 valid samples
+2025-10-08 10:56:24,992 - INFO - Collected batch 446/504: 100 samples
+2025-10-08 10:56:25,028 - INFO - Processing batch 446 with 100 files
+2025-10-08 10:56:25,029 - INFO - Batch 446: Processed 100/100 files
+2025-10-08 10:56:25,029 - INFO - Batch 446 completed: 100 valid samples
+2025-10-08 10:56:25,032 - INFO - Collected batch 447/504: 100 samples
+2025-10-08 10:56:25,078 - INFO - Processing batch 447 with 100 files
+2025-10-08 10:56:25,080 - INFO - Batch 447: Processed 100/100 files
+2025-10-08 10:56:25,080 - INFO - Batch 447 completed: 100 valid samples
+2025-10-08 10:56:25,081 - INFO - Collected batch 448/504: 100 samples
+2025-10-08 10:56:25,123 - INFO - Processing batch 448 with 100 files
+2025-10-08 10:56:25,124 - INFO - Batch 448: Processed 100/100 files
+2025-10-08 10:56:25,124 - INFO - Batch 448 completed: 100 valid samples
+2025-10-08 10:56:25,125 - INFO - Collected batch 449/504: 100 samples
+2025-10-08 10:56:25,163 - INFO - Processing batch 449 with 100 files
+2025-10-08 10:56:25,164 - INFO - Batch 449: Processed 100/100 files
+2025-10-08 10:56:25,165 - INFO - Batch 449 completed: 100 valid samples
+2025-10-08 10:56:25,165 - INFO - Collected batch 450/504: 100 samples
+2025-10-08 10:56:25,204 - INFO - Processing batch 450 with 100 files
+2025-10-08 10:56:25,205 - INFO - Batch 450: Processed 100/100 files
+2025-10-08 10:56:25,205 - INFO - Batch 450 completed: 100 valid samples
+2025-10-08 10:56:25,211 - INFO - Collected batch 451/504: 100 samples
+2025-10-08 10:56:25,258 - INFO - Processing batch 451 with 100 files
+2025-10-08 10:56:25,259 - INFO - Batch 451: Processed 100/100 files
+2025-10-08 10:56:25,259 - INFO - Batch 451 completed: 100 valid samples
+2025-10-08 10:56:25,297 - INFO - Collected batch 452/504: 100 samples
+2025-10-08 10:56:25,297 - INFO - Processing batch 452 with 100 files
+2025-10-08 10:56:25,298 - INFO - Batch 452: Processed 100/100 files
+2025-10-08 10:56:25,298 - INFO - Batch 452 completed: 100 valid samples
+2025-10-08 10:56:25,299 - INFO - Collected batch 453/504: 100 samples
+2025-10-08 10:56:25,342 - INFO - Processing batch 453 with 100 files
+2025-10-08 10:56:25,343 - INFO - Batch 453: Processed 100/100 files
+2025-10-08 10:56:25,343 - INFO - Batch 453 completed: 100 valid samples
+2025-10-08 10:56:25,383 - INFO - Collected batch 454/504: 100 samples
+2025-10-08 10:56:25,386 - INFO - Processing batch 454 with 100 files
+2025-10-08 10:56:25,387 - INFO - Batch 454: Processed 100/100 files
+2025-10-08 10:56:25,387 - INFO - Batch 454 completed: 100 valid samples
+2025-10-08 10:56:25,425 - INFO - Collected batch 455/504: 100 samples
+2025-10-08 10:56:25,429 - INFO - Processing batch 455 with 100 files
+2025-10-08 10:56:25,430 - INFO - Batch 455: Processed 100/100 files
+2025-10-08 10:56:25,430 - INFO - Batch 455 completed: 100 valid samples
+2025-10-08 10:56:25,465 - INFO - Collected batch 456/504: 100 samples
+2025-10-08 10:56:25,471 - INFO - Processing batch 456 with 100 files
+2025-10-08 10:56:25,472 - INFO - Batch 456: Processed 100/100 files
+2025-10-08 10:56:25,472 - INFO - Batch 456 completed: 100 valid samples
+2025-10-08 10:56:25,508 - INFO - Collected batch 457/504: 100 samples
+2025-10-08 10:56:25,513 - INFO - Processing batch 457 with 100 files
+2025-10-08 10:56:25,515 - INFO - Batch 457: Processed 100/100 files
+2025-10-08 10:56:25,515 - INFO - Batch 457 completed: 100 valid samples
+2025-10-08 10:56:25,552 - INFO - Processing batch 458 with 100 files
+2025-10-08 10:56:25,552 - INFO - Collected batch 458/504: 100 samples
+2025-10-08 10:56:25,553 - INFO - Batch 458: Processed 100/100 files
+2025-10-08 10:56:25,553 - INFO - Batch 458 completed: 100 valid samples
+2025-10-08 10:56:25,554 - INFO - Collected batch 459/504: 100 samples
+2025-10-08 10:56:25,599 - INFO - Processing batch 459 with 100 files
+2025-10-08 10:56:25,600 - INFO - Batch 459: Processed 100/100 files
+2025-10-08 10:56:25,600 - INFO - Batch 459 completed: 100 valid samples
+2025-10-08 10:56:25,638 - INFO - Collected batch 460/504: 100 samples
+2025-10-08 10:56:25,643 - INFO - Processing batch 460 with 100 files
+2025-10-08 10:56:25,644 - INFO - Batch 460: Processed 100/100 files
+2025-10-08 10:56:25,644 - INFO - Batch 460 completed: 100 valid samples
+2025-10-08 10:56:25,680 - INFO - Processing batch 461 with 100 files
+2025-10-08 10:56:25,682 - INFO - Batch 461: Processed 100/100 files
+2025-10-08 10:56:25,682 - INFO - Batch 461 completed: 100 valid samples
+2025-10-08 10:56:25,687 - INFO - Collected batch 461/504: 100 samples
+2025-10-08 10:56:25,687 - INFO - Collected batch 462/504: 100 samples
+2025-10-08 10:56:25,732 - INFO - Processing batch 462 with 100 files
+2025-10-08 10:56:25,733 - INFO - Batch 462: Processed 100/100 files
+2025-10-08 10:56:25,733 - INFO - Batch 462 completed: 100 valid samples
+2025-10-08 10:56:25,772 - INFO - Processing batch 463 with 100 files
+2025-10-08 10:56:25,773 - INFO - Batch 463: Processed 100/100 files
+2025-10-08 10:56:25,773 - INFO - Batch 463 completed: 100 valid samples
+2025-10-08 10:56:25,776 - INFO - Collected batch 463/504: 100 samples
+2025-10-08 10:56:25,776 - INFO - Collected batch 464/504: 100 samples
+2025-10-08 10:56:25,822 - INFO - Processing batch 464 with 100 files
+2025-10-08 10:56:25,823 - INFO - Batch 464: Processed 100/100 files
+2025-10-08 10:56:25,823 - INFO - Batch 464 completed: 100 valid samples
+2025-10-08 10:56:25,824 - INFO - Collected batch 465/504: 100 samples
+2025-10-08 10:56:25,880 - INFO - Processing batch 465 with 100 files
+2025-10-08 10:56:25,881 - INFO - Batch 465: Processed 100/100 files
+2025-10-08 10:56:25,881 - INFO - Batch 465 completed: 100 valid samples
+2025-10-08 10:56:25,907 - INFO - Collected batch 466/504: 100 samples
+2025-10-08 10:56:25,911 - INFO - Processing batch 466 with 100 files
+2025-10-08 10:56:25,912 - INFO - Batch 466: Processed 100/100 files
+2025-10-08 10:56:25,912 - INFO - Batch 466 completed: 100 valid samples
+2025-10-08 10:56:25,948 - INFO - Collected batch 467/504: 100 samples
+2025-10-08 10:56:25,975 - INFO - Processing batch 467 with 100 files
+2025-10-08 10:56:25,976 - INFO - Batch 467: Processed 100/100 files
+2025-10-08 10:56:25,976 - INFO - Batch 467 completed: 100 valid samples
+2025-10-08 10:56:25,994 - INFO - Collected batch 468/504: 100 samples
+2025-10-08 10:56:25,998 - INFO - Processing batch 468 with 100 files
+2025-10-08 10:56:26,000 - INFO - Batch 468: Processed 100/100 files
+2025-10-08 10:56:26,000 - INFO - Batch 468 completed: 100 valid samples
+2025-10-08 10:56:26,036 - INFO - Collected batch 469/504: 100 samples
+2025-10-08 10:56:26,040 - INFO - Processing batch 469 with 100 files
+2025-10-08 10:56:26,041 - INFO - Batch 469: Processed 100/100 files
+2025-10-08 10:56:26,041 - INFO - Batch 469 completed: 100 valid samples
+2025-10-08 10:56:26,080 - INFO - Collected batch 470/504: 100 samples
+2025-10-08 10:56:26,080 - INFO - Processing batch 470 with 100 files
+2025-10-08 10:56:26,081 - INFO - Batch 470: Processed 100/100 files
+2025-10-08 10:56:26,082 - INFO - Batch 470 completed: 100 valid samples
+2025-10-08 10:56:26,082 - INFO - Collected batch 471/504: 100 samples
+2025-10-08 10:56:26,122 - INFO - Processing batch 471 with 100 files
+2025-10-08 10:56:26,123 - INFO - Batch 471: Processed 100/100 files
+2025-10-08 10:56:26,124 - INFO - Batch 471 completed: 100 valid samples
+2025-10-08 10:56:26,124 - INFO - Collected batch 472/504: 100 samples
+2025-10-08 10:56:26,166 - INFO - Processing batch 472 with 100 files
+2025-10-08 10:56:26,167 - INFO - Batch 472: Processed 100/100 files
+2025-10-08 10:56:26,167 - INFO - Batch 472 completed: 100 valid samples
+2025-10-08 10:56:26,171 - INFO - Collected batch 473/504: 100 samples
+2025-10-08 10:56:26,211 - INFO - Processing batch 473 with 100 files
+2025-10-08 10:56:26,212 - INFO - Batch 473: Processed 100/100 files
+2025-10-08 10:56:26,212 - INFO - Batch 473 completed: 100 valid samples
+2025-10-08 10:56:26,214 - INFO - Collected batch 474/504: 100 samples
+2025-10-08 10:56:26,263 - INFO - Processing batch 474 with 100 files
+2025-10-08 10:56:26,264 - INFO - Batch 474: Processed 100/100 files
+2025-10-08 10:56:26,264 - INFO - Batch 474 completed: 100 valid samples
+2025-10-08 10:56:26,295 - INFO - Processing batch 475 with 100 files
+2025-10-08 10:56:26,296 - INFO - Batch 475: Processed 100/100 files
+2025-10-08 10:56:26,296 - INFO - Batch 475 completed: 100 valid samples
+2025-10-08 10:56:26,297 - INFO - Collected batch 475/504: 100 samples
+2025-10-08 10:56:26,298 - INFO - Collected batch 476/504: 100 samples
+2025-10-08 10:56:26,344 - INFO - Processing batch 476 with 100 files
+2025-10-08 10:56:26,345 - INFO - Batch 476: Processed 100/100 files
+2025-10-08 10:56:26,345 - INFO - Batch 476 completed: 100 valid samples
+2025-10-08 10:56:26,383 - INFO - Collected batch 477/504: 100 samples
+2025-10-08 10:56:26,385 - INFO - Processing batch 477 with 100 files
+2025-10-08 10:56:26,386 - INFO - Batch 477: Processed 100/100 files
+2025-10-08 10:56:26,386 - INFO - Batch 477 completed: 100 valid samples
+2025-10-08 10:56:26,387 - INFO - Collected batch 478/504: 100 samples
+2025-10-08 10:56:26,431 - INFO - Processing batch 478 with 100 files
+2025-10-08 10:56:26,432 - INFO - Batch 478: Processed 100/100 files
+2025-10-08 10:56:26,432 - INFO - Batch 478 completed: 100 valid samples
+2025-10-08 10:56:26,470 - INFO - Collected batch 479/504: 100 samples
+2025-10-08 10:56:26,479 - INFO - Processing batch 479 with 100 files
+2025-10-08 10:56:26,481 - INFO - Batch 479: Processed 100/100 files
+2025-10-08 10:56:26,481 - INFO - Batch 479 completed: 100 valid samples
+2025-10-08 10:56:26,511 - INFO - Collected batch 480/504: 100 samples
+2025-10-08 10:56:26,514 - INFO - Processing batch 480 with 100 files
+2025-10-08 10:56:26,515 - INFO - Batch 480: Processed 100/100 files
+2025-10-08 10:56:26,515 - INFO - Batch 480 completed: 100 valid samples
+2025-10-08 10:56:26,554 - INFO - Collected batch 481/504: 100 samples
+2025-10-08 10:56:26,557 - INFO - Processing batch 481 with 100 files
+2025-10-08 10:56:26,558 - INFO - Batch 481: Processed 100/100 files
+2025-10-08 10:56:26,558 - INFO - Batch 481 completed: 100 valid samples
+2025-10-08 10:56:26,596 - INFO - Collected batch 482/504: 100 samples
+2025-10-08 10:56:26,601 - INFO - Processing batch 482 with 100 files
+2025-10-08 10:56:26,602 - INFO - Batch 482: Processed 100/100 files
+2025-10-08 10:56:26,602 - INFO - Batch 482 completed: 100 valid samples
+2025-10-08 10:56:26,641 - INFO - Collected batch 483/504: 100 samples
+2025-10-08 10:56:26,645 - INFO - Processing batch 483 with 100 files
+2025-10-08 10:56:26,646 - INFO - Batch 483: Processed 100/100 files
+2025-10-08 10:56:26,646 - INFO - Batch 483 completed: 100 valid samples
+2025-10-08 10:56:26,682 - INFO - Collected batch 484/504: 100 samples
+2025-10-08 10:56:26,687 - INFO - Processing batch 484 with 100 files
+2025-10-08 10:56:26,688 - INFO - Batch 484: Processed 100/100 files
+2025-10-08 10:56:26,688 - INFO - Batch 484 completed: 100 valid samples
+2025-10-08 10:56:26,727 - INFO - Collected batch 485/504: 100 samples
+2025-10-08 10:56:26,729 - INFO - Processing batch 485 with 100 files
+2025-10-08 10:56:26,730 - INFO - Batch 485: Processed 100/100 files
+2025-10-08 10:56:26,730 - INFO - Batch 485 completed: 100 valid samples
+2025-10-08 10:56:26,731 - INFO - Collected batch 486/504: 100 samples
+2025-10-08 10:56:26,771 - INFO - Processing batch 486 with 100 files
+2025-10-08 10:56:26,773 - INFO - Batch 486: Processed 100/100 files
+2025-10-08 10:56:26,773 - INFO - Batch 486 completed: 100 valid samples
+2025-10-08 10:56:26,774 - INFO - Collected batch 487/504: 100 samples
+2025-10-08 10:56:26,819 - INFO - Processing batch 487 with 100 files
+2025-10-08 10:56:26,820 - INFO - Batch 487: Processed 100/100 files
+2025-10-08 10:56:26,820 - INFO - Batch 487 completed: 100 valid samples
+2025-10-08 10:56:26,821 - INFO - Collected batch 488/504: 100 samples
+2025-10-08 10:56:26,863 - INFO - Processing batch 488 with 100 files
+2025-10-08 10:56:26,864 - INFO - Batch 488: Processed 100/100 files
+2025-10-08 10:56:26,864 - INFO - Batch 488 completed: 100 valid samples
+2025-10-08 10:56:26,902 - INFO - Processing batch 489 with 100 files
+2025-10-08 10:56:26,903 - INFO - Collected batch 489/504: 100 samples
+2025-10-08 10:56:26,903 - INFO - Batch 489: Processed 100/100 files
+2025-10-08 10:56:26,903 - INFO - Batch 489 completed: 100 valid samples
+2025-10-08 10:56:26,904 - INFO - Collected batch 490/504: 100 samples
+2025-10-08 10:56:26,942 - INFO - Processing batch 490 with 100 files
+2025-10-08 10:56:26,943 - INFO - Batch 490: Processed 100/100 files
+2025-10-08 10:56:26,943 - INFO - Batch 490 completed: 100 valid samples
+2025-10-08 10:56:26,947 - INFO - Collected batch 491/504: 100 samples
+2025-10-08 10:56:26,985 - INFO - Processing batch 491 with 100 files
+2025-10-08 10:56:26,986 - INFO - Batch 491: Processed 100/100 files
+2025-10-08 10:56:26,986 - INFO - Batch 491 completed: 100 valid samples
+2025-10-08 10:56:26,987 - INFO - Collected batch 492/504: 100 samples
+2025-10-08 10:56:27,034 - INFO - Processing batch 492 with 100 files
+2025-10-08 10:56:27,035 - INFO - Batch 492: Processed 100/100 files
+2025-10-08 10:56:27,035 - INFO - Batch 492 completed: 100 valid samples
+2025-10-08 10:56:27,073 - INFO - Collected batch 493/504: 100 samples
+2025-10-08 10:56:27,077 - INFO - Processing batch 493 with 100 files
+2025-10-08 10:56:27,078 - INFO - Batch 493: Processed 100/100 files
+2025-10-08 10:56:27,078 - INFO - Batch 493 completed: 100 valid samples
+2025-10-08 10:56:27,113 - INFO - Collected batch 494/504: 100 samples
+2025-10-08 10:56:27,114 - INFO - Processing batch 494 with 100 files
+2025-10-08 10:56:27,115 - INFO - Batch 494: Processed 100/100 files
+2025-10-08 10:56:27,115 - INFO - Batch 494 completed: 100 valid samples
+2025-10-08 10:56:27,116 - INFO - Collected batch 495/504: 100 samples
+2025-10-08 10:56:27,151 - INFO - Processing batch 495 with 100 files
+2025-10-08 10:56:27,152 - INFO - Batch 495: Processed 100/100 files
+2025-10-08 10:56:27,152 - INFO - Batch 495 completed: 100 valid samples
+2025-10-08 10:56:27,154 - INFO - Collected batch 496/504: 100 samples
+2025-10-08 10:56:27,200 - INFO - Processing batch 496 with 100 files
+2025-10-08 10:56:27,201 - INFO - Batch 496: Processed 100/100 files
+2025-10-08 10:56:27,201 - INFO - Batch 496 completed: 100 valid samples
+2025-10-08 10:56:27,202 - INFO - Collected batch 497/504: 100 samples
+2025-10-08 10:56:27,247 - INFO - Processing batch 497 with 100 files
+2025-10-08 10:56:27,248 - INFO - Batch 497: Processed 100/100 files
+2025-10-08 10:56:27,248 - INFO - Batch 497 completed: 100 valid samples
+2025-10-08 10:56:27,249 - INFO - Collected batch 498/504: 100 samples
+2025-10-08 10:56:27,290 - INFO - Processing batch 498 with 100 files
+2025-10-08 10:56:27,291 - INFO - Batch 498: Processed 100/100 files
+2025-10-08 10:56:27,291 - INFO - Batch 498 completed: 100 valid samples
+2025-10-08 10:56:27,292 - INFO - Collected batch 499/504: 100 samples
+2025-10-08 10:56:27,336 - INFO - Processing batch 499 with 100 files
+2025-10-08 10:56:27,337 - INFO - Batch 499: Processed 100/100 files
+2025-10-08 10:56:27,337 - INFO - Batch 499 completed: 100 valid samples
+2025-10-08 10:56:27,338 - INFO - Collected batch 500/504: 100 samples
+2025-10-08 10:56:27,380 - INFO - Processing batch 500 with 100 files
+2025-10-08 10:56:27,382 - INFO - Batch 500: Processed 100/100 files
+2025-10-08 10:56:27,382 - INFO - Batch 500 completed: 100 valid samples
+2025-10-08 10:56:27,420 - INFO - Collected batch 501/504: 100 samples
+2025-10-08 10:56:27,424 - INFO - Processing batch 501 with 100 files
+2025-10-08 10:56:27,425 - INFO - Batch 501: Processed 100/100 files
+2025-10-08 10:56:27,425 - INFO - Batch 501 completed: 100 valid samples
+2025-10-08 10:56:27,462 - INFO - Collected batch 502/504: 100 samples
+2025-10-08 10:56:27,467 - INFO - Processing batch 502 with 100 files
+2025-10-08 10:56:27,468 - INFO - Batch 502: Processed 100/100 files
+2025-10-08 10:56:27,468 - INFO - Batch 502 completed: 100 valid samples
+2025-10-08 10:56:27,469 - INFO - Collected batch 503/504: 100 samples
+2025-10-08 10:56:27,501 - INFO - Processing batch 503 with 81 files
+2025-10-08 10:56:27,502 - INFO - Batch 503 completed: 81 valid samples
+2025-10-08 10:56:27,503 - INFO - Collected batch 504/504: 81 samples
+2025-10-08 10:56:27,523 - INFO - Parallel loading completed in 22.58 seconds
+2025-10-08 10:56:27,523 - INFO - Total samples loaded: 50381
+2025-10-08 10:56:27,527 - INFO - Loading predefined data splits...
+2025-10-08 10:56:27,527 - INFO - Loading split file: /scratch/zf281/pangaea-bench/data/treesatai/train_filenames.lst
+2025-10-08 10:56:27,531 - INFO - Found 38520 files in train split
+2025-10-08 10:56:27,594 - INFO - Split 'train': 38520 samples loaded from predefined split
+Traceback (most recent call last):
+  File "/scratch/zf281/pangaea-bench/debug_tensor_shapes.py", line 86, in <module>
+    debug_shapes()
+  File "/scratch/zf281/pangaea-bench/debug_tensor_shapes.py", line 37, in debug_shapes
+    preprocessor = Preprocessor(cfg.preprocessing.train.preprocessor_cfg)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Preprocessor.__init__() missing 2 required positional arguments: 'dataset_cfg' and 'encoder_cfg'

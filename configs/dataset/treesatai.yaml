@@ -60,13 +60,13 @@ distribution:
 # Band definitions
 bands:
   optical:
-    - B02  # Blue
-    - B03  # Green
-    - B04  # Red
-    - B05  # Red Edge 1
-    - B06  # Red Edge 2
-    - B07  # Red Edge 3
-    - B08  # NIR
+    - B2  # Blue
+    - B3  # Green
+    - B4  # Red
+    - B5  # Red Edge 1
+    - B6  # Red Edge 2
+    - B7  # Red Edge 3
+    - B8  # NIR
     - B8A  # Red Edge 4
     - B11  # SWIR 1
     - B12  # SWIR 2
